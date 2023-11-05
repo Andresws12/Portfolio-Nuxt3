@@ -8,7 +8,13 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/robots",
     "nuxt-purgecss",
+    "nuxt-delay-hydration",
   ],
+  delayHydration: {
+    // enables nuxt-delay-hydration in dev mode for testing
+    debug: process.env.NODE_ENV === 'development',
+    mode: 'init'
+  },
   image: {
     densities: [1, 2],
     format: ["webp"],
