@@ -7,7 +7,6 @@
       :title="$t('common.images.dataBodyImage')"
       width="230"
       height="360"
-      loading="lazy"
     />
     <article class="home-description__data">
       <h1 class="home-description__title">
