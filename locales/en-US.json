@@ -1,0 +1,150 @@
+{
+  "views": {
+    "maintenancePage": {},
+    "home": {
+      "homeDescription": {
+        "title": "Andrés Felipe Hernández Galindo",
+        "subtitle": "Front-end Software Egineer",
+        "descriptionWelcome": "Hey there! 👋",
+        "description": "Welcome to my digital corner! I've built this portfolio with lots of love and code, using Vue 3, Typescript, and Pinia for efficient state management. Here, you'll not only find me having fun experimenting with the latest trends in frontend development and bringing my most innovative ideas to life, but you'll also get a glimpse into my work experience."
+      },
+      "homeDescriptionPersonal": {
+        "descriptionWho": "So, who am I? 🤔",
+        "descriptions": {
+          "paragraph1": "I'm a Colombian with a Spanish soul, or perhaps a Spaniard with a Colombian heart. I've been fortunate to live in both countries and soak up the best of each culture: the joy, work ethic, problem-solving skills, love for family, and perseverance.",
+          "paragraph2": "Ever since I was a kid, I've been drawn to technology. I started with Habbo servers and custom Android operating systems, and now, here I am, living my passion every day. But life isn't all about code; I also love staying fit with crossfit, getting lost in nature, traveling to discover new horizons, and enjoying good music. Oh, and let's not forget, I absolutely love animals! Allow me to introduce you to my little furry companions."
+        }
+      },
+      "homeWorkExperience": {
+        "title": "Check Out My Work Adventure! 🚀",
+        "callToActionButton": "See more",
+        "activeButtonText": "Current"
+      },
+      "seo": {
+        "title": "Andrés Felipe Hernández Galindo - Front End Developer in Málaga",
+        "description": "Andrés Felipe Hernández Galindo, front end developer with over 5 years of experience. Explore my journey with companies like Iskaypet, CloudAPPI, STAR, and Pantallazo Azul. Based in Málaga, Spain.",
+        "keywords": "Andrés Felipe Hernández Galindo, front end developer, Málaga, Spain, Iskaypet, CloudAPPI, STAR, Pantallazo Azul"
+      }
+    },
+    "works": {
+      "iskaypet": {
+        "title": "At Iskaypet 🐾",
+        "intro": "I dove headfirst into the ecommerce world, working on the Tiendanimal and Kiwoko websites, which are built on Salesforce. But hey, we're not stopping there. We're on a mission to migrate everything to Headless using Vue 3, and as the team's Vue \"guru,\" I'm leading the charge on research, standardization, and setting up the foundational projects for this epic journey.",
+        "coolProjects": "Cool Projects I've Worked On:",
+        "ecommerceTitle": "Ecommerce Tiendanimal and Kiwoko:",
+        "ecommerce": "Here, I juggle Salesforce, Jquery, JavaScript, and Sass. A real tech cocktail!",
+        "componentLibraryTitle": "Component Library for Tiendanimal's Design System:",
+        "componentLibrary": "Built this one from scratch, using Vue 3, Rollup, and Sass. Also threw in lint, jest, stylelint, and Vitest to keep things neat.",
+        "ssrProjectTitle": "Front SSR Project with Vue 3:",
+        "ssrProject": "Another from-scratch project, but this time with a whole bunch of tech like Sass, TypeScript, ESLint, Vitest, Cypress, Stylelint, Pinia, Axios, and i18n. All to achieve the best performance, SEO, and core vitals for the ecommerce site.",
+        "seo": {
+          "title": "Experience at Iskaypet - Andrés Felipe Hernández Galindo",
+          "description": "Discover my work and projects at Iskaypet as a front end developer. Web application development and maintenance.",
+          "keywords": "Iskaypet, front end developer, projects, web development"
+        }
+      },
+      "cloudappi": {
+        "title": "Cloudappi Adventures 🌩️",
+        "intro": "At Cloudappi, I was like a tech wizard, conjuring web apps with VUE 3, Angular, and .NET Core. We were all about that SCRUM life, and I got to play around with cool tools like GitLab, Redmine, Odoo, and Jira. Whether it was a big project or a small one, I was there, sprinkling in some Bootstrap, Buefy, and Bulma magic, and of course, making sure everything was tip-top with e2e and unit tests.",
+        "coolProjects": "Projects That Rocked My Socks:",
+        "simulationTitle": "Simulation for Pre-Offers with a Map:",
+        "simulation": "Got to work with Vue 3, Bulma, and TypeScript. It was like building a treasure map, but for installations!",
+        "mapManagementTitle": "Map Management for Data Points:",
+        "mapManagement": "This one was all about Blazor and Bootstrap. Like a cartographer, but for data!",
+        "listingTitle": "Listing and Managing Information:",
+        "listing": "Dived into Angular and TypeScript for this one. It was like being a librarian, but for data!",
+        "seo": {
+          "title": "Experience at CloudAPPI - Andrés Felipe Hernández Galindo",
+          "description": "Learn about my journey at CloudAPPI as a front end developer. Involvement in various projects and web applications.",
+          "keywords": "CloudAPPI, front end developer, projects, web development"
+        }
+      },
+      "pantallazo": {
+        "title": "Mi Saga en Pantallazo Azul 🖥️",
+        "intro": "Mi primer curro en tecnología fue en Pantallazo Azul, ¡y vaya si hice de todo! Era el tipo al que acudían para montar PCs, ya fuera un equipo básico o una bestia para gaming. Pero eso no es todo, también era la cara amigable que vendía todo tipo de chucherías tecnológicas a los clientes. ¿Tienes un problema técnico? Yo era tu solucionador, resolviendo problemas aquí y allá. Pero espera, ¡hay más! También me metí en el desarrollo de aplicaciones en PHP, instalé cámaras de seguridad y hasta diseñé sitios web en WordPress.",
+        "coolProjects": "Proyectos que marcaron mi inicio:",
+        "posTitle": "TPV web y aplicación web para hoteles en PHP:",
+        "pos": "Era el chico del mantenimiento, asegurándome de que todo funcionara como un reloj.",
+        "wordpressTitle": "Distintas webs de tiendas y estáticas en WordPress:",
+        "wordpress": "Desde tiendas online hasta páginas estáticas, yo era el mago de WordPress que lo hacía todo posible.",
+        "seo": {
+          "title": "Experience at Pantallazo Azul - Andrés Felipe Hernández Galindo",
+          "description": "My tech beginnings with Pantallazo Azul. Application development, PC assembly, and more.",
+          "keywords": "Pantallazo Azul, developer, application development, PC assembly"
+        }
+      },
+      "star": {
+        "title": "My Big League Debut with STAR Group 🌟",
+        "intro": "Stepping into the big leagues with STAR Group, my first job at a major company was all about flexing my Vue 2 and .NET Core muscles. We were a SCRUM-loving bunch, and I got to mess around with GitLab and Jira. Whether it was a mammoth project or a mini-app, I was the guy sprinkling some Bootstrap, Buefy, and Bulma magic on it. And you bet I made sure everything was A-OK with e2e and unit tests.",
+        "coolProjects": "Projects That Made Me Feel Like a Rockstar:",
+        "smartSearchTitle": "Smart Search Engine: ",
+        "smartSearch": "I was one of the contributors in both creating and maintaining this project, which was developed with Vue 2, Bulma, Buefy, Cypress, and Jest.",
+        "techServiceTitle": "Tech Service App for Mechanics: ",
+        "techService": "I was one of the developers on this project, built using Vue 2, Bulma, Buefy, Cypress, and Jest.",
+        "productListingTitle": "Product Listing with Smart Filtering: ",
+        "productListing": "I collaborated in both creating and maintaining this project, made with Vue 2, Bulma, Buefy, Cypress, and Jest.",
+        "dataManagerTitle": "Data Manager for the Product Listing: ",
+        "dataManager": "This was a project I was involved in, all about .NET and Bootstrap.",
+        "wholesaleTitle": "Wholesale Customer Store: ",
+        "wholesale": "I was one of the contributors to this project, another masterpiece in .NET and Bootstrap.",
+        "seo": {
+          "title": "Experience at STAR Group - Andrés Felipe Hernández Galindo",
+          "description": "My time at STAR Group as a front end developer. Engaged in multiple projects and web applications.",
+          "keywords": "STAR Group, front end developer, projects, web applications"
+        }
+      }
+    }
+  },
+  "common": {
+    "components": {
+      "loading": {
+        "altText": "Loading icon"
+      }
+    },
+    "works": {
+      "iskaypet": {
+        "name": "IskayPet Group",
+        "title": "Front-end Software Engineer",
+        "period": "Nov 2021 - Present · 2 years"
+      },
+      "cloudappi": {
+        "name": "CloudAPPI",
+        "title": "Front-end Software Engineer",
+        "period": "Mar 2021 - Nov 2021 · 9 months"
+      },
+      "star": {
+        "name": "Star",
+        "title": "Front-end Software Engineer",
+        "period": "Feb 2019 - Feb 2021 · 2 years 1 month"
+      },
+      "pantallazo": {
+        "name": "Pantallazo Azul",
+        "title": "Front-end Software Engineer",
+        "period": "Aug 2018 - Feb 2019 · 7 months"
+      }
+    },
+    "title": {
+      "home": "Home"
+    },
+    "subtitle": {},
+    "inputs": {},
+    "buttons": {},
+    "notifications": {
+      "success": {},
+      "error": {}
+    },
+    "images": {
+      "dataBodyImage": "Me in 3D low poly",
+      "dataBodyImageBlurred": "Me in 3D low poly",
+      "dataAnimalsImage": "Animals in low poly",
+      "dataGithubImage": "Github logo",
+      "dataLinkedinImage": "Linkedin logo",
+      "dataIskaypetImage": "Iskaypet logo",
+      "dataCloudappiImage": "CloudAPPI logo",
+      "dataStarImage": "Star logo",
+      "dataPantallazoImage": "Pantallazo Azul logo"
+    },
+    "languages": { "spanish": "Spanish", "english": "English" },
+    "errors": {}
+  }
+}
