@@ -10,9 +10,11 @@ export default defineNuxtConfig({
     "nuxt-purgecss",
     "nuxt-delay-hydration",
     "nuxt-simple-sitemap",
+    "nuxt-schema-org",
   ],
   site: {
     url: "https://andres-hernandez.onrender.com/",
+    name: "My Website",
     autoI18n: true,
   },
   delayHydration: {

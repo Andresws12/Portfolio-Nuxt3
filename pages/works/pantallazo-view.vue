@@ -37,7 +37,15 @@ useSeoMeta({
   ogTitle: i18n.t("views.works.pantallazo.seo.title"),
   description: i18n.t("views.works.pantallazo.seo.description"),
   ogDescription: i18n.t("views.works.pantallazo.seo.description"),
+  keywords: i18n.t("views.works.pantallazo.seo.keywords"),
 });
+
+useSchemaOrg([
+  defineWebSite({
+    name: i18n.t("views.works.pantallazo.seo.title"),
+  }),
+  defineWebPage(),
+]);
 </script>
 
 <style lang="scss" scoped>

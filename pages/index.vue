@@ -16,6 +16,13 @@ useSeoMeta({
   ogTitle: i18n.t("views.home.seo.title"),
   description: i18n.t("views.home.seo.description"),
   ogDescription: i18n.t("views.home.seo.description"),
+  keywords: i18n.t("views.home.seo.keywords"),
 });
+useSchemaOrg([
+  defineWebSite({
+    name: i18n.t("views.home.seo.title"),
+  }),
+  defineWebPage(),
+]);
 </script>
 <style lang="scss"></style>

@@ -41,7 +41,15 @@ useSeoMeta({
   ogTitle: i18n.t("views.works.cloudappi.seo.title"),
   description: i18n.t("views.works.cloudappi.seo.description"),
   ogDescription: i18n.t("views.works.cloudappi.seo.description"),
+  keywords: i18n.t("views.works.cloudappi.seo.keywords"),
 });
+
+useSchemaOrg([
+  defineWebSite({
+    name: i18n.t("views.works.cloudappi.seo.title"),
+  }),
+  defineWebPage(),
+]);
 </script>
 
 <style lang="scss" scoped>

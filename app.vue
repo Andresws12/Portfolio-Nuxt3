@@ -16,19 +16,35 @@ import { loadSlim } from "tsparticles-slim";
 import type { Engine } from "tsparticles-engine";
 
 const { locale } = useI18n();
+const i18n = useI18n();
 
 import { optionsParticles } from "@/utils/vueParticlesConfiguration";
 
 import ButtonTranslation from "@/components/common/ButtonTranslation.vue";
 
 createHead();
-
 const particlesInit = async (engine: Engine): Promise<void> => {
   await loadSlim(engine);
 };
+
 useHead({
   htmlAttrs: {
     lang: locale,
   },
 });
+
+useSeoMeta({
+  author: i18n.t("common.seo.author"),
+  publisher: i18n.t("common.seo.author"),
+  robots: "index, follow",
+});
+
+useSchemaOrg([
+  definePerson({
+    publisher: i18n.t("common.seo.author"),
+    image: "/img/body.webp",
+    sameAs: ["hhttps://github.com/Andresws12"],
+  }),
+  defineWebPage(),
+]);
 </script>
