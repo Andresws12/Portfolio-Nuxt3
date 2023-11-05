@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     'nuxt-simple-sitemap',
   ],
   site: {
-    url: 'https://example.com',
+    url: 'https://andres-hernandez.onrender.com/',
     autoI18n: true
   },
   delayHydration: {
