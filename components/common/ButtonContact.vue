@@ -4,6 +4,7 @@
       target="_blank"
       rel="noopener noreferrer nofollow"
       href="https://github.com/Andresws12"
+      :title="$t('common.images.dataGithubImage')"
     >
       <NuxtImg
         src="/img/github.svg"
@@ -19,6 +20,7 @@
       target="_blank"
       rel="noopener noreferrer nofollow"
       href="https://www.linkedin.com/in/andreshernandez1995/"
+      :title="$t('common.images.dataLinkedinImage')"
     >
       <NuxtImg
         class="contact-buttons__icon"
