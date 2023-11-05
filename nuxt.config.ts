@@ -13,8 +13,8 @@ export default defineNuxtConfig({
     "nuxt-schema-org",
   ],
   site: {
-    url: "https://andres-hernandez.onrender.com/",
-    name: "My Website",
+    url: "https://andres-hernandez.com/",
+    name: "Andres Felipe Hernandez Galindo - Website",
     autoI18n: true,
   },
   delayHydration: {
