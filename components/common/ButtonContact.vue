@@ -2,7 +2,7 @@
   <p class="contact-buttons">
     <a
       target="_blank"
-      rel="noopener noreferrer"
+      rel="noopener noreferrer nofollow"
       href="https://github.com/Andresws12"
     >
       <NuxtImg
@@ -17,7 +17,7 @@
     </a>
     <a
       target="_blank"
-      rel="noopener noreferrer"
+      rel="noopener noreferrer nofollow"
       href="https://www.linkedin.com/in/andreshernandez1995/"
     >
       <NuxtImg
