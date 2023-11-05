@@ -12,6 +12,7 @@
         class="contact-buttons__icon"
         width="29"
         height="29"
+        loading="lazy"
       />
     </a>
     <a
@@ -26,6 +27,7 @@
         :title="$t('common.images.dataLinkedinImage')"
         width="29"
         height="29"
+        loading="lazy"
       />
     </a>
   </p>

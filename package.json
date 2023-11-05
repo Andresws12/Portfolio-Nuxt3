@@ -10,7 +10,8 @@
     "postinstall": "nuxt prepare",
     "start": "nuxt start",
     "format:check": "prettier --list-different \"./**/*.?(vue|ts|js|scss|html|json)\"",
-    "format": "prettier --write \"./**/*.?(vue|ts|js|scss|html|json)\""
+    "format": "prettier --write \"./**/*.?(vue|ts|js|scss|html|json)\"",
+    "analyze": "nuxt build --analyze"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
@@ -24,6 +25,7 @@
     "@nuxt/image": "^1.0.0",
     "@nuxtjs/robots": "^3.0.0",
     "nuxt-particles": "^0.1.5",
+    "nuxt-purgecss": "^2.0.0",
     "prettier": "^3.0.3"
   },
   "engines": {

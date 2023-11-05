@@ -2,11 +2,20 @@
 // const { resolve } = createResolver(import.meta.url)
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/i18n", "nuxt-particles", "@nuxt/image", "@nuxtjs/robots"],
+  modules: [
+    "@nuxtjs/i18n",
+    "nuxt-particles",
+    "@nuxt/image",
+    "@nuxtjs/robots",
+    "nuxt-purgecss",
+  ],
   image: {
     densities: [1, 2],
     format: ["webp"],
     quality: 80,
+  },
+  particles: {
+    mode: "slim", // 'full' | 'slim' | 'basic' | 'custom'
   },
   i18n: {
     /* module options */
