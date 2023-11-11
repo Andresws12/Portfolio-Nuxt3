@@ -37,6 +37,7 @@ useSeoMeta({
   author: i18n.t("common.seo.author"),
   publisher: i18n.t("common.seo.author"),
   robots: "index, follow",
+  googleSiteVerification: "wd0T2xFbSwhH9Pv08VAGT59eyVVSXjlkEL1_sckqUBY",
 });
 
 useSchemaOrg([
