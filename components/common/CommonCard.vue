@@ -5,7 +5,7 @@
         :src="props.imageSource"
         :alt="props.imageData"
         :title="props.imageData"
-        sizes="250px sm:50px md:150px"
+        width="250"
         :height="props.imageHeight"
         loading="lazy"
       />
