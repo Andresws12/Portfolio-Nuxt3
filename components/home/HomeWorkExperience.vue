@@ -1,7 +1,7 @@
 <template>
   <section data-cy="home-section" class="home-work-experience">
     <h2>{{ $t("views.home.homeWorkExperience.title") }}</h2>
-    <div class="home-work-experience__cads">
+    <div class="home-work-experience__cards">
       <common-card
         image-source="img/iskaypet.webp"
         :image-height="workImageHeight.ISKAYPET"
@@ -67,15 +67,24 @@ import { workImageHeight } from "@/models/ImagesHeight";
 <style lang="scss" scoped>
 //Styles
 .home-work-experience {
-  padding: 25px;
+  padding: 25px 200px 0;
 
-  @include desktop-large {
-    padding: 25px 200px;
+  @include tablet {
+    padding: 25px;
   }
 
-  &__cads {
+  @include mobile {
+    flex-direction: column;
+  }
+
+  &__cards {
     display: flex;
-    overflow-x: auto;
+    flex-wrap: wrap;
+    @include tablet {
+      padding: 25px;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
 </style>
