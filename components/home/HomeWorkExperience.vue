@@ -80,6 +80,7 @@ import { workImageHeight } from "@/models/ImagesHeight";
   &__cards {
     display: flex;
     flex-wrap: wrap;
+
     @include tablet {
       padding: 25px;
       justify-content: center;
