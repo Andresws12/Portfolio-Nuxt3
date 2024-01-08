@@ -49,7 +49,7 @@ export default defineNuxtConfig({
         file: "es-ES.json",
       },
     ],
-    defaultLocale: "en-US",
+    defaultLocale: "es-ES",
   },
   css: ["assets/styles/main.scss"],
   vite: {
