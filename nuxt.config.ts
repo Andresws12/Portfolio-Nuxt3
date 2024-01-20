@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     "@nuxtjs/robots",
     "nuxt-purgecss",
     "nuxt-delay-hydration",
-    "nuxt-simple-sitemap",
+    "@nuxtjs/sitemap",
     "nuxt-schema-org",
   ],
   site: {
@@ -29,12 +29,13 @@ export default defineNuxtConfig({
   },
   particles: {
     mode: "slim", // 'full' | 'slim' | 'basic' | 'custom'
+    lazy: true,
   },
   i18n: {
     /* module options */
     lazy: true,
     langDir: "locales",
-    strategy: "prefix_except_default",
+    strategy: "prefix_and_default",
     locales: [
       {
         code: "en-US",
@@ -47,6 +48,7 @@ export default defineNuxtConfig({
         iso: "es-ES",
         name: "Español",
         file: "es-ES.json",
+        isCatchallLocale: true,
       },
     ],
     defaultLocale: "es-ES",
