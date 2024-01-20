@@ -28,9 +28,9 @@ const particlesInit = async (engine: Engine): Promise<void> => {
 };
 
 const i18nHead = useLocaleHead({
-  addSeoAttributes: {
-    canonicalQueries: ["/"],
-  },
+  addDirAttribute: true,
+  addSeoAttributes: true,
+  route: useRoute(),
 });
 
 useServerHead({
