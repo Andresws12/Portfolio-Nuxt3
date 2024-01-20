@@ -4,7 +4,6 @@
 export default defineNuxtConfig({
   modules: [
     "@nuxtjs/i18n",
-    "nuxt-particles",
     "@nuxt/image",
     "@nuxtjs/robots",
     "nuxt-purgecss",
@@ -27,10 +26,6 @@ export default defineNuxtConfig({
     densities: [0.5, 1],
     format: ["webp"],
     quality: 50,
-  },
-  particles: {
-    mode: "slim", // 'full' | 'slim' | 'basic' | 'custom'
-    lazy: true,
   },
   i18n: {
     /* module options */
