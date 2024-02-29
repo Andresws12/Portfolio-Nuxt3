@@ -49,6 +49,7 @@ export default defineNuxtConfig({
       },
     ],
     defaultLocale: 'es-ES',
+    detectBrowserLanguage: false,
   },
   css: ['assets/styles/main.scss'],
   vite: {
