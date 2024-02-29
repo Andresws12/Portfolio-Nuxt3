@@ -35,14 +35,14 @@ export interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  imageSource: "",
-  imageData: "",
-  imageHeight: "",
-  businessName: "",
-  businessRole: "",
-  businessPeriod: "",
+  imageSource: '',
+  imageData: '',
+  imageHeight: '',
+  businessName: '',
+  businessRole: '',
+  businessPeriod: '',
   isActive: false,
-  activeTextButton: "",
+  activeTextButton: '',
 });
 </script>
 

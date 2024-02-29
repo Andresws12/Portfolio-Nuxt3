@@ -2,12 +2,12 @@
   <section data-cy="home-section" class="home-personal-description">
     <article class="home-personal-description__content">
       <div>
-        <h2>{{ $t("views.home.homeDescriptionPersonal.descriptionWho") }}</h2>
+        <h2>{{ $t('views.home.homeDescriptionPersonal.descriptionWho') }}</h2>
         <p>
-          {{ $t("views.home.homeDescriptionPersonal.descriptions.paragraph1") }}
+          {{ $t('views.home.homeDescriptionPersonal.descriptions.paragraph1') }}
         </p>
         <p>
-          {{ $t("views.home.homeDescriptionPersonal.descriptions.paragraph2") }}
+          {{ $t('views.home.homeDescriptionPersonal.descriptions.paragraph2') }}
         </p>
       </div>
       <NuxtImg

@@ -6,11 +6,11 @@
 </template>
 
 <script setup lang="ts">
-import { createHead } from "unhead";
+import { createHead } from 'unhead';
 
 const i18n = useI18n();
 
-import ButtonTranslation from "@/components/common/ButtonTranslation.vue";
+import ButtonTranslation from '@/components/common/ButtonTranslation.vue';
 
 createHead();
 
@@ -29,19 +29,19 @@ useServerHead({
 });
 
 useServerSeoMeta({
-  author: i18n.t("common.seo.author"),
-  publisher: i18n.t("common.seo.author"),
-  robots: "index, follow",
-  googleSiteVerification: "wd0T2xFbSwhH9Pv08VAGT59eyVVSXjlkEL1_sckqUBY",
+  author: i18n.t('common.seo.author'),
+  publisher: i18n.t('common.seo.author'),
+  robots: 'index, follow',
+  googleSiteVerification: 'wd0T2xFbSwhH9Pv08VAGT59eyVVSXjlkEL1_sckqUBY',
 });
 
 useSchemaOrg([
   definePerson({
-    email: "andreshernandez12.1995@gmail.com",
-    jobTitle: i18n.t("views.home.homeDescription.subtitle"),
-    worksFor: i18n.t("common.works.iskaypet.name"),
-    image: "/img/body.webp",
-    sameAs: ["hhttps://github.com/Andresws12"],
+    email: 'andreshernandez12.1995@gmail.com',
+    jobTitle: i18n.t('views.home.homeDescription.subtitle'),
+    worksFor: i18n.t('common.works.iskaypet.name'),
+    image: '/img/body.webp',
+    sameAs: ['hhttps://github.com/Andresws12'],
   }),
   defineWebPage(),
 ]);

@@ -1,6 +1,6 @@
 <template>
   <section data-cy="home-section" class="home-work-experience">
-    <h2>{{ $t("views.home.homeWorkExperience.title") }}</h2>
+    <h2>{{ $t('views.home.homeWorkExperience.title') }}</h2>
     <div class="home-work-experience__cards">
       <common-card
         image-source="img/iskaypet.webp"
@@ -59,9 +59,9 @@
 </template>
 
 <script lang="ts" setup>
-import CommonCard from "@/components/common/CommonCard.vue";
+import CommonCard from '@/components/common/CommonCard.vue';
 
-import { workImageHeight } from "@/models/ImagesHeight";
+import { workImageHeight } from '@/models/ImagesHeight';
 </script>
 
 <style lang="scss" scoped>

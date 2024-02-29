@@ -5,23 +5,23 @@
       src="/img/body.webp"
       :alt="$t('common.images.dataBodyImage')"
       :title="$t('common.images.dataBodyImage')"
-      sizes="sm:150px"
+      quality="65"
       width="230"
       height="360"
     />
     <article class="home-description__data">
       <h1 class="home-description__title">
-        {{ $t("views.home.homeDescription.title") }}
+        {{ $t('views.home.homeDescription.title') }}
       </h1>
       <h2 class="home-description__subtitle">
-        {{ $t("views.home.homeDescription.subtitle") }}
+        {{ $t('views.home.homeDescription.subtitle') }}
       </h2>
 
       <button-contact />
       <div class="home-description__description-section">
-        <p>{{ $t("views.home.homeDescription.descriptionWelcome") }}</p>
+        <p>{{ $t('views.home.homeDescription.descriptionWelcome') }}</p>
         <p>
-          {{ $t("views.home.homeDescription.description") }}
+          {{ $t('views.home.homeDescription.description') }}
         </p>
       </div>
     </article>
@@ -29,7 +29,7 @@
 </template>
 
 <script lang="ts" setup>
-import ButtonContact from "@/components/common/ButtonContact.vue";
+import ButtonContact from '@/components/common/ButtonContact.vue';
 </script>
 
 <style lang="scss" scoped>

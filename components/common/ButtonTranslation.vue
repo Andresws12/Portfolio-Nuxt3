@@ -7,7 +7,7 @@
 <script setup lang="ts">
 const { locale, setLocale } = useI18n();
 const changeLanguage = () => {
-  locale.value === "es-ES" ? setLocale("en-US") : setLocale("es-ES");
+  locale.value === 'es-ES' ? setLocale('en-US') : setLocale('es-ES');
 };
 </script>
 
