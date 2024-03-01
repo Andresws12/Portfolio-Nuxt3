@@ -40,8 +40,8 @@ useSchemaOrg([
     email: 'andreshernandez12.1995@gmail.com',
     jobTitle: i18n.t('views.home.homeDescription.subtitle'),
     worksFor: i18n.t('common.works.iskaypet.name'),
-    image: '/img/body.webp',
-    sameAs: ['hhttps://github.com/Andresws12'],
+    image: '/img/andres-front-programador.webp',
+    sameAs: ['https://github.com/Andresws12'],
   }),
   defineWebPage(),
 ]);
