@@ -10,7 +10,6 @@
       <NuxtImg
         src="/img/github.svg"
         :alt="$t('common.images.dataGithubImage')"
-        :title="$t('common.images.dataGithubImage')"
         class="contact-buttons__icon"
         width="29"
         height="29"
@@ -27,7 +26,6 @@
         class="contact-buttons__icon"
         src="/img/linkedin.svg"
         :alt="$t('common.images.dataLinkedinImage')"
-        :title="$t('common.images.dataLinkedinImage')"
         width="29"
         height="29"
         loading="lazy"
