@@ -10,8 +10,8 @@
       src="/img/andres-front-programador.webp"
       :alt="$t('common.images.dataBodyImage')"
       sizes="220px sm:180px md:240px lg:250px xl:350px"
-      width="200"
-      height="200"
+      width="175"
+      height="175"
     />
     <article class="home-description__data">
       <h1 class="home-description__title is-title">
@@ -42,8 +42,10 @@ import ButtonContact from '@/components/common/ButtonContact.vue';
 
   &__data {
     padding: 0 35px;
+    align-self: start;
 
     @include mobile {
+      margin-top: 15px;
       padding: 0;
     }
   }
