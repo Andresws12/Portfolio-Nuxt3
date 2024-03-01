@@ -1,29 +1,23 @@
 <template>
-  <section data-cy="home-section" class="home-description">
+  <section data-cy="home-section" class="home-description card">
     <NuxtImg
       class="home-description__image"
-      src="/img/body.webp"
+      src="/img/andres-front-programador.webp"
       :alt="$t('common.images.dataBodyImage')"
       :title="$t('common.images.dataBodyImage')"
-      quality="65"
-      width="230"
-      height="360"
+      sizes="220px sm:350px md:450px lg:550px xl:650px"
+      width="200"
+      height="200"
     />
     <article class="home-description__data">
-      <h1 class="home-description__title">
+      <h1 class="home-description__title is-title">
         {{ $t('views.home.homeDescription.title') }}
       </h1>
-      <h2 class="home-description__subtitle">
+      <h2 class="home-description__subtitle is-subtitle">
         {{ $t('views.home.homeDescription.subtitle') }}
       </h2>
 
       <button-contact />
-      <div class="home-description__description-section">
-        <p>{{ $t('views.home.homeDescription.descriptionWelcome') }}</p>
-        <p>
-          {{ $t('views.home.homeDescription.description') }}
-        </p>
-      </div>
     </article>
   </section>
 </template>
@@ -36,21 +30,10 @@ import ButtonContact from '@/components/common/ButtonContact.vue';
 //Styles
 .home-description {
   display: flex;
-  padding: 25px 200px 0;
-  align-items: flex-end;
-
-  @include tablet {
-    padding: 25px 55px 0;
-  }
+  align-items: center;
 
   @include mobile {
-    padding: 25px 25px 0;
     flex-direction: column;
-    align-items: center;
-  }
-
-  &__title {
-    font-size: 1.75rem;
   }
 
   &__data {
@@ -63,12 +46,10 @@ import ButtonContact from '@/components/common/ButtonContact.vue';
 
   &__image {
     z-index: 2;
-    -webkit-filter: drop-shadow(0 0 90px $main-color);
-    filter: drop-shadow(0 0 90px $main-color);
-  }
-
-  &__description-section {
-    padding-bottom: 25px;
+    border-radius: 50%;
+    box-shadow:
+      rgb(0 0 0 / 16%) 0 10px 36px 0,
+      rgb(0 0 0 / 6%) 0 0 0 1px;
   }
 }
 </style>
