@@ -1,11 +1,14 @@
 <template>
-  <main aria-label="Main Content" class="home">
+  <main aria-label="main-content" class="home">
     <home-description />
+    <!-- Hidden links for skipping blocks -->
+    <accessibility-skips />
   </main>
 </template>
 
 <script lang="ts" setup>
 import HomeDescription from '@/components/home/HomeDescription.vue';
+import AccessibilitySkips from '@/components/common/AccessibilitySkips.vue';
 
 const i18n = useI18n();
 
