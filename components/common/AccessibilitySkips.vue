@@ -20,6 +20,13 @@
   >
     {{ $t('common.skips.skipToGithub') }}
   </a>
+  <a
+    href="#personal-data"
+    class="skip-link"
+    :aria-label="$t('common.skips.skipToPersonalData')"
+  >
+    {{ $t('common.skips.skipToPersonalData') }}
+  </a>
 </template>
 
 <style lang="scss" scoped>

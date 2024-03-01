@@ -1,5 +1,5 @@
 <template>
-  <main aria-label="main-content" class="home">
+  <main id="main-content" aria-label="main-content" class="home">
     <home-description />
     <!-- Hidden links for skipping blocks -->
     <accessibility-skips />

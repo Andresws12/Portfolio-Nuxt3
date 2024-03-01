@@ -1,5 +1,10 @@
 <template>
-  <section data-cy="home-section" class="home-description card">
+  <section
+    id="personal-data"
+    aria-label="personal-data"
+    data-cy="home-section"
+    class="home-description card"
+  >
     <NuxtImg
       class="home-description__image"
       src="/img/andres-front-programador.webp"
