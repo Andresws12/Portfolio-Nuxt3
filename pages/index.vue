@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
+  <main aria-label="Main Content" class="home">
     <home-description />
-  </div>
+  </main>
 </template>
 
 <script lang="ts" setup>
