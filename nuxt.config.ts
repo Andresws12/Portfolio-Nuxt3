@@ -25,7 +25,7 @@ export default defineNuxtConfig({
   image: {
     densities: [0.5, 1],
     format: ['webp'],
-    quality: 50,
+    quality: 80,
   },
   i18n: {
     /* module options */
