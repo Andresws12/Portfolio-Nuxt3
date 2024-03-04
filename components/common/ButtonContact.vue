@@ -14,7 +14,7 @@
         :alt="$t('common.images.dataGithubImage')"
         class="contact-buttons__icon"
         quality="100"
-        height="29"
+        height="25"
         loading="lazy"
       />
     </a>
@@ -31,7 +31,7 @@
         src="/img/linkedin.svg"
         :alt="$t('common.images.dataLinkedinImage')"
         quality="100"
-        height="29"
+        height="25"
         loading="lazy"
       />
     </a>
@@ -48,7 +48,7 @@
         src="/img/gmail.svg"
         :alt="$t('common.images.dataGmailImage')"
         quality="100"
-        height="29"
+        height="25"
         loading="lazy"
       />
     </a>
