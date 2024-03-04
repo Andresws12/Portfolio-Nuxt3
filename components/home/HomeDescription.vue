@@ -10,7 +10,6 @@
       src="/img/andres-front-programador.webp"
       :alt="$t('common.images.dataBodyImage')"
       sizes="220px sm:180px md:240px lg:250px xl:350px"
-      provider="cloudflare"
       width="175"
       height="175"
     />
