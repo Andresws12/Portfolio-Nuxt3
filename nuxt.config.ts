@@ -51,6 +51,10 @@ export default defineNuxtConfig({
     defaultLocale: 'es-ES',
     detectBrowserLanguage: false,
   },
+  experimental: {
+    inlineSSRStyles: false,
+    extractCSS: true,
+  },
   css: ['assets/styles/main.scss'],
   vite: {
     css: {
