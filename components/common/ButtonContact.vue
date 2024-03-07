@@ -15,6 +15,7 @@
         class="contact-buttons__icon"
         quality="100"
         height="25"
+        width="25"
         loading="lazy"
       />
     </a>
@@ -32,6 +33,7 @@
         :alt="$t('common.images.dataLinkedinImage')"
         quality="100"
         height="25"
+        width="25"
         loading="lazy"
       />
     </a>
@@ -49,6 +51,7 @@
         :alt="$t('common.images.dataGmailImage')"
         quality="100"
         height="25"
+        width="33"
         loading="lazy"
       />
     </a>
