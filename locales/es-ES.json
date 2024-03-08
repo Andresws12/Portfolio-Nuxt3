@@ -4,7 +4,7 @@
     "home": {
       "homeDescription": {
         "title": "Andrés Felipe Hernández Galindo",
-        "subtitle": "Desarrollador Front-end",
+        "subtitle": "Programador Front-end",
         "descriptionWelcome": "¡Hey, qué tal! 👋",
         "description": "¡Bienvenido a mi rincón digital! He construido este portafolio con mucho amor y código, utilizando Vue 3, Typescript y Pinia para una gestión de estados eficiente. Aquí no solo me divierto experimentando con las últimas tendencias en desarrollo frontend y poniendo en práctica mis ideas más innovadoras, sino que también podrás encontrar detalles sobre mi experiencia laboral."
       },
@@ -80,7 +80,7 @@
         "smartSearchTitle": "Buscador inteligente: ",
         "smartSearch": "Participé en la creación y mantenimiento de este proyecto, que fue desarrollado con Vue 2, Bulma, Buefy, Cypress y Jest.",
         "techServiceTitle": "App de servicio técnico para mecánicos: ",
-        "techService": "Fui uno de los desarrolladores en este proyecto, construido usando Vue 2, Bulma, Buefy, Cypress y Jest.",
+        "techService": "Fui uno de los Programadores en este proyecto, construido usando Vue 2, Bulma, Buefy, Cypress y Jest.",
         "productListingTitle": "Listado de productos con filtrado inteligente: ",
         "productListing": "Colaboré en la creación y mantenimiento de este proyecto, hecho con Vue 2, Bulma, Buefy, Cypress y Jest.",
         "dataManagerTitle": "Gestor de datos para el listado de productos: ",
@@ -89,8 +89,8 @@
         "wholesale": "Fui uno de los colaboradores en este proyecto, otra obra maestra en .NET y Bootstrap.",
         "seo": {
           "title": "Experiencia en STAR Group - Andrés Felipe Hernández Galindo",
-          "description": "Mi paso por STAR Group como desarrollador front end. Involucrado en múltiples proyectos y aplicaciones web.",
-          "keywords": "STAR Group, desarrollador front end, proyectos, aplicaciones web"
+          "description": "Mi paso por STAR Group como Programador front end. Involucrado en múltiples proyectos y aplicaciones web.",
+          "keywords": "STAR Group, Programador front end, proyectos, aplicaciones web"
         }
       }
     }
@@ -107,22 +107,22 @@
     "works": {
       "iskaypet": {
         "name": "Grupo IskayPet",
-        "title": "Desarrollador Front-end",
+        "title": "Programador Front-end",
         "period": "nov. 2021 - actualidad · 2 años"
       },
       "cloudappi": {
         "name": "CloudAPPI",
-        "title": "Desarrollador Front-end",
+        "title": "Programador Front-end",
         "period": "mar. 2021 - nov. 2021 · 9 mesess"
       },
       "star": {
         "name": "Star",
-        "title": "Desarrollador Front-end",
+        "title": "Programador Front-end",
         "period": "feb. 2019 - feb. 2021 · 2 años 1 mes"
       },
       "pantallazo": {
         "name": "Pantallazo Azul",
-        "title": "Desarrollador Front-end",
+        "title": "Programador Front-end",
         "period": "ago. 2018 - feb. 2019 · 7 meses"
       }
     },
@@ -144,7 +144,7 @@
       "error": {}
     },
     "images": {
-      "dataBodyImage": "Andrés Hernández Desarrollador Front-end",
+      "dataBodyImage": "Andrés Hernández Programador Front-end",
       "dataAnimalsImage": "Animales en low poly",
       "dataGithubImage": "Github logo",
       "dataLinkedinImage": "Linkedin logo",
