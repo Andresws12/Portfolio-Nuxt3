@@ -6,8 +6,7 @@
       rel="noopener noreferrer nofollow"
       href="https://github.com/Andresws12"
       :title="$t('common.images.dataGithubImage')"
-      aria-label="gitHub"
-      class=""
+      :aria-label="$t('common.ariaLabel.ariaLabelGithub')"
     >
       <NuxtImg
         src="/img/github.svg"
@@ -25,7 +24,7 @@
       rel="noopener noreferrer nofollow"
       href="https://www.linkedin.com/in/andreshernandez1995/"
       :title="$t('common.images.dataLinkedinImage')"
-      aria-label="linkedIn"
+      :aria-label="$t('common.ariaLabel.ariaLabelLinkedin')"
     >
       <NuxtImg
         class="contact-buttons__icon"
@@ -43,7 +42,7 @@
       rel="noopener noreferrer nofollow"
       href="mailto:andreshernandez12.1995@gmail.com"
       :title="$t('common.images.dataGmailImage')"
-      aria-label="gmail"
+      :aria-label="$t('common.ariaLabel.ariaLabelGmail')"
     >
       <NuxtImg
         class="contact-buttons__icon"

@@ -1,5 +1,9 @@
 <template>
-  <main id="main-content" aria-label="main-content" class="home">
+  <main
+    id="main-content"
+    :aria-label="$t('common.ariaLabel.ariaLabelMainContent')"
+    class="home"
+  >
     <home-description />
     <!-- Hidden links for skipping blocks -->
     <accessibility-skips />
