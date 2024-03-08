@@ -1,6 +1,6 @@
 <template>
   <button class="button button-translations" @click="changeLanguage()">
-    <span>{{ locale }}</span>
+    <span>{{ locale.slice(0, 2) }}</span>
   </button>
 </template>
 
@@ -14,11 +14,10 @@ const changeLanguage = () => {
 <style lang="scss" scoped>
 .button-translations {
   position: absolute;
-  top: 20px;
+  top: 12px;
   right: 20px;
   z-index: 20;
   text-transform: uppercase;
-  font-weight: 700;
 
   &__locale {
     margin-left: 8px;

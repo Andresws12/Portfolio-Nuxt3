@@ -1,13 +1,20 @@
 <template>
-  <home-description />
-  <home-personal-description />
-  <home-work-experience />
+  <main
+    id="main-content"
+    :aria-label="$t('common.ariaLabel.ariaLabelMainContent')"
+    class="home"
+  >
+    <home-description />
+    <HomeExperience />
+    <!-- Hidden links for skipping blocks -->
+    <accessibility-skips />
+  </main>
 </template>
 
 <script lang="ts" setup>
 import HomeDescription from '@/components/home/HomeDescription.vue';
-import HomePersonalDescription from '@/components/home/HomePersonalDescription.vue';
-import HomeWorkExperience from '@/components/home/HomeWorkExperience.vue';
+import AccessibilitySkips from '@/components/common/AccessibilitySkips.vue';
+import HomeExperience from '@/components/home/HomeExperience.vue';
 
 const i18n = useI18n();
 
@@ -26,3 +33,21 @@ useSchemaOrg([
   defineWebPage(),
 ]);
 </script>
+
+<style lang="scss" scoped>
+.home {
+  padding: 55px 200px 0;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    padding: 55px 55px 0;
+    justify-content: center;
+  }
+
+  @include mobile {
+    padding: 55px 15px 0;
+    justify-content: center;
+  }
+}
+</style>

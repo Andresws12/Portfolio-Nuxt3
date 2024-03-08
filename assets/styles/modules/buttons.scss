@@ -2,19 +2,18 @@
   cursor: pointer;
   padding: 7px 14px;
   border-radius: 5px;
-  background-color: $main-color;
-  color: $main-color-dark;
+  background-color: $main-color-dark;
+  color: $light-color-lighter;
   border: none;
   transition: all 0.3s ease 0s;
 
   &:hover {
-    background-color: $main-color-dark;
-    color: $main-color;
+    box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
   }
 
   &.is-secondary {
-    background-color: $main-color-dark;
-    color: $main-color;
+    background-color: $secondary-color;
+    color: $light-color-lighter;
 
     &:hover {
       background-color: $main-color-medium-light;

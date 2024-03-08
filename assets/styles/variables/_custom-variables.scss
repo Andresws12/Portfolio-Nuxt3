@@ -1,13 +1,29 @@
 // App Colors
-$main-color: #dcd7c9;
-$main-color-light: #3f4e4f;
-$main-color-dark: #2c3639;
-$main-color-medium-light: #a27b5c;
-$main-color-background: linear-gradient(
-  90deg,
-  $main-color-dark 0%,
-  $main-color-light 100%
-);
+// Palette: https: //colors.muz.li/palette/4d4dff/3655b3/884dff/4dffff/36b3b3
+$main-color: #3655b3;
+$main-color-transparent: #3655b352;
+$main-color-light: #4d4dff;
+$main-color-medium-light: #3655b3;
+$main-color-dark: #1a1a66;
+$secondary-color: #884dff;
+$secondary-color-transparent: #884dff52;
+$secondary-color-light: #a366ff;
+$secondary-color-dark: #662db3;
+$extra-color: #36b3b3;
+$extra-color-transparent: #36b3b352;
+$extra-color-light: #4dffff;
+$extra-color-dark: #1a8c8c;
+$main-color-background: #ebf1f4;
+
+// Basic Colors
+$dark-color: #313131;
+$dark-color-medium-light: #616161;
+$dark-color-light: #919191;
+$dark-color-lighter: #c2c2c2;
+$light-color: #e4e4e4;
+$light-color-medium-light: #ececec;
+$light-color-light: #f5f5f7;
+$light-color-lighter: #fff;
 
 // App Colors Lighters
 $main-color-success-lighter: #48c774;
@@ -18,11 +34,13 @@ $main-font: 'Yantramanav';
 $main-font-default: helvetica, arial, verdana, tahoma, sans-serif;
 
 // App filter colors
-$main-filter-color: invert(93%) sepia(25%) saturate(135%) hue-rotate(344deg)
-  brightness(91%) contrast(89%);
-$main-filter-color-light: invert(25%) sepia(8%) saturate(837%)
-  hue-rotate(135deg) brightness(103%) contrast(87%);
-$main-filter-color-dark: brightness(0) saturate(100%) invert(16%) sepia(7%)
-  saturate(1405%) hue-rotate(147deg) brightness(93%) contrast(85%);
-$main-filter-color-medium-light: invert(51%) sepia(30%) saturate(477%)
-  hue-rotate(344deg) brightness(93%) contrast(92%);
+$main-filter-color: invert(26%) sepia(66%) saturate(1607%) hue-rotate(207deg)
+  brightness(94%) contrast(87%);
+$main-filter-color-light: invert(22%) sepia(92%) saturate(2999%)
+  hue-rotate(238deg) brightness(105%) contrast(101%);
+$main-filter-color-medium-light: invert(27%) sepia(99%) saturate(1132%)
+  hue-rotate(207deg) brightness(86%) contrast(87%);
+$main-filter-color-dark: invert(5%) sepia(82%) saturate(6715%)
+  hue-rotate(247deg) brightness(90%) contrast(93%);
+$secondary-filter-color: invert(30%) sepia(31%) saturate(3274%)
+  hue-rotate(237deg) brightness(117%) contrast(111%);

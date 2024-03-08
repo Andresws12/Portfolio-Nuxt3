@@ -16,7 +16,7 @@
       <p class="layout-work__business-period">{{ businessPeriod }}</p>
       <slot name="business-data" />
     </article>
-    <article class="layout-work__personal-data">
+    <article class="layout-work__personal-data card">
       <slot />
     </article>
   </section>
@@ -76,8 +76,6 @@ const props = withDefaults(defineProps<Props>(), {
     padding: 25px;
     width: -webkit-fill-available;
     border-radius: 15px;
-    background-color: $main-color;
-    color: $main-color-dark;
     position: relative;
     z-index: 1;
   }

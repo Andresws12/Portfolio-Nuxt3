@@ -25,7 +25,7 @@ export default defineNuxtConfig({
   image: {
     densities: [0.5, 1],
     format: ['webp'],
-    quality: 50,
+    quality: 80,
   },
   i18n: {
     /* module options */
@@ -51,12 +51,16 @@ export default defineNuxtConfig({
     defaultLocale: 'es-ES',
     detectBrowserLanguage: false,
   },
+  experimental: {
+    inlineSSRStyles: false,
+    extractCSS: true,
+  },
   css: ['assets/styles/main.scss'],
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@use "assets/styles/utilities.scss" as *;',
+          additionalData: '@import "assets/styles/utilities.scss";',
         },
       },
     },

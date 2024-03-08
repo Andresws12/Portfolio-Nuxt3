@@ -1,8 +1,15 @@
 <template>
-  <section data-cy="home-section" class="home-work-experience">
-    <h2>{{ $t('views.home.homeWorkExperience.title') }}</h2>
-    <div class="home-work-experience__cards">
-      <common-card
+  <section
+    id="experience-data"
+    :aria-label="$t('common.ariaLabel.ariaLabelExperienceData')"
+    data-cy="home-section"
+    class="home-experience card"
+  >
+    <h2 class="home-experience__title is-subtitle is-strong">
+      {{ $t('views.home.homeWorkExperience.title') }}
+    </h2>
+    <div class="home-experience__container-cards">
+      <common-card-experience
         image-source="img/iskaypet.webp"
         :image-height="workImageHeight.ISKAYPET"
         :image-data="$t('common.images.dataIskaypetImage')"
@@ -18,7 +25,7 @@
         is-active
         @click="$router.push({ path: '/works/iskaypet-view' })"
       />
-      <common-card
+      <common-card-experience
         image-source="img/cloudappi.webp"
         :image-height="workImageHeight.CLOUDAPPI"
         :image-data="$t('common.images.dataCloudappiImage')"
@@ -30,7 +37,7 @@
         "
         @click="$router.push({ path: '/works/cloudappi-view' })"
       />
-      <common-card
+      <common-card-experience
         image-source="img/star.webp"
         :image-height="workImageHeight.STAR"
         :image-data="$t('common.images.dataStarImage')"
@@ -40,9 +47,9 @@
         :call-to-action-button="
           $t('views.home.homeWorkExperience.callToActionButton')
         "
-        @click="$router.push({ path: '/works/pantallazo-view' })"
+        @click="$router.push({ path: '/works/star-view' })"
       />
-      <common-card
+      <common-card-experience
         image-source="img/pantallazo.webp"
         :image-height="workImageHeight.PANTALLAZO"
         :image-data="$t('common.images.dataPantallazoImage')"
@@ -52,40 +59,34 @@
         :call-to-action-button="
           $t('views.home.homeWorkExperience.callToActionButton')
         "
-        @click="$router.push({ path: '/works/star-view' })"
+        @click="$router.push({ path: '/works/pantallazo-view' })"
       />
     </div>
   </section>
 </template>
 
 <script lang="ts" setup>
-import CommonCard from '@/components/common/CommonCard.vue';
-
+import CommonCardExperience from '@/components/common/CommonCardExperience.vue';
 import { workImageHeight } from '@/models/ImagesHeight';
 </script>
 
 <style lang="scss" scoped>
 //Styles
-.home-work-experience {
-  padding: 25px 200px 0;
-
-  @include tablet {
-    padding: 25px;
-  }
+.home-experience {
+  padding: 30px;
 
   @include mobile {
-    flex-direction: column;
+    padding: 5px;
   }
 
-  &__cards {
-    display: flex;
-    flex-wrap: wrap;
+  &__title {
+    margin: 25px;
+  }
 
-    @include tablet {
-      padding: 25px;
-      justify-content: center;
-      align-items: center;
-    }
+  &__container-cards {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 20px;
   }
 }
 </style>
