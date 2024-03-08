@@ -18,7 +18,6 @@ const changeLanguage = () => {
   right: 20px;
   z-index: 20;
   text-transform: uppercase;
-  font-size: 1.05rem;
 
   &__locale {
     margin-left: 8px;

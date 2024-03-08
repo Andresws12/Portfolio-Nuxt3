@@ -5,6 +5,7 @@
     class="home"
   >
     <home-description />
+    <HomeExperience />
     <!-- Hidden links for skipping blocks -->
     <accessibility-skips />
   </main>
@@ -13,6 +14,7 @@
 <script lang="ts" setup>
 import HomeDescription from '@/components/home/HomeDescription.vue';
 import AccessibilitySkips from '@/components/common/AccessibilitySkips.vue';
+import HomeExperience from '@/components/home/HomeExperience.vue';
 
 const i18n = useI18n();
 
@@ -36,6 +38,7 @@ useSchemaOrg([
 .home {
   padding: 55px 200px 0;
   display: flex;
+  flex-direction: column;
 
   @include tablet {
     padding: 55px 55px 0;
@@ -43,7 +46,7 @@ useSchemaOrg([
   }
 
   @include mobile {
-    padding: 55px 25px 0;
+    padding: 55px 15px 0;
     justify-content: center;
   }
 }

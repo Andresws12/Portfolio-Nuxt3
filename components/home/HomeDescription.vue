@@ -34,6 +34,7 @@ import ButtonContact from '@/components/common/ButtonContact.vue';
 //Styles
 .home-description {
   display: flex;
+  max-width: max-content;
   align-items: center;
 
   @include mobile {
