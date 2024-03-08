@@ -10,7 +10,6 @@
       <NuxtImg
         :src="props.imageSource"
         :alt="props.imageData"
-        :title="props.imageData"
         width="250"
         :height="props.imageHeight"
         loading="lazy"
