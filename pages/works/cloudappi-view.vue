@@ -6,6 +6,12 @@
     :business-name="$t('common.works.cloudappi.name')"
     :business-role="$t('common.works.cloudappi.title')"
     :business-period="$t('common.works.cloudappi.period')"
+    has-vue
+    has-react
+    has-angular
+    has-typescript
+    has-jquery
+    has-net
   >
     <h3>{{ $t('views.works.cloudappi.title') }}</h3>
     <p>
