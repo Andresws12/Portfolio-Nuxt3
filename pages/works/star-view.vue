@@ -6,6 +6,10 @@
     :business-name="$t('common.works.star.name')"
     :business-role="$t('common.works.star.title')"
     :business-period="$t('common.works.star.period')"
+    has-vue
+    has-typescript
+    has-net
+    has-jquery
   >
     <h3>{{ $t('views.works.star.title') }}</h3>
     <p>

@@ -6,6 +6,9 @@
     :business-name="$t('common.works.pantallazo.name')"
     :business-role="$t('common.works.pantallazo.title')"
     :business-period="$t('common.works.pantallazo.period')"
+    has-typescript
+    has-php
+    has-jquery
   >
     <h3>{{ $t('views.works.pantallazo.title') }}</h3>
     <p>

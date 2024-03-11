@@ -15,6 +15,64 @@
       <h2 class="layout-work__business-role">{{ businessRole }}</h2>
       <p class="layout-work__business-period">{{ businessPeriod }}</p>
       <slot name="business-data" />
+      <div class="layout-work__technologies-container">
+        <NuxtImg
+          v-if="props.hasVue"
+          src="/img/tech/vue.svg"
+          alt="vue"
+          width="25"
+          height="25"
+          loading="lazy"
+        />
+        <NuxtImg
+          v-if="props.hasAngular"
+          src="/img/tech/angular.svg"
+          alt="angular"
+          width="25"
+          height="25"
+          loading="lazy"
+        />
+        <NuxtImg
+          v-if="props.hasNet"
+          src="/img/tech/net.svg"
+          alt=".net"
+          width="25"
+          height="25"
+          loading="lazy"
+        />
+        <NuxtImg
+          v-if="props.hasReact"
+          src="/img/tech/react.svg"
+          alt="react"
+          width="25"
+          height="25"
+          loading="lazy"
+        />
+        <NuxtImg
+          v-if="props.hasJquery"
+          src="/img/tech/jquery.svg"
+          alt="jquery"
+          width="25"
+          height="25"
+          loading="lazy"
+        />
+        <NuxtImg
+          v-if="props.hasTypescript"
+          src="/img/tech/typescript.svg"
+          alt="typescript"
+          width="25"
+          height="25"
+          loading="lazy"
+        />
+        <NuxtImg
+          v-if="props.hasPhp"
+          src="/img/tech/php.svg"
+          alt="php"
+          width="25"
+          height="25"
+          loading="lazy"
+        />
+      </div>
     </article>
     <article class="layout-work__personal-data card">
       <slot />
@@ -32,6 +90,13 @@ export interface Props {
   businessPeriod: string;
   isActive?: boolean;
   activeTextButton?: string;
+  hasVue?: boolean;
+  hasAngular?: boolean;
+  hasNet?: boolean;
+  hasReact?: boolean;
+  hasJquery?: boolean;
+  hasTypescript?: boolean;
+  hasPhp?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -43,6 +108,13 @@ const props = withDefaults(defineProps<Props>(), {
   businessPeriod: '',
   isActive: false,
   activeTextButton: '',
+  hasVue: false,
+  hasAngular: false,
+  hasNet: false,
+  hasReact: false,
+  hasJquery: false,
+  hasTypescript: false,
+  hasPhp: false,
 });
 </script>
 
