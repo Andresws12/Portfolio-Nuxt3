@@ -12,6 +12,7 @@
         :alt="props.imageData"
         width="250"
         :height="props.imageHeight"
+        loading="lazy"
       />
       <span
         v-if="isActive"
@@ -38,6 +39,7 @@
         alt="vue"
         width="25"
         height="25"
+        loading="lazy"
       />
       <NuxtImg
         v-if="props.hasAngular"
@@ -45,6 +47,7 @@
         alt="angular"
         width="25"
         height="25"
+        loading="lazy"
       />
       <NuxtImg
         v-if="props.hasNet"
@@ -52,6 +55,7 @@
         alt=".net"
         width="25"
         height="25"
+        loading="lazy"
       />
       <NuxtImg
         v-if="props.hasReact"
@@ -59,6 +63,7 @@
         alt="react"
         width="25"
         height="25"
+        loading="lazy"
       />
       <NuxtImg
         v-if="props.hasJquery"
@@ -66,6 +71,7 @@
         alt="jquery"
         width="25"
         height="25"
+        loading="lazy"
       />
       <NuxtImg
         v-if="props.hasTypescript"
@@ -73,6 +79,7 @@
         alt="typescript"
         width="25"
         height="25"
+        loading="lazy"
       />
       <NuxtImg
         v-if="props.hasPhp"
@@ -80,6 +87,7 @@
         alt="php"
         width="25"
         height="25"
+        loading="lazy"
       />
     </div>
     <div class="common-card-experience__button-container">
