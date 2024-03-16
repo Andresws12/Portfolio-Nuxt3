@@ -5,6 +5,7 @@
         :src="props.imageSource"
         :alt="props.imageData"
         :title="props.imageData"
+        provider="cloudflare"
         sizes="100vw xs:25vw sm:50vw md:400px"
         loading="lazy"
         width="250"
