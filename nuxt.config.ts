@@ -26,6 +26,9 @@ export default defineNuxtConfig({
     densities: [0.5, 1],
     format: ['webp'],
     quality: 80,
+    cloudflare: {
+      baseURL: 'https://andres-hernandez.com',
+    },
   },
   i18n: {
     /* module options */
