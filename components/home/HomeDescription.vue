@@ -8,6 +8,7 @@
     <NuxtImg
       class="home-description__image"
       src="/img/andres-front-programador.webp"
+      provider="cloudflare"
       :alt="$t('common.images.dataBodyImage')"
       sizes="220px sm:180px md:240px lg:250px xl:350px"
       densities="1x 2x"
