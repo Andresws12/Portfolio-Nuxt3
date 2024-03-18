@@ -24,6 +24,7 @@
           width="25"
           height="25"
           loading="lazy"
+          provider="cloudflare"
         />
         <NuxtImg
           v-if="props.hasAngular"
@@ -32,6 +33,7 @@
           width="25"
           height="25"
           loading="lazy"
+          provider="cloudflare"
         />
         <NuxtImg
           v-if="props.hasNet"
@@ -40,6 +42,7 @@
           width="25"
           height="25"
           loading="lazy"
+          provider="cloudflare"
         />
         <NuxtImg
           v-if="props.hasReact"
@@ -56,6 +59,7 @@
           width="25"
           height="25"
           loading="lazy"
+          provider="cloudflare"
         />
         <NuxtImg
           v-if="props.hasTypescript"
@@ -64,6 +68,7 @@
           width="25"
           height="25"
           loading="lazy"
+          provider="cloudflare"
         />
         <NuxtImg
           v-if="props.hasPhp"
@@ -72,6 +77,7 @@
           width="25"
           height="25"
           loading="lazy"
+          provider="cloudflare"
         />
       </div>
     </article>
