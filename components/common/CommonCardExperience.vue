@@ -22,7 +22,10 @@
         {{ props.activeTextButton }}
       </span>
     </div>
-    <div class="common-card-experience__text-container">
+    <div
+      class="common-card-experience__text-container"
+      :aria-label="'Technologies ' + props.textTitle"
+    >
       <h3 class="common-card-experience__title is-subtitle is-strong">
         {{ props.textTitle }}
       </h3>
@@ -38,6 +41,7 @@
         v-if="props.hasVue"
         src="/img/tech/vue.svg"
         alt="vue"
+        title="vue logo"
         width="25"
         height="25"
         loading="lazy"
@@ -46,6 +50,7 @@
         v-if="props.hasAngular"
         src="/img/tech/angular.svg"
         alt="angular"
+        title="angular logo"
         width="25"
         height="25"
         loading="lazy"
@@ -54,6 +59,7 @@
         v-if="props.hasNet"
         src="/img/tech/net.svg"
         alt=".net"
+        title=".net logo"
         width="25"
         height="25"
         loading="lazy"
@@ -62,6 +68,7 @@
         v-if="props.hasReact"
         src="/img/tech/react.svg"
         alt="react"
+        title="react logo"
         width="25"
         height="25"
         loading="lazy"
@@ -70,6 +77,7 @@
         v-if="props.hasJquery"
         src="/img/tech/jquery.svg"
         alt="jquery"
+        title="jquery logo"
         width="25"
         height="25"
         loading="lazy"
@@ -78,6 +86,7 @@
         v-if="props.hasTypescript"
         src="/img/tech/typescript.svg"
         alt="typescript"
+        title="typescript logo"
         width="25"
         height="25"
         loading="lazy"
@@ -86,6 +95,7 @@
         v-if="props.hasPhp"
         src="/img/tech/php.svg"
         alt="php"
+        title="php logo"
         width="25"
         height="25"
         loading="lazy"
