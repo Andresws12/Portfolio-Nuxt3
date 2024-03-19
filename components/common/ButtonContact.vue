@@ -1,5 +1,5 @@
 <template>
-  <p class="contact-buttons">
+  <p class="contact-buttons" data-cy="button-contact">
     <a
       id="gitHub"
       target="_blank"
@@ -7,6 +7,7 @@
       href="https://github.com/Andresws12"
       :title="$t('common.images.dataGithubImage')"
       :aria-label="$t('common.ariaLabel.ariaLabelGithub')"
+      data-cy="button-contact-github"
     >
       <NuxtImg
         src="/img/github.svg"
@@ -25,6 +26,7 @@
       href="https://www.linkedin.com/in/andreshernandez1995/"
       :title="$t('common.images.dataLinkedinImage')"
       :aria-label="$t('common.ariaLabel.ariaLabelLinkedin')"
+      data-cy="button-contact-linkedin"
     >
       <NuxtImg
         class="contact-buttons__icon"
@@ -43,6 +45,7 @@
       href="mailto:andreshernandez12.1995@gmail.com"
       :title="$t('common.images.dataGmailImage')"
       :aria-label="$t('common.ariaLabel.ariaLabelGmail')"
+      data-cy="button-contact-gmail"
     >
       <NuxtImg
         class="contact-buttons__icon"

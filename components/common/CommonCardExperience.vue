@@ -5,8 +5,12 @@
     :aria-label="
       $t('common.ariaLabel.ariaLabelWorkData') + ' ' + props.textTitle
     "
+    data-cy="common-card-experience"
   >
-    <div class="common-card-experience__image-container">
+    <div
+      class="common-card-experience__image-container"
+      data-cy="common-card-experience-image-container"
+    >
       <NuxtImg
         :src="props.imageSource"
         :alt="props.imageData"
@@ -14,15 +18,20 @@
         :height="props.imageHeight"
         loading="lazy"
         provider="cloudflare"
+        data-cy="common-card-experience-work-image"
       />
       <span
         v-if="isActive"
         class="common-card-experience__image-label is-extra is-strong"
+        data-cy="common-card-experience-active-label"
       >
         {{ props.activeTextButton }}
       </span>
     </div>
-    <div class="common-card-experience__text-container">
+    <div
+      class="common-card-experience__text-container"
+      data-cy="common-card-experience-text-container"
+    >
       <h3 class="common-card-experience__title is-subtitle is-strong">
         {{ props.textTitle }}
       </h3>
@@ -36,6 +45,7 @@
     <div
       class="common-card-experience__technologies-container"
       :aria-label="'Technologies ' + props.textTitle"
+      data-cy="common-card-experience-technologies-container"
     >
       <img
         v-if="props.hasVue"
@@ -45,6 +55,7 @@
         width="25"
         height="25"
         loading="lazy"
+        data-cy="common-card-experience-tech-vue"
       />
       <img
         v-if="props.hasAngular"
@@ -54,6 +65,7 @@
         width="25"
         height="25"
         loading="lazy"
+        data-cy="common-card-experience-tech-angular"
       />
       <img
         v-if="props.hasNet"
@@ -63,6 +75,7 @@
         width="25"
         height="25"
         loading="lazy"
+        data-cy="common-card-experience-tech-net"
       />
       <img
         v-if="props.hasReact"
@@ -72,6 +85,7 @@
         width="25"
         height="25"
         loading="lazy"
+        data-cy="common-card-experience-tech-react"
       />
       <img
         v-if="props.hasJquery"
@@ -81,6 +95,7 @@
         width="25"
         height="25"
         loading="lazy"
+        data-cy="common-card-experience-tech-jquery"
       />
       <img
         v-if="props.hasTypescript"
@@ -90,6 +105,7 @@
         width="25"
         height="25"
         loading="lazy"
+        data-cy="common-card-experience-tech-typescript"
       />
       <img
         v-if="props.hasPhp"
@@ -99,10 +115,15 @@
         width="25"
         height="25"
         loading="lazy"
+        data-cy="common-card-experience-tech-php"
       />
     </div>
     <div class="common-card-experience__button-container">
-      <button class="button" @click="emit('click')">
+      <button
+        class="button"
+        data-cy="common-card-experience-button"
+        @click="emit('click')"
+      >
         {{ props.callToActionButton }}
       </button>
     </div>

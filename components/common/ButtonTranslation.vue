@@ -1,5 +1,9 @@
 <template>
-  <button class="button button-translations" @click="changeLanguage()">
+  <button
+    class="button button-translations"
+    data-cy="button-translation"
+    @click="changeLanguage()"
+  >
     <span>{{ locale.slice(0, 2) }}</span>
   </button>
 </template>
