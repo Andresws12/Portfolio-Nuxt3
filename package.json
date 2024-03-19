@@ -17,7 +17,16 @@
     "fix:all": "pnpm format && pnpm lint && pnpm stylelint",
     "check:all": "pnpm format:check && pnpm lint:check && pnpm stylelint:check",
     "stylelint:check": "stylelint \"{,!(node_modules|dist|.output|.nuxt)/**/}*.{css,scss,vue}\"",
-    "stylelint": "stylelint --fix \"{,!(node_modules|dist|.output|.nuxt)/**/}*.{css,scss,vue}\""
+    "stylelint": "stylelint --fix \"{,!(node_modules|dist|.output|.nuxt)/**/}*.{css,scss,vue}\"",
+    "test:e2e-cy-cli-action": "cypress run --browser chrome",
+    "test:e2e-cy": "export NODE_ENV=local && cypress open",
+    "test:e2e-cy-cli": "export NODE_ENV=local && cypress run --browser chrome",
+    "test:dev:e2e-cy": "export NODE_ENV=development && cypress open",
+    "test:dev:e2e-cy-cli": "export NODE_ENV=development && cypress run --browser chrome",
+    "test:stg:e2e-cy": "export NODE_ENV=staging && cypress open",
+    "test:stg:e2e-cy-cli": "export NODE_ENV=staging && cypress run --browser chrome",
+    "test:prod:e2e-cy": "export NODE_ENV=production && cypress open",
+    "test:prod:e2e-cy-cli": "export NODE_ENV=production && cypress run --browser chrome"
   },
   "devDependencies": {
     "@intlify/eslint-plugin-vue-i18n": "^2.0.0",
@@ -29,6 +38,8 @@
     "@nuxtjs/sitemap": "^5.1.2",
     "@typescript-eslint/eslint-plugin": "^7.1.1",
     "@vue/eslint-config-typescript": "^13.0.0",
+    "cypress": "^13.7.0",
+    "dotenv": "^16.4.5",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-cypress": "^2.15.1",
@@ -46,8 +57,9 @@
     "stylelint-config-standard-scss": "^13.0.0",
     "stylelint-declaration-strict-value": "^1.10.4",
     "stylelint-scss": "^6.2.1",
-    "vue": "^3.4.21",
     "typescript": "^5.4.2",
+    "vitest": "^1.4.0",
+    "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
   "engines": {

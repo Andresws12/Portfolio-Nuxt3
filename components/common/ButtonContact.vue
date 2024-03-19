@@ -59,9 +59,11 @@
     </a>
   </p>
 </template>
+
 <script lang="ts" setup>
 // Code
 </script>
+
 <style lang="scss" scoped>
 .contact-buttons {
   &__icon {
