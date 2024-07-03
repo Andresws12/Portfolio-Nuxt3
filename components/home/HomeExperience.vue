@@ -3,7 +3,7 @@
     id="experience-data"
     :aria-label="$t('common.ariaLabel.ariaLabelExperienceData')"
     data-cy="home-experience"
-    class="home-experience card"
+    class="home-experience"
   >
     <h2
       class="home-experience__title is-subtitle is-strong"
@@ -97,12 +97,6 @@ import { workImageHeight } from '@/models/ImagesHeight';
 <style lang="scss" scoped>
 //Styles
 .home-experience {
-  padding: 30px;
-
-  @include mobile {
-    padding: 5px;
-  }
-
   &__title {
     margin: 25px;
   }
