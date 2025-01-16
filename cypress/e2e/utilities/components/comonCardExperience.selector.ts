@@ -1,46 +1,46 @@
-import { cySelector } from '../utils';
+import { cySelector } from "../utils";
 
-const baseCommonCardExperience = 'common-card-experience';
+const baseCommonCardExperience = "common-card-experience";
 
 const commonCardExperience = cySelector(baseCommonCardExperience);
 const commonCardExperienceImageContainer = cySelector(
-  `${baseCommonCardExperience}-image-container`
+  `${baseCommonCardExperience}-image-container`,
 );
 const commonCardExperienceWorkImage = cySelector(
-  `${baseCommonCardExperience}-work-image`
+  `${baseCommonCardExperience}-work-image`,
 );
 const commonCardExperienceActiveLabel = cySelector(
-  `${baseCommonCardExperience}-active-label`
+  `${baseCommonCardExperience}-active-label`,
 );
 const commonCardExperienceTextContainer = cySelector(
-  `${baseCommonCardExperience}-text-container`
+  `${baseCommonCardExperience}-text-container`,
 );
 const commonCardExperienceTechnologiesContainer = cySelector(
-  `${baseCommonCardExperience}-technologies-container`
+  `${baseCommonCardExperience}-technologies-container`,
 );
 const commonCardExperienceTechVue = cySelector(
-  `${baseCommonCardExperience}-tech-vue`
+  `${baseCommonCardExperience}-tech-vue`,
 );
 const commonCardExperienceTechAngular = cySelector(
-  `${baseCommonCardExperience}-tech-angular`
+  `${baseCommonCardExperience}-tech-angular`,
 );
 const commonCardExperienceTechNet = cySelector(
-  `${baseCommonCardExperience}-tech-net`
+  `${baseCommonCardExperience}-tech-net`,
 );
 const commonCardExperienceTechReact = cySelector(
-  `${baseCommonCardExperience}-tech-react`
+  `${baseCommonCardExperience}-tech-react`,
 );
 const commonCardExperienceTechJquery = cySelector(
-  `${baseCommonCardExperience}-tech-jquery`
+  `${baseCommonCardExperience}-tech-jquery`,
 );
 const commonCardExperienceTechTypescript = cySelector(
-  `${baseCommonCardExperience}-tech-typescript`
+  `${baseCommonCardExperience}-tech-typescript`,
 );
 const commonCardExperienceTechPhp = cySelector(
-  `${baseCommonCardExperience}-tech-php`
+  `${baseCommonCardExperience}-tech-php`,
 );
 const commonCardExperienceButton = cySelector(
-  `${baseCommonCardExperience}-button`
+  `${baseCommonCardExperience}-button`,
 );
 
 export const commonCardExperienceSelectors = {

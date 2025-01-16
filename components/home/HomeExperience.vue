@@ -1,3 +1,8 @@
+<script lang="ts" setup>
+import CommonCardExperience from "@/components/common/CommonCardExperience.vue";
+import { workImageHeight } from "@/models/ImagesHeight";
+</script>
+
 <template>
   <section
     id="experience-data"
@@ -9,90 +14,83 @@
       class="home-experience__title is-subtitle is-strong"
       data-cy="home-experience-title"
     >
-      {{ $t('views.home.homeWorkExperience.title') }}
+      {{ $t("views.home.homeWorkExperience.title") }}
     </h2>
     <div class="home-experience__container-cards">
-      <common-card-experience
-        image-source="img/iskaypet.webp"
-        :image-height="workImageHeight.ISKAYPET"
-        :image-data="$t('common.images.dataIskaypetImage')"
-        :text-title="$t('common.works.iskaypet.name')"
-        :text-subtitle="$t('common.works.iskaypet.title')"
-        :text-description="$t('common.works.iskaypet.period')"
-        :call-to-action-button="
+      <CommonCardExperience
+        imageSource="img/iskaypet.webp"
+        :imageHeight="workImageHeight.ISKAYPET"
+        :imageData="$t('common.images.dataIskaypetImage')"
+        :textTitle="$t('common.works.iskaypet.name')"
+        :textSubtitle="$t('common.works.iskaypet.title')"
+        :textDescription="$t('common.works.iskaypet.period')"
+        :callToActionButton="
           $t('views.home.homeWorkExperience.callToActionButton')
         "
-        :active-text-button="
-          $t('views.home.homeWorkExperience.activeButtonText')
-        "
-        is-active
-        has-vue
-        has-react
-        has-typescript
-        has-jquery
+        :activeTextButton="$t('views.home.homeWorkExperience.activeButtonText')"
+        isActive
+        hasVue
+        hasReact
+        hasTypescript
+        hasJquery
         data-cy="home-experience-card-iskaypet"
         @click="$router.push({ path: '/works/iskaypet-view' })"
       />
-      <common-card-experience
-        image-source="img/cloudappi.webp"
-        :image-height="workImageHeight.CLOUDAPPI"
-        :image-data="$t('common.images.dataCloudappiImage')"
-        :text-title="$t('common.works.cloudappi.name')"
-        :text-subtitle="$t('common.works.cloudappi.title')"
-        :text-description="$t('common.works.cloudappi.period')"
-        :call-to-action-button="
+      <CommonCardExperience
+        imageSource="img/cloudappi.webp"
+        :imageHeight="workImageHeight.CLOUDAPPI"
+        :imageData="$t('common.images.dataCloudappiImage')"
+        :textTitle="$t('common.works.cloudappi.name')"
+        :textSubtitle="$t('common.works.cloudappi.title')"
+        :textDescription="$t('common.works.cloudappi.period')"
+        :callToActionButton="
           $t('views.home.homeWorkExperience.callToActionButton')
         "
-        has-vue
-        has-react
-        has-angular
-        has-typescript
-        has-jquery
-        has-net
+        hasVue
+        hasReact
+        hasAngular
+        hasTypescript
+        hasJquery
+        hasNet
         data-cy="home-experience-card-cloudappi"
         @click="$router.push({ path: '/works/cloudappi-view' })"
       />
-      <common-card-experience
-        image-source="img/star.webp"
-        :image-height="workImageHeight.STAR"
-        :image-data="$t('common.images.dataStarImage')"
-        :text-title="$t('common.works.star.name')"
-        :text-subtitle="$t('common.works.star.title')"
-        :text-description="$t('common.works.star.period')"
-        :call-to-action-button="
+      <CommonCardExperience
+        imageSource="img/star.webp"
+        :imageHeight="workImageHeight.STAR"
+        :imageData="$t('common.images.dataStarImage')"
+        :textTitle="$t('common.works.star.name')"
+        :textSubtitle="$t('common.works.star.title')"
+        :textDescription="$t('common.works.star.period')"
+        :callToActionButton="
           $t('views.home.homeWorkExperience.callToActionButton')
         "
-        has-vue
-        has-typescript
-        has-net
-        has-jquery
+        hasVue
+        hasTypescript
+        hasNet
+        hasJquery
         data-cy="home-experience-card-star"
         @click="$router.push({ path: '/works/star-view' })"
       />
-      <common-card-experience
-        image-source="img/pantallazo.webp"
-        :image-height="workImageHeight.PANTALLAZO"
-        :image-data="$t('common.images.dataPantallazoImage')"
-        :text-title="$t('common.works.pantallazo.name')"
-        :text-subtitle="$t('common.works.pantallazo.title')"
-        :text-description="$t('common.works.pantallazo.period')"
-        :call-to-action-button="
+      <CommonCardExperience
+        imageSource="img/pantallazo.webp"
+        :imageHeight="workImageHeight.PANTALLAZO"
+        :imageData="$t('common.images.dataPantallazoImage')"
+        :textTitle="$t('common.works.pantallazo.name')"
+        :textSubtitle="$t('common.works.pantallazo.title')"
+        :textDescription="$t('common.works.pantallazo.period')"
+        :callToActionButton="
           $t('views.home.homeWorkExperience.callToActionButton')
         "
-        has-typescript
-        has-php
-        has-jquery
+        hasTypescript
+        hasPhp
+        hasJquery
         data-cy="home-experience-card-pantallazo"
         @click="$router.push({ path: '/works/pantallazo-view' })"
       />
     </div>
   </section>
 </template>
-
-<script lang="ts" setup>
-import CommonCardExperience from '@/components/common/CommonCardExperience.vue';
-import { workImageHeight } from '@/models/ImagesHeight';
-</script>
 
 <style lang="scss" scoped>
 //Styles

@@ -1,3 +1,41 @@
+<script lang="ts" setup>
+export interface Props {
+  imageSource: string;
+  imageData: string;
+  imageHeight: string;
+  businessName: string;
+  businessRole: string;
+  businessPeriod: string;
+  isActive?: boolean;
+  activeTextButton?: string;
+  hasVue?: boolean;
+  hasAngular?: boolean;
+  hasNet?: boolean;
+  hasReact?: boolean;
+  hasJquery?: boolean;
+  hasTypescript?: boolean;
+  hasPhp?: boolean;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  imageSource: "",
+  imageData: "",
+  imageHeight: "",
+  businessName: "",
+  businessRole: "",
+  businessPeriod: "",
+  isActive: false,
+  activeTextButton: "",
+  hasVue: false,
+  hasAngular: false,
+  hasNet: false,
+  hasReact: false,
+  hasJquery: false,
+  hasTypescript: false,
+  hasPhp: false,
+});
+</script>
+
 <template>
   <section class="layout-work" data-cy="layout-work">
     <article
@@ -119,55 +157,19 @@
   </section>
 </template>
 
-<script lang="ts" setup>
-export interface Props {
-  imageSource: string;
-  imageData: string;
-  imageHeight: string;
-  businessName: string;
-  businessRole: string;
-  businessPeriod: string;
-  isActive?: boolean;
-  activeTextButton?: string;
-  hasVue?: boolean;
-  hasAngular?: boolean;
-  hasNet?: boolean;
-  hasReact?: boolean;
-  hasJquery?: boolean;
-  hasTypescript?: boolean;
-  hasPhp?: boolean;
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  imageSource: '',
-  imageData: '',
-  imageHeight: '',
-  businessName: '',
-  businessRole: '',
-  businessPeriod: '',
-  isActive: false,
-  activeTextButton: '',
-  hasVue: false,
-  hasAngular: false,
-  hasNet: false,
-  hasReact: false,
-  hasJquery: false,
-  hasTypescript: false,
-  hasPhp: false,
-});
-</script>
-
 <style lang="scss" scoped>
+@use "@/assets/styles/mixins/all" as mixins;
+
 //styles
 .layout-work {
   display: flex;
   padding: 100px 150px 55px;
 
-  @include tablet {
+  @include mixins.tablet {
     padding: 100px 25px 55px;
   }
 
-  @include mobile {
+  @include mixins.mobile {
     flex-direction: column;
   }
 
@@ -176,7 +178,7 @@ const props = withDefaults(defineProps<Props>(), {
     backdrop-filter: blur(5px);
     z-index: 1;
 
-    @include mobile {
+    @include mixins.mobile {
       display: flex;
       flex-direction: column;
       align-items: center;

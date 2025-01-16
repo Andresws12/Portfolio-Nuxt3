@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+// Code
+</script>
+
 <template>
   <p class="contact-buttons" data-cy="button-contact">
     <a
@@ -59,10 +63,6 @@
     </a>
   </p>
 </template>
-
-<script lang="ts" setup>
-// Code
-</script>
 
 <style lang="scss" scoped>
 .contact-buttons {

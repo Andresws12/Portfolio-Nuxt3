@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+import ButtonContact from "@/components/common/ButtonContact.vue";
+</script>
+
 <template>
   <section
     id="personal-data"
@@ -21,32 +25,30 @@
         class="home-description__title is-title"
         data-cy="home-description-data-title"
       >
-        {{ $t('views.home.homeDescription.title') }}
+        {{ $t("views.home.homeDescription.title") }}
       </h1>
       <h2
         class="home-description__subtitle is-subtitle"
         data-cy="home-description-data-subtitle"
       >
-        {{ $t('views.home.homeDescription.subtitle') }}
+        {{ $t("views.home.homeDescription.subtitle") }}
       </h2>
 
-      <button-contact />
+      <ButtonContact />
     </article>
   </section>
 </template>
 
-<script lang="ts" setup>
-import ButtonContact from '@/components/common/ButtonContact.vue';
-</script>
-
 <style lang="scss" scoped>
+@use "@/assets/styles/mixins/all" as mixins;
+
 //Styles
 .home-description {
   display: flex;
   max-width: max-content;
   align-items: center;
 
-  @include mobile {
+  @include mixins.mobile {
     flex-direction: column;
   }
 
@@ -54,7 +56,7 @@ import ButtonContact from '@/components/common/ButtonContact.vue';
     padding: 0 35px;
     align-self: start;
 
-    @include mobile {
+    @include mixins.mobile {
       margin-top: 15px;
       padding: 0;
     }

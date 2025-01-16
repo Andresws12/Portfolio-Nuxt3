@@ -1,31 +1,31 @@
-import { cySelector } from '../utils';
+import { cySelector } from "../utils";
 
-const baseDescription = 'home-description';
+const baseDescription = "home-description";
 
 const homeDescription = cySelector(baseDescription);
 const homeDescriptionImage = cySelector(`${baseDescription}-image`);
 const homeDescriptionData = cySelector(`${baseDescription}-data`);
 const homeDescriptionDataTitle = cySelector(`${baseDescription}-data-title`);
 const homeDescriptionDataSubtitle = cySelector(
-  `${baseDescription}-data-subtitle`
+  `${baseDescription}-data-subtitle`,
 );
 const homeDescriptionButtonContact = cySelector(
-  `${baseDescription}-button-contact`
+  `${baseDescription}-button-contact`,
 );
 
-const baseExperience = 'home-experience';
+const baseExperience = "home-experience";
 
 const homeExperience = cySelector(baseExperience);
 const homeExperienceTitle = cySelector(`${baseExperience}-title`);
 const homeExperienceCardIskaypet = cySelector(
-  `${baseExperience}-card-iskaypet`
+  `${baseExperience}-card-iskaypet`,
 );
 const homeExperienceCardCloudappi = cySelector(
-  `${baseExperience}-card-cloudappi`
+  `${baseExperience}-card-cloudappi`,
 );
 const homeExperienceCardStar = cySelector(`${baseExperience}-card-star`);
 const homeExperienceCardPantallazo = cySelector(
-  `${baseExperience}-card-pantallazo`
+  `${baseExperience}-card-pantallazo`,
 );
 
 export const homeDescriptionSelectors = {

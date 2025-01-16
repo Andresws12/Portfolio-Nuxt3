@@ -1,77 +1,49 @@
-// import { createResolver } from '@nuxt/kit'
-// const { resolve } = createResolver(import.meta.url)
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
-    '@nuxtjs/i18n',
-    '@nuxt/image',
-    '@nuxtjs/robots',
-    'nuxt-purgecss',
-    'nuxt-delay-hydration',
-    '@nuxtjs/sitemap',
-    'nuxt-schema-org',
+    "@nuxtjs/i18n",
+    "@nuxt/image",
+    "@nuxtjs/robots",
+    "nuxt-purgecss",
+    "nuxt-delay-hydration",
+    "@nuxtjs/sitemap",
+    "nuxt-schema-org",
+    "@nuxt/eslint",
   ],
+
   site: {
-    baseURL: 'https://andres-hernandez.com/',
-    url: 'https://andres-hernandez.com/',
-    name: 'Andres Felipe Hernandez Galindo - Website',
-    autoI18n: true,
+    // baseURL: 'https://andres-hernandez.com/',
+    // url: 'https://andres-hernandez.com/',
+    name: "Andres Felipe Hernandez Galindo - Website",
+    // autoI18n: true,
   },
+
   delayHydration: {
     // enables nuxt-delay-hydration in dev mode for testing
-    debug: process.env.NODE_ENV === 'development',
-    mode: 'init',
+    debug: process.env.NODE_ENV === "development",
+    mode: "init",
   },
+
   image: {
     densities: [0.5, 1],
-    format: ['webp'],
+    format: ["webp"],
     quality: 80,
     cloudflare: {
-      baseURL: 'https://andres-hernandez.com',
+      baseURL: "https://andres-hernandez.com",
     },
   },
+
   i18n: {
-    /* module options */
-    baseUrl: 'https://andres-hernandez.com',
-    lazy: true,
-    langDir: 'locales',
-    strategy: 'prefix_except_default',
-    locales: [
-      {
-        code: 'en-US',
-        iso: 'en-US',
-        name: 'English(US)',
-        file: 'en-US.json',
-      },
-      {
-        code: 'es-ES',
-        iso: 'es-ES',
-        name: 'Español',
-        file: 'es-ES.json',
-        isCatchallLocale: true,
-      },
-    ],
-    defaultLocale: 'es-ES',
-    detectBrowserLanguage: false,
+    vueI18n: "./nuxt-i18n.ts", // custom path example
+    baseUrl: "https://andres-hernandez.com",
   },
-  experimental: {
-    inlineSSRStyles: false,
-    extractCSS: true,
-  },
-  css: ['assets/styles/main.scss'],
-  vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: '@import "assets/styles/utilities.scss";',
-        },
-      },
-    },
-  },
+  css: ["assets/styles/main.scss"],
   app: {
     head: {
-      charset: 'utf-8',
-      viewport: 'width=device-width, initial-scale=1',
+      charset: "utf-8",
+      viewport: "width=device-width, initial-scale=1",
     },
   },
+
+  compatibilityDate: "2025-01-07",
 });

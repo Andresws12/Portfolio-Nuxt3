@@ -1,5 +1,5 @@
-@import 'modules/all';
-@import 'animations/all';
-@import 'yantramanav';
-@import 'modifiers/all';
-@import 'transitions/all';
+@use "modules/all" as *;
+@use "animations/all" as *;
+@use "yantramanav" as *;
+@use "modifiers/all" as *;
+@use "transitions/all" as *;
