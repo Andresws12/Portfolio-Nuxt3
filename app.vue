@@ -7,15 +7,11 @@ const i18n = useI18n();
 
 createHead();
 
-const i18nHead = useLocaleHead({
-  addDirAttribute: true,
-  addSeoAttributes: true,
-  route: useRoute(),
-});
+const i18nHead = useLocaleHead();
 
 useServerHead({
   htmlAttrs: {
-    lang: i18nHead.value.htmlAttrs!.lang,
+    lang: i18nHead.value.htmlAttrs!.lang || "es",
   },
   link: [...(i18nHead.value.link || [])],
   meta: [...(i18nHead.value.meta || [])],
