@@ -34,6 +34,8 @@ import { workImageHeight } from "@/models/ImagesHeight";
         hasTypescript
         hasJquery
         data-cy="home-experience-card-iskaypet"
+        dateStart="2021-11-01T00:00:00"
+        dateEnd="now"
         @click="$router.push({ path: '/works/iskaypet-view' })"
       />
       <CommonCardExperience
@@ -53,6 +55,8 @@ import { workImageHeight } from "@/models/ImagesHeight";
         hasJquery
         hasNet
         data-cy="home-experience-card-cloudappi"
+        dateStart="2021-03-01T00:00:00"
+        dateEnd="2021-11-01T00:00:00"
         @click="$router.push({ path: '/works/cloudappi-view' })"
       />
       <CommonCardExperience
@@ -70,6 +74,8 @@ import { workImageHeight } from "@/models/ImagesHeight";
         hasNet
         hasJquery
         data-cy="home-experience-card-star"
+        dateStart="2019-02-01T00:00:00"
+        dateEnd="2021-02-01T00:00:00"
         @click="$router.push({ path: '/works/star-view' })"
       />
       <CommonCardExperience
@@ -86,6 +92,8 @@ import { workImageHeight } from "@/models/ImagesHeight";
         hasPhp
         hasJquery
         data-cy="home-experience-card-pantallazo"
+        dateStart="2018-08-01T00:00:00"
+        dateEnd="2019-02-01T00:00:00"
         @click="$router.push({ path: '/works/pantallazo-view' })"
       />
     </div>
