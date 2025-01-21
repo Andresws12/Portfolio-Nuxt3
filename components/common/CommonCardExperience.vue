@@ -1,10 +1,12 @@
 <script lang="ts" setup>
-export interface Props {
+/**
+ * Represents the argument object for the CommonCardExperience component.
+ */
+export interface Args {
   imageSource: string;
   imageData: string;
   imageHeight: string;
   textTitle: string;
-  textDescription: string;
   textSubtitle: string;
   callToActionButton: string;
   isActive?: boolean;
@@ -20,106 +22,180 @@ export interface Props {
   dateEnd?: string;
 }
 
+interface Props {
+  args: Args;
+}
+
+/**
+ * Defines props with default values assigned via `withDefaults`.
+ */
 const props = withDefaults(defineProps<Props>(), {
-  imageSource: "",
-  imageData: "",
-  imageHeight: "",
-  textTitle: "",
-  textDescription: "",
-  textSubtitle: "",
-  callToActionButton: "",
-  isActive: false,
-  activeTextButton: "",
-  hasVue: false,
-  hasAngular: false,
-  hasNet: false,
-  hasReact: false,
-  hasJquery: false,
-  hasTypescript: false,
-  hasPhp: false,
-  dateStart: "",
-  dateEnd: "",
+  args: () => ({
+    imageSource: "",
+    imageData: "",
+    imageHeight: "",
+    textTitle: "",
+    textSubtitle: "",
+    callToActionButton: "",
+    isActive: false,
+    activeTextButton: "",
+    hasVue: false,
+    hasAngular: false,
+    hasNet: false,
+    hasReact: false,
+    hasJquery: false,
+    hasTypescript: false,
+    hasPhp: false,
+    dateStart: "",
+    dateEnd: "",
+  }),
 });
 
-const emit = defineEmits<EmitsType>();
-
 /**
- * Calculates the number of months between two dates.
- *
- * @param {Date} dateStart - The start date.
- * @param {Date} dateEnd - The end date.
- * @returns {number} The number of months between the start and end dates.
+ * Defines the `click` event emitted by this component.
  */
-const getMonths = (dateStart: Date, dateEnd: Date) => {
-  const diffTime = Math.abs(dateEnd.getTime() - dateStart.getTime());
-  return Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 30));
-};
-
-/**
- * Calculates the number of years from a given number of months.
- *
- * @param {number} months - The total number of months.
- * @returns {number} The number of complete years.
- */
-const getYearsByMonths = (months: number) => {
-  return Math.floor(months / 12);
-};
-
-/**
- * Removes the years from a given number of months.
- *
- * @param {number} months - The total number of months.
- * @returns {number} The remaining months after removing the years.
- */
-const removeYears = (months: number) => {
-  return months % 12;
-};
-
-/**
- * Calculates the total time between two dates in years and months.
- *
- * @param {Date} dateStart - The start date.
- * @param {Date} dateEnd - The end date.
- * @returns {string} - The total time formatted as "X años Y meses" or "Y meses" if less than a year.
- */
-const getTotalTime = (dateStart: Date, dateEnd: Date) => {
-  const diffMonths = getMonths(dateStart, dateEnd);
-  const years = getYearsByMonths(diffMonths);
-  const diffMonthsYears = removeYears(diffMonths);
-
-  if (years === 0) {
-    return `${diffMonthsYears} meses`;
-  }
-  return `${years} años ${diffMonthsYears} meses`;
-};
-
-const workDateCount = computed(() => {
-  if (props.dateStart && props.dateEnd) {
-    const dateStart = new Date(props.dateStart);
-    if (props.dateEnd === "now") {
-      const dateEnd = new Date();
-      const totalTime = getTotalTime(dateStart, dateEnd);
-      return totalTime;
-    }
-    const dateEnd = new Date(props.dateEnd);
-    const totalTime = getTotalTime(dateStart, dateEnd);
-    return totalTime;
-  }
-  return "";
-});
-
-type EmitsType = {
+const emit = defineEmits<{
   (e: "click"): void;
-};
+}>();
+
+const { t } = useI18n();
+
+const {
+  imageSource,
+  imageData,
+  imageHeight,
+  textTitle,
+  textSubtitle,
+  callToActionButton,
+  isActive,
+  activeTextButton,
+  hasVue,
+  hasAngular,
+  hasNet,
+  hasReact,
+  hasJquery,
+  hasTypescript,
+  hasPhp,
+  dateStart,
+  dateEnd,
+} = toRefs(props.args);
+
+/**
+ * Gets the absolute difference in full months between two dates.
+ *
+ * @param start - The start date.
+ * @param end - The end date.
+ * @returns The number of months difference (rounded up).
+ */
+function getMonthDifference(start: Date, end: Date): number {
+  const diffTime = Math.abs(end.getTime() - start.getTime());
+  // Approximate 30 days per month
+  return Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 30));
+}
+
+/**
+ * Returns the whole number of years in a month count.
+ *
+ * @param months - The total number of months.
+ * @returns The full years contained in those months.
+ */
+function getYearsFromMonths(months: number): number {
+  return Math.floor(months / 12);
+}
+
+/**
+ * Returns the remaining months after extracting whole years.
+ *
+ * @param months - The total number of months.
+ * @returns The leftover months once years are factored out.
+ */
+function getRemainingMonths(months: number): number {
+  return months % 12;
+}
+
+/**
+ * Constructs a display string of "X años Y meses" or "Y meses" for the
+ * time difference between two dates.
+ *
+ * @param start - The start date.
+ * @param end - The end date.
+ * @returns A formatted string of the duration between the dates.
+ */
+function formatDuration(start: Date, end: Date): string {
+  const totalMonths = getMonthDifference(start, end);
+  const years = getYearsFromMonths(totalMonths);
+  const months = getRemainingMonths(totalMonths);
+
+  if (years <= 0) {
+    return `${months} meses`;
+  } else {
+    return `${years} años ${months} meses`;
+  }
+}
+
+/**
+ * Computes how long the time span is, based on provided start and end dates.
+ * If `dateEnd` is "now", the current date is used as the end date.
+ */
+const workDateCount = computed((): string => {
+  // Ensure both dates exist and are non-empty
+  if (!dateStart.value || !dateEnd.value) {
+    return "";
+  }
+
+  // Parse start date and handle invalid date scenario
+  const start = new Date(dateStart.value);
+  if (isNaN(start.getTime())) return "";
+
+  let end: Date;
+  if (dateEnd.value === "now") {
+    end = new Date();
+  } else {
+    end = new Date(dateEnd.value);
+    if (isNaN(end.getTime())) return "";
+  }
+
+  return formatDuration(start, end);
+});
+
+/**
+ * Computes the formatted start and end dates for a work experience.
+ *
+ * @computed
+ * @returns {Object} An object containing the formatted start and end dates.
+ * @property {string} start - The formatted start date in "MMM YYYY" format.
+ * @property {string} end - The formatted end date in "MMM YYYY" format, or a localized string indicating the work is ongoing.
+ */
+const workDateNames = computed(() => {
+  const start = new Date(dateStart.value);
+  const end = dateEnd.value === "now" ? null : new Date(dateEnd.value);
+  return {
+    start: start.toLocaleDateString(undefined, {
+      year: "numeric",
+      month: "short",
+    }),
+    end: end
+      ? end.toLocaleDateString(undefined, { year: "numeric", month: "short" })
+      : t("views.home.homeWorkExperience.activeButtonText"),
+  };
+});
+
+/**
+ * Computed property that generates a description string for a work experience card.
+ * The description includes the start date, end date, and the duration of the work experience.
+ *
+ * @returns {string} A formatted string in the format "start - end · duration".
+ */
+const description = computed(() => {
+  return `${workDateNames.value.start} - ${workDateNames.value.end} · ${workDateCount.value}`;
+});
 </script>
 
 <template>
   <article
     class="common-card-experience card"
     :class="{ 'is-active': isActive }"
-    :aria-label="
-      $t('common.ariaLabel.ariaLabelWorkData') + ' ' + props.textTitle
-    "
+    :aria-label="$t('common.ariaLabel.ariaLabelWorkData') + ' ' + textTitle"
     data-cy="common-card-experience"
   >
     <div
@@ -127,10 +203,10 @@ type EmitsType = {
       data-cy="common-card-experience-image-container"
     >
       <NuxtImg
-        :src="props.imageSource"
-        :alt="props.imageData"
+        :src="imageSource"
+        :alt="imageData"
         width="250"
-        :height="props.imageHeight"
+        :height="imageHeight"
         loading="lazy"
         provider="cloudflare"
         data-cy="common-card-experience-work-image"
@@ -140,7 +216,7 @@ type EmitsType = {
         class="common-card-experience__image-label is-extra is-strong"
         data-cy="common-card-experience-active-label"
       >
-        {{ props.activeTextButton }}
+        {{ activeTextButton }}
       </span>
     </div>
     <div
@@ -148,22 +224,22 @@ type EmitsType = {
       data-cy="common-card-experience-text-container"
     >
       <h3 class="common-card-experience__title is-subtitle is-strong">
-        {{ props.textTitle }}
+        {{ textTitle }}
       </h3>
       <h4 class="common-card-experience__subtitle is-light">
-        {{ props.textSubtitle }}
+        {{ textSubtitle }}
       </h4>
       <p class="common-card-experience__description is-extra">
-        {{ props.textDescription }} {{ workDateCount }}
+        {{ description }}
       </p>
     </div>
     <div
       class="common-card-experience__technologies-container"
-      :aria-label="'Technologies ' + props.textTitle"
+      :aria-label="'Technologies ' + textTitle"
       data-cy="common-card-experience-technologies-container"
     >
       <img
-        v-if="props.hasVue"
+        v-if="hasVue"
         src="/img/tech/vue.svg"
         alt="vue"
         title="vue logo"
@@ -173,7 +249,7 @@ type EmitsType = {
         data-cy="common-card-experience-tech-vue"
       />
       <img
-        v-if="props.hasAngular"
+        v-if="hasAngular"
         src="/img/tech/angular.svg"
         alt="angular"
         title="angular logo"
@@ -183,7 +259,7 @@ type EmitsType = {
         data-cy="common-card-experience-tech-angular"
       />
       <img
-        v-if="props.hasNet"
+        v-if="hasNet"
         src="/img/tech/net.svg"
         alt=".net"
         title=".net logo"
@@ -193,7 +269,7 @@ type EmitsType = {
         data-cy="common-card-experience-tech-net"
       />
       <img
-        v-if="props.hasReact"
+        v-if="hasReact"
         src="/img/tech/react.svg"
         alt="react"
         title="react logo"
@@ -203,7 +279,7 @@ type EmitsType = {
         data-cy="common-card-experience-tech-react"
       />
       <img
-        v-if="props.hasJquery"
+        v-if="hasJquery"
         src="/img/tech/jquery.svg"
         alt="jquery"
         title="jquery logo"
@@ -213,7 +289,7 @@ type EmitsType = {
         data-cy="common-card-experience-tech-jquery"
       />
       <img
-        v-if="props.hasTypescript"
+        v-if="hasTypescript"
         src="/img/tech/typescript.svg"
         alt="typescript"
         title="typescript logo"
@@ -223,7 +299,7 @@ type EmitsType = {
         data-cy="common-card-experience-tech-typescript"
       />
       <img
-        v-if="props.hasPhp"
+        v-if="hasPhp"
         src="/img/tech/php.svg"
         alt="php"
         title="php logo"
@@ -240,7 +316,7 @@ type EmitsType = {
         data-cy="common-card-experience-button"
         @click="emit('click')"
       >
-        {{ props.callToActionButton }}
+        {{ callToActionButton }}
       </button>
     </div>
   </article>
@@ -249,7 +325,6 @@ type EmitsType = {
 <style lang="scss" scoped>
 @use "@/assets/styles/mixins/all" as mixins;
 
-// styles
 .common-card-experience {
   display: flex;
   flex-direction: column;
@@ -279,8 +354,8 @@ type EmitsType = {
     margin-bottom: 0;
   }
 
-  &__button-container,
-  &__text-container {
+  &__text-container,
+  &__button-container {
     padding: 0 15px 15px;
   }
 

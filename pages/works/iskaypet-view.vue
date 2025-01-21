@@ -1,8 +1,11 @@
 <script lang="ts" setup>
 import LayoutWork from "@/components/common/layouts/LayoutWork.vue";
 
-import { workImageHeight } from "@/models/ImagesHeight";
+import { useWorksExperienceStore } from "@/stores/worksExperienceStore";
 
+const worksExperienceStore = useWorksExperienceStore();
+
+const workExperiences = computed(() => worksExperienceStore.workArgs[0]);
 const i18n = useI18n();
 
 useSeoMeta({
@@ -22,19 +25,7 @@ useSchemaOrg([
 </script>
 
 <template>
-  <LayoutWork
-    imageSource="/img/iskaypet.webp"
-    :imageHeight="workImageHeight.ISKAYPET"
-    :imageData="$t('common.images.dataIskaypetImage')"
-    :businessName="$t('common.works.iskaypet.name')"
-    :businessRole="$t('common.works.iskaypet.title')"
-    :businessPeriod="$t('common.works.iskaypet.period')"
-    isActive
-    hasVue
-    hasReact
-    hasTypescript
-    hasJquery
-  >
+  <LayoutWork :args="workExperiences">
     <h3>{{ $t("views.works.iskaypet.title") }}</h3>
     <p>{{ $t("views.works.iskaypet.intro") }}</p>
     <h4>{{ $t("views.works.iskaypet.coolProjects") }}</h4>

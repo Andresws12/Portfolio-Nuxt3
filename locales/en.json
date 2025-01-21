@@ -7,7 +7,7 @@
     "home": {
       "homeDescription": {
         "title": "Andrés Felipe Hernández Galindo",
-        "subtitle": "Front-end Software Engineer",
+        "subtitle": "Senior Front-end Software Engineer",
         "descriptionWelcome": "Hey there! 👋",
         "description": "Welcome to my digital corner! I've built this portfolio with lots of love and code, using Vue 3, Typescript, and Pinia for efficient state management. Here, you'll not only find me having fun experimenting with the latest trends in frontend development and bringing my most innovative ideas to life, but you'll also get a glimpse into my work experience."
       },
@@ -17,9 +17,9 @@
         "activeButtonText": "Current"
       },
       "seo": {
-        "title": "Andrés Felipe Hernández Galindo - Front End Developer in Málaga",
-        "description": "Andrés Felipe Hernández Galindo, front end developer with over 5 years of experience. Explore my journey with companies like Iskaypet, CloudAPPI, STAR, and Pantallazo Azul. Based in Málaga, Spain.",
-        "keywords": "Andrés Felipe Hernández Galindo, front end developer, Málaga, Spain, Iskaypet, CloudAPPI, STAR, Pantallazo Azul"
+        "title": "Andrés Felipe Hernández Galindo - Senior Front End Developer in Málaga",
+        "description": "Andrés Felipe Hernández Galindo, senior front end developer with over 6 years of experience. Explore my journey with companies like Iskaypet, CloudAPPI, STAR, and Pantallazo Azul. Based in Málaga, Spain.",
+        "keywords": "Andrés Felipe Hernández Galindo, senior front end developer, Málaga, Spain, Iskaypet, CloudAPPI, STAR, Pantallazo Azul"
       }
     },
     "works": {
@@ -36,7 +36,7 @@
         "seo": {
           "title": "Experience at Iskaypet - Andrés Felipe Hernández Galindo",
           "description": "Discover my work and projects at Iskaypet as a front end developer. Web application development and maintenance.",
-          "keywords": "Iskaypet, front end developer, projects, web development"
+          "keywords": "Iskaypet,senior front end developer, projects, web development"
         }
       },
       "cloudappi": {
@@ -103,13 +103,11 @@
     "works": {
       "iskaypet": {
         "name": "IskayPet Group",
-        "title": "Front-end Software Engineer",
-        "period": "Nov 2021 - act"
+        "title": "SeniorFront-end Software Engineer"
       },
       "cloudappi": {
         "name": "CloudAPPI",
-        "title": "Front-end Software Engineer",
-        "period": "Mar 2021 - Nov 2021"
+        "title": "Front-end Software Engineer"
       },
       "star": {
         "name": "Star",
@@ -118,8 +116,7 @@
       },
       "pantallazo": {
         "name": "Pantallazo Azul",
-        "title": "Front-end Software Engineer",
-        "period": "Aug 2018 - Feb 2019 "
+        "title": "Front-end Software Engineer"
       }
     },
     "title": {
