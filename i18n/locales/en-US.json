@@ -25,6 +25,44 @@
         "callToActionButton": "More",
         "activeButtonText": "Current"
       },
+      "homeTestProjects": {
+        "title": "Let's take a look at some test projects I've completed 🙇",
+        "callToActionButton": "View Project",
+        "projects": {
+          "factorial": {
+            "title": "Factorial",
+            "description": "Bicycle builder"
+          },
+          "iskaypet": {
+            "title": "Iskaypet",
+            "description": "To-do task manager"
+          },
+          "bjumper": {
+            "title": "Bjumper",
+            "description": "Github user searcher"
+          },
+          "mayoral": {
+            "title": "Mayoral",
+            "description": "Vacation calendar"
+          },
+          "Patterson": {
+            "title": "Patterson",
+            "description": "Ecommerce with shopping cart"
+          },
+          "acciona": {
+            "title": "Acciona",
+            "description": "Favorite users manager"
+          },
+          "cloudappi": {
+            "title": "Cloudappi",
+            "description": "User manager"
+          },
+          "azertiumit": {
+            "title": "Azertiumit",
+            "description": "Github repositories searcher"
+          }
+        }
+      },
       "seo": {
         "title": "Andrés Felipe Hernández Galindo - Senior Front End Developer in Málaga",
         "description": "Andrés Felipe Hernández Galindo, senior front end developer with over 6 years of experience. Explore my journey with companies like Iskaypet, CloudAPPI, STAR, and Pantallazo Azul. Based in Málaga, Spain.",

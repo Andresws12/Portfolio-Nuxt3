@@ -8,6 +8,7 @@
   color: $light-color-lighter;
   border: none;
   transition: all 0.3s ease 0s;
+  text-decoration: none;
 
   &:hover {
     box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
@@ -19,7 +20,6 @@
 
     &:hover {
       background-color: $main-color-medium-light;
-      color: $main-color-dark;
     }
   }
 
