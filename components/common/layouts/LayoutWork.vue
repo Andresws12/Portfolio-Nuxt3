@@ -110,9 +110,22 @@ function formatDuration(start: Date, end: Date): string {
   const months = getRemainingMonths(totalMonths);
 
   if (years <= 0) {
-    return `${months} meses`;
+    return t("duration.months", { count: months });
+  } else if (months <= 0) {
+    return t("duration.years", { count: years });
   } else {
-    return `${years} años ${months} meses`;
+    const yearsText =
+      years === 1
+        ? t("duration.year_one", { count: years })
+        : t("duration.year_other", { count: years });
+    const monthsText =
+      months === 1
+        ? t("duration.month_one", { count: months })
+        : t("duration.month_other", { count: months });
+    return t("duration.yearsAndMonths", {
+      years: yearsText,
+      months: monthsText,
+    });
   }
 }
 
