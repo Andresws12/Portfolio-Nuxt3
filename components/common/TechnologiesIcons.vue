@@ -7,7 +7,13 @@ interface Technology {
   icon: string;
   delay: number;
   duration: number;
+  xPos?: string;
+  yPos?: string;
 }
+
+const POSITION_MARGIN = 10;
+const POSITION_RANGE = 80;
+const ANIMATION_START_DELAY = 100;
 
 const technologies = ref<Technology[]>([
   { name: "Vue", icon: "/img/tech/vue.svg", delay: 0, duration: 45 },
@@ -25,19 +31,27 @@ const technologies = ref<Technology[]>([
 ]);
 
 const animationActive = ref(false);
+const isClient = ref(false);
 
-const POSITION_MARGIN = 10;
-const POSITION_RANGE = 80;
-const ANIMATION_START_DELAY = 100;
+for (const tech of technologies.value) {
+  tech.xPos = `${POSITION_MARGIN + technologies.value.indexOf(tech) * 10}%`;
+  tech.yPos = `${POSITION_MARGIN + technologies.value.indexOf(tech) * 8}%`;
+}
+
+const getRandomPosition = () =>
+  `${POSITION_MARGIN + Math.random() * POSITION_RANGE}%`;
 
 onMounted(() => {
+  isClient.value = true;
+  for (const tech of technologies.value) {
+    tech.xPos = getRandomPosition();
+    tech.yPos = getRandomPosition();
+  }
+
   setTimeout(() => {
     animationActive.value = true;
   }, ANIMATION_START_DELAY);
 });
-
-const getRandomPosition = () =>
-  `${POSITION_MARGIN + Math.random() * POSITION_RANGE}%`;
 </script>
 
 <template>
@@ -50,8 +64,8 @@ const getRandomPosition = () =>
       :style="{
         '--delay': `${tech.delay}s`,
         '--duration': `${tech.duration}s`,
-        '--x-pos': getRandomPosition(),
-        '--y-pos': getRandomPosition(),
+        '--x-pos': tech.xPos,
+        '--y-pos': tech.yPos,
       }"
     >
       <NuxtImg
