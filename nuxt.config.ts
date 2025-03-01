@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     "nuxt-schema-org",
     "@nuxt/eslint",
     "@pinia/nuxt",
+    "@nuxt/devtools",
   ],
   pinia: {
     storesDirs: ["./stores/**"],
