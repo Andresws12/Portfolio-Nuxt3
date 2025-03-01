@@ -1,15 +1,23 @@
-import en from "./locales/en.json";
-import es from "./locales/es.json";
+import en from "./i18n/locales/en-US.json";
+import es from "./i18n/locales/es-ES.json";
 
-// You can use `defineI18nConfig` to get type inferences for options to pass to vue-i18n.
 export default defineI18nConfig(() => {
   return {
     legacy: false,
-    locale: "es",
+    locale: "es-ES",
+    fallbackLocale: "es-ES",
     globalInjection: true,
     messages: {
-      en,
-      es,
+      "en-US": en,
+      "es-ES": es,
+    },
+    numberFormats: {
+      "en-US": {
+        currency: { style: "currency", currency: "USD" },
+      },
+      "es-ES": {
+        currency: { style: "currency", currency: "EUR" },
+      },
     },
   };
 });

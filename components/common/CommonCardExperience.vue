@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { NuxtImg } from "#components";
 /**
  * Represents the argument object for the CommonCardExperience component.
  */

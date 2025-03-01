@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-// Code
+import { NuxtImg } from "#components";
 </script>
 
 <template>
