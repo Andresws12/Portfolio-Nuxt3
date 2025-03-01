@@ -3,6 +3,7 @@ import { createHead } from "unhead";
 import { NuxtPage } from "#components";
 
 import ButtonTranslation from "@/components/common/ButtonTranslation.vue";
+import TechnologiesIcons from "@/components/common/TechnologiesIcons.vue";
 
 const i18n = useI18n();
 
@@ -41,5 +42,6 @@ useSchemaOrg([
   <div>
     <NuxtPage />
     <ButtonTranslation />
+    <TechnologiesIcons />
   </div>
 </template>
