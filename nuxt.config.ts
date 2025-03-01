@@ -14,6 +14,8 @@ export default defineNuxtConfig({
   pinia: {
     storesDirs: ["./stores/**"],
   },
+  future: { compatibilityVersion: 4 },
+  compatibilityDate: "2024-07-30",
   site: {
     baseURL: "https://andres-hernandez.com/",
     url: "https://andres-hernandez.com/",
