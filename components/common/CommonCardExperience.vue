@@ -162,7 +162,7 @@ const workDateCount = computed((): string => {
   if (isNaN(start.getTime())) return "";
 
   let end: Date;
-  if (dateEnd.value === "Now") {
+  if (dateEnd.value === "now") {
     end = new Date();
   } else {
     end = new Date(dateEnd.value);
