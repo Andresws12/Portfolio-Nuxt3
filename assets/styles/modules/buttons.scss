@@ -1,11 +1,9 @@
-@use "../variables/custom-variables.scss" as *;
-
 .button {
   cursor: pointer;
   padding: 7px 14px;
   border-radius: 5px;
-  background-color: $main-color-dark;
-  color: $light-color-lighter;
+  background-color: var(--main-color-dark);
+  color: var(--light-color-lighter);
   border: none;
   transition: all 0.3s ease 0s;
   text-decoration: none;
@@ -15,11 +13,11 @@
   }
 
   &.is-secondary {
-    background-color: $secondary-color;
-    color: $light-color-lighter;
+    background-color: var(--secondary-color);
+    color: var(--light-color-lighter);
 
     &:hover {
-      background-color: $main-color-medium-light;
+      background-color: var(--main-color-medium-light);
     }
   }
 

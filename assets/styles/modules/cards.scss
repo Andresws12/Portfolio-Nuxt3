@@ -1,8 +1,6 @@
-@use "../variables/custom-variables.scss" as *;
-
 .card {
   padding: 16px;
-  background-color: $light-color-lighter;
+  background-color: var(--light-color-lighter);
   border-radius: 25px;
   box-shadow: rgb(0 0 0 / 9%) 0 3px 12px;
   margin-bottom: 25px;
