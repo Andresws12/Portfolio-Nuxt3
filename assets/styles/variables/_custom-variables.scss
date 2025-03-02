@@ -48,6 +48,8 @@ $main-filter-color-dark: invert(5%) sepia(82%) saturate(6715%)
   hue-rotate(247deg) brightness(90%) contrast(93%);
 $secondary-filter-color: invert(30%) sepia(31%) saturate(3274%)
   hue-rotate(237deg) brightness(117%) contrast(111%);
+$extra-color-filter-light: brightness(0) saturate(100%) invert(90%) sepia(99%)
+  saturate(1112%) hue-rotate(142deg) brightness(104%) contrast(103%);
 
 // Define theme maps including all variables
 $themes: (
@@ -72,7 +74,7 @@ $themes: (
     dark-color-lighter: $dark-color-lighter,
     light-color: $light-color,
     light-color-medium-light: $light-color-medium-light,
-    light-color-light: $light-color-light,
+    light-color-light: $light-color-lighter,
     light-color-lighter: $light-color-lighter,
     main-color-success-lighter: $main-color-success-lighter,
     main-color-fail-lighter: $main-color-fail-lighter,
@@ -82,6 +84,7 @@ $themes: (
     main-filter-color-light: $main-filter-color-light,
     main-filter-color-medium-light: $main-filter-color-medium-light,
     main-filter-color-dark: $main-filter-color-dark,
+    extra-color-filter-light: $extra-color-filter-light,
     secondary-filter-color: $secondary-filter-color,
   ),
   "dark": (
@@ -108,7 +111,7 @@ $themes: (
     dark-color-lighter: $light-color-lighter-dark,
     light-color: $dark-color,
     light-color-medium-light: $dark-color-medium-light,
-    light-color-light: $dark-color-light,
+    light-color-light: $light-color-lighter-dark,
     light-color-lighter: $light-color-lighter-dark,
     main-color-success-lighter: $main-color-success-lighter,
     main-color-fail-lighter: $main-color-fail-lighter,
@@ -119,6 +122,45 @@ $themes: (
     main-filter-color-light: $main-filter-color-light,
     main-filter-color-medium-light: $main-filter-color-medium-light,
     main-filter-color-dark: $main-filter-color-dark,
+    extra-color-filter-light: $extra-color-filter-light,
+    secondary-filter-color: $secondary-filter-color,
+  ),
+  "multicolor": (
+    // Adjust dark variables as needed.
+    main-color: $secondary-color,
+    main-color-transparent: $main-color-transparent,
+    main-color-light: $main-color-light,
+    main-color-medium-light: $main-color-medium-light,
+    main-color-dark: $main-color-light,
+    secondary-color: $secondary-color-dark,
+    secondary-color-transparent: $secondary-color-transparent,
+    secondary-color-light: $secondary-color-light,
+    secondary-color-dark: $secondary-color-dark,
+    extra-color: $extra-color-dark,
+    extra-color-transparent: $extra-color-transparent,
+    extra-color-light: $extra-color-light,
+    extra-color-dark: $extra-color-dark,
+    main-color-background: $secondary-color-light,
+    // dark mode background
+    // Swap basic colors for contrast
+    dark-color: $light-color,
+    dark-color-medium-light: $light-color-medium-light,
+    dark-color-light: $light-color-light,
+    dark-color-lighter: $light-color-lighter-dark,
+    light-color: $light-color,
+    light-color-medium-light: $dark-color-medium-light,
+    light-color-light: $light-color,
+    light-color-lighter: $main-color-transparent,
+    main-color-success-lighter: $main-color-success-lighter,
+    main-color-fail-lighter: $main-color-fail-lighter,
+    main-font: $main-font,
+    main-font-default: $main-font-default,
+    // Use darker filter variations in dark mode if needed
+    main-filter-color: $main-filter-color-dark,
+    main-filter-color-light: $main-filter-color-light,
+    main-filter-color-medium-light: $main-filter-color-medium-light,
+    main-filter-color-dark: $main-filter-color-dark,
+    extra-color-filter-light: $extra-color-filter-light,
     secondary-filter-color: $secondary-filter-color,
   ),
 );
@@ -138,6 +180,10 @@ $themes: (
 }
 
 // Activate dark theme by adding .dark-mode to the root element
-.dark-mode {
+.dark {
   @include theme("dark");
+}
+
+.multicolor {
+  @include theme("multicolor");
 }

@@ -1,8 +1,15 @@
 export const useMainStore = defineStore("useMainStore", () => {
-  const isDark = ref(false);
+  const theme = ref("light");
 
-  const toggleDarkMode = () => {
-    isDark.value = !isDark.value;
+  const toggleTheme = () => {
+    if (theme.value === "light") {
+      theme.value = "dark";
+    } else if (theme.value === "dark") {
+      theme.value = "multicolor";
+    } else {
+      theme.value = "light";
+    }
   };
-  return { isDark, toggleDarkMode };
+
+  return { theme, toggleTheme };
 });
