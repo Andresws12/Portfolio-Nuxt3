@@ -71,6 +71,7 @@
     "node": ">=20"
   },
   "dependencies": {
-    "eslint-plugin-jest": "^28.11.0"
+    "eslint-plugin-jest": "^28.11.0",
+    "pinia-plugin-persistedstate": "^4.2.0"
   }
 }

@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@pinia/nuxt",
     "@nuxt/devtools",
+    "pinia-plugin-persistedstate/nuxt",
   ],
   pinia: {
     storesDirs: ["./stores/**"],
