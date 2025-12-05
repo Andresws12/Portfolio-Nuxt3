@@ -4,7 +4,7 @@
     "home": {
       "homeDescription": {
         "title": "Andrés Felipe Hernández Galindo",
-        "subtitle": "Front-end Software Egineer",
+        "subtitle": "Front-end Software Engineer",
         "descriptionWelcome": "Hey there! 👋",
         "description": "Welcome to my digital corner! I've built this portfolio with lots of love and code, using Vue 3, Typescript, and Pinia for efficient state management. Here, you'll not only find me having fun experimenting with the latest trends in frontend development and bringing my most innovative ideas to life, but you'll also get a glimpse into my work experience."
       },
@@ -143,8 +143,7 @@
       "error": {}
     },
     "images": {
-      "dataBodyImage": "Me in 3D low poly",
-      "dataBodyImageBlurred": "Me in 3D low poly",
+      "dataBodyImage": "Andrés Hernández Front-end Software Engineer",
       "dataAnimalsImage": "Animals in low poly",
       "dataGithubImage": "Github logo",
       "dataLinkedinImage": "Linkedin logo",
