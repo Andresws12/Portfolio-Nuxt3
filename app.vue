@@ -15,7 +15,6 @@ import { createHead } from "unhead";
 import { loadSlim } from "tsparticles-slim";
 import type { Engine } from "tsparticles-engine";
 
-const { locale } = useI18n();
 const i18n = useI18n();
 
 import { optionsParticles } from "@/utils/vueParticlesConfiguration";
@@ -23,17 +22,26 @@ import { optionsParticles } from "@/utils/vueParticlesConfiguration";
 import ButtonTranslation from "@/components/common/ButtonTranslation.vue";
 
 createHead();
+
 const particlesInit = async (engine: Engine): Promise<void> => {
   await loadSlim(engine);
 };
 
-useHead({
-  htmlAttrs: {
-    lang: locale,
+const i18nHead = useLocaleHead({
+  addSeoAttributes: {
+    canonicalQueries: ["/"],
   },
 });
 
-useSeoMeta({
+useServerHead({
+  htmlAttrs: {
+    lang: i18nHead.value.htmlAttrs!.lang,
+  },
+  link: [...(i18nHead.value.link || [])],
+  meta: [...(i18nHead.value.meta || [])],
+});
+
+useServerSeoMeta({
   author: i18n.t("common.seo.author"),
   publisher: i18n.t("common.seo.author"),
   robots: "index, follow",
