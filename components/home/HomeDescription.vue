@@ -5,7 +5,7 @@
       src="/img/andres-front-programador.webp"
       :alt="$t('common.images.dataBodyImage')"
       :title="$t('common.images.dataBodyImage')"
-      sizes="220px sm:350px md:450px lg:550px xl:650px"
+      sizes="220px sm:180px md:240px lg:250px xl:350px"
       width="200"
       height="200"
     />
