@@ -5,7 +5,7 @@
         :src="props.imageSource"
         :alt="props.imageData"
         :title="props.imageData"
-        width="250"
+        sizes="250px sm:50px md:150px"
         :height="props.imageHeight"
         loading="lazy"
       />
@@ -65,13 +65,21 @@ const emit = defineEmits<EmitsType>();
   flex-direction: column;
   margin: 10px;
   width: 350px;
-  border-radius: 15px;
+  border-radius: 5px;
   box-shadow: 0 2px 5px 0 $main-color;
   background-color: $main-color;
   transition: 0.3s;
   color: $main-color-dark;
   position: relative;
   z-index: 1;
+
+  @include tablet {
+    width: 300px;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
 
   &:hover {
     box-shadow: 0 4px 8px 0 $main-color;
