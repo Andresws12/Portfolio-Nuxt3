@@ -133,7 +133,8 @@
       "skipToMainContent": "Go to content",
       "skipToPersonalData": "Go to my personal data",
       "skipToLinkedin": "Go to my Linkedin profile",
-      "skipToGithub": "Go to my Github profile"
+      "skipToGithub": "Go to my Github profile",
+      "skipToGmail": "Go to my gmail"
     },
     "subtitle": {},
     "inputs": {},
@@ -147,6 +148,7 @@
       "dataAnimalsImage": "Animals in low poly",
       "dataGithubImage": "Github logo",
       "dataLinkedinImage": "Linkedin logo",
+      "dataGmailImage": "Gmail logo",
       "dataIskaypetImage": "Iskaypet logo",
       "dataCloudappiImage": "CloudAPPI logo",
       "dataStarImage": "Star logo",

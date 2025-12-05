@@ -13,7 +13,7 @@
         src="/img/github.svg"
         :alt="$t('common.images.dataGithubImage')"
         class="contact-buttons__icon"
-        width="29"
+        quality="100"
         height="29"
         loading="lazy"
       />
@@ -30,7 +30,24 @@
         class="contact-buttons__icon"
         src="/img/linkedin.svg"
         :alt="$t('common.images.dataLinkedinImage')"
-        width="29"
+        quality="100"
+        height="29"
+        loading="lazy"
+      />
+    </a>
+    <a
+      id="gmail"
+      target="_blank"
+      rel="noopener noreferrer nofollow"
+      href="mailto:andreshernandez12.1995@gmail.com"
+      :title="$t('common.images.dataGmailImage')"
+      aria-label="gmail"
+    >
+      <NuxtImg
+        class="contact-buttons__icon"
+        src="/img/gmail.svg"
+        :alt="$t('common.images.dataGmailImage')"
+        quality="100"
         height="29"
         loading="lazy"
       />
@@ -44,12 +61,6 @@
 .contact-buttons {
   &__icon {
     margin-right: 10px;
-    transition: all 0.3s;
-    filter: $secondary-filter-color;
-
-    &:hover {
-      filter: $main-filter-color-dark;
-    }
   }
 }
 </style>

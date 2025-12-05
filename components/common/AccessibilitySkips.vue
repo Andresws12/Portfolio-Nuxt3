@@ -21,6 +21,13 @@
     {{ $t('common.skips.skipToGithub') }}
   </a>
   <a
+    href="#gmail"
+    class="skip-link"
+    :aria-label="$t('common.skips.skipToGmail')"
+  >
+    {{ $t('common.skips.skipToGmail') }}
+  </a>
+  <a
     href="#personal-data"
     class="skip-link"
     :aria-label="$t('common.skips.skipToPersonalData')"
