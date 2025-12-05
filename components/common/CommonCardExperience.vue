@@ -32,6 +32,64 @@
         {{ props.textDescription }}
       </p>
     </div>
+    <div class="common-card-experience__technologies-container">
+      <NuxtImg
+        v-if="props.hasVue"
+        src="/img/tech/vue.svg"
+        alt="vue"
+        width="25"
+        height="25"
+        loading="lazy"
+      />
+      <NuxtImg
+        v-if="props.hasAngular"
+        src="/img/tech/angular.svg"
+        alt="angular"
+        width="25"
+        height="25"
+        loading="lazy"
+      />
+      <NuxtImg
+        v-if="props.hasNet"
+        src="/img/tech/net.svg"
+        alt=".net"
+        width="25"
+        height="25"
+        loading="lazy"
+      />
+      <NuxtImg
+        v-if="props.hasReact"
+        src="/img/tech/react.svg"
+        alt="react"
+        width="25"
+        height="25"
+        loading="lazy"
+      />
+      <NuxtImg
+        v-if="props.hasJquery"
+        src="/img/tech/jquery.svg"
+        alt="jquery"
+        width="25"
+        height="25"
+        loading="lazy"
+      />
+      <NuxtImg
+        v-if="props.hasTypescript"
+        src="/img/tech/typescript.svg"
+        alt="typescript"
+        width="25"
+        height="25"
+        loading="lazy"
+      />
+      <NuxtImg
+        v-if="props.hasPhp"
+        src="/img/tech/php.svg"
+        alt="php"
+        width="25"
+        height="25"
+        loading="lazy"
+      />
+    </div>
     <div class="common-card-experience__button-container">
       <button class="button" @click="emit('click')">
         {{ props.callToActionButton }}
@@ -51,6 +109,13 @@ export interface Props {
   callToActionButton: string;
   isActive?: boolean;
   activeTextButton?: string;
+  hasVue?: boolean;
+  hasAngular?: boolean;
+  hasNet?: boolean;
+  hasReact?: boolean;
+  hasJquery?: boolean;
+  hasTypescript?: boolean;
+  hasPhp?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -63,6 +128,13 @@ const props = withDefaults(defineProps<Props>(), {
   callToActionButton: '',
   isActive: false,
   activeTextButton: '',
+  hasVue: false,
+  hasAngular: false,
+  hasNet: false,
+  hasReact: false,
+  hasJquery: false,
+  hasTypescript: false,
+  hasPhp: false,
 });
 
 type EmitsType = {
@@ -111,7 +183,11 @@ const emit = defineEmits<EmitsType>();
   &__button-container {
     position: absolute;
     right: 0;
-    bottom: 15px;
+    bottom: 5px;
+  }
+
+  &__technologies-container {
+    padding-left: 15px;
   }
 
   &__image-label {

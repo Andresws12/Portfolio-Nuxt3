@@ -23,6 +23,10 @@
           $t('views.home.homeWorkExperience.activeButtonText')
         "
         is-active
+        has-vue
+        has-react
+        has-typescript
+        has-jquery
         @click="$router.push({ path: '/works/iskaypet-view' })"
       />
       <common-card-experience
@@ -35,6 +39,12 @@
         :call-to-action-button="
           $t('views.home.homeWorkExperience.callToActionButton')
         "
+        has-vue
+        has-react
+        has-angular
+        has-typescript
+        has-jquery
+        has-net
         @click="$router.push({ path: '/works/cloudappi-view' })"
       />
       <common-card-experience
@@ -47,6 +57,10 @@
         :call-to-action-button="
           $t('views.home.homeWorkExperience.callToActionButton')
         "
+        has-vue
+        has-typescript
+        has-net
+        has-jquery
         @click="$router.push({ path: '/works/star-view' })"
       />
       <common-card-experience
@@ -59,6 +73,9 @@
         :call-to-action-button="
           $t('views.home.homeWorkExperience.callToActionButton')
         "
+        has-typescript
+        has-php
+        has-jquery
         @click="$router.push({ path: '/works/pantallazo-view' })"
       />
     </div>
