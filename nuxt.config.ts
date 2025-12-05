@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     "nuxt-schema-org",
   ],
   site: {
+    baseURL: "https://andres-hernandez.com/",
     url: "https://andres-hernandez.com/",
     name: "Andres Felipe Hernandez Galindo - Website",
     autoI18n: true,
@@ -23,9 +24,9 @@ export default defineNuxtConfig({
     mode: "init",
   },
   image: {
-    densities: [1, 2],
+    densities: [0.5, 1],
     format: ["webp"],
-    quality: 80,
+    quality: 50,
   },
   particles: {
     mode: "slim", // 'full' | 'slim' | 'basic' | 'custom'
@@ -33,9 +34,10 @@ export default defineNuxtConfig({
   },
   i18n: {
     /* module options */
+    baseUrl: "https://andres-hernandez.com",
     lazy: true,
     langDir: "locales",
-    strategy: "prefix_and_default",
+    strategy: "prefix_except_default",
     locales: [
       {
         code: "en-US",
