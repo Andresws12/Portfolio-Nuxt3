@@ -2,6 +2,7 @@
 import HomeDescription from "@/components/home/HomeDescription.vue";
 import AccessibilitySkips from "@/components/common/AccessibilitySkips.vue";
 import HomeExperience from "@/components/home/HomeExperience.vue";
+import HomeTestProjects from "@/components/home/HomeTestProjects.vue";
 
 const i18n = useI18n();
 
@@ -29,6 +30,7 @@ useSchemaOrg([
   >
     <HomeDescription />
     <HomeExperience />
+    <HomeTestProjects />
     <!-- Hidden links for skipping blocks -->
     <AccessibilitySkips />
   </main>

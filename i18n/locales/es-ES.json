@@ -25,6 +25,44 @@
         "callToActionButton": "Ver más",
         "activeButtonText": "Actualmente"
       },
+      "homeTestProjects": {
+        "title": "Veamos algunos proyectos de prueba que he realizado 🙇",
+        "callToActionButton": "Ver proyecto",
+        "projects": {
+          "factorial": {
+            "title": "Factorial",
+            "description": "Constructor de bicicletas"
+          },
+          "iskaypet": {
+            "title": "Iskaypet",
+            "description": "Gestor de tareas todo"
+          },
+          "bjumper": {
+            "title": "Bjumper",
+            "description": "Buscador de usuarios Github"
+          },
+          "mayoral": {
+            "title": "Mayoral",
+            "description": "Calendario de vacaciones"
+          },
+          "Patterson": {
+            "title": "Patterson",
+            "description": "Ecommerce con carrito de compras"
+          },
+          "acciona": {
+            "title": "Acciona",
+            "description": "Gestor de Usuarios Favoritos"
+          },
+          "cloudappi": {
+            "title": "Cloudappi",
+            "description": "Gestor de Usuarios"
+          },
+          "azertiumit": {
+            "title": "Azertiumit",
+            "description": "Buscador de repositorios Github"
+          }
+        }
+      },
       "seo": {
         "title": "Andrés Felipe Hernández Galindo - Programador Front End Senior en Málaga",
         "description": "Andrés Felipe Hernández Galindo, programador front end senior con más de 6 años de experiencia. Conoce mi trayectoria en empresas como Iskaypet, CloudAPPI, STAR y Pantallazo Azul. Basado en Málaga, España.",
