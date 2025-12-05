@@ -1,5 +1,12 @@
 <script lang="ts" setup>
 import { NuxtImg } from "#components";
+const { locale } = useI18n();
+
+const cvDownload = computed(() => {
+  return locale.value === "es-ES"
+    ? "/AndresHernandezCurriculum.pdf"
+    : "/AndresHernandezCurriculumENG.pdf";
+});
 </script>
 
 <template>
@@ -54,6 +61,26 @@ import { NuxtImg } from "#components";
       <NuxtImg
         class="contact-buttons__icon"
         src="/img/gmail.svg"
+        :alt="$t('common.images.dataGmailImage')"
+        quality="100"
+        height="25"
+        width="33"
+        loading="lazy"
+      />
+    </a>
+    <a
+      id="gmail"
+      target="_blank"
+      rel="noopener noreferrer nofollow"
+      :href="cvDownload"
+      download
+      alt="Curriculum"
+      title="Curriculum"
+      data-cy="button-contact-gmail"
+    >
+      <NuxtImg
+        class="contact-buttons__icon"
+        src="/img/cv.svg"
         :alt="$t('common.images.dataGmailImage')"
         quality="100"
         height="25"
