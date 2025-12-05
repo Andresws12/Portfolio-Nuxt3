@@ -13,6 +13,7 @@
         width="250"
         :height="props.imageHeight"
         loading="lazy"
+        provider="cloudflare"
       />
       <span
         v-if="isActive"
