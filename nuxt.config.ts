@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     "nuxt-delay-hydration",
     "nuxt-simple-sitemap",
     "nuxt-schema-org",
-    'nuxt-security'
+    "nuxt-security",
   ],
   site: {
     url: "https://andres-hernandez.onrender.com/",
