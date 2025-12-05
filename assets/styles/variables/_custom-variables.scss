@@ -1,0 +1,28 @@
+// App Colors
+$main-color: #dcd7c9;
+$main-color-light: #3f4e4f;
+$main-color-dark: #2c3639;
+$main-color-medium-light: #a27b5c;
+$main-color-background: linear-gradient(
+  90deg,
+  $main-color-dark 0%,
+  $main-color-light 100%
+);
+
+// App Colors Lighters
+$main-color-success-lighter: #48c774;
+$main-color-fail-lighter: #e64c59;
+
+// App fonts
+$main-font: "Yantramanav";
+$main-font-default: helvetica, arial, verdana, tahoma, sans-serif;
+
+// App filter colors
+$main-filter-color: invert(93%) sepia(25%) saturate(135%) hue-rotate(344deg)
+  brightness(91%) contrast(89%);
+$main-filter-color-light: invert(25%) sepia(8%) saturate(837%)
+  hue-rotate(135deg) brightness(103%) contrast(87%);
+$main-filter-color-dark: brightness(0) saturate(100%) invert(16%) sepia(7%)
+  saturate(1405%) hue-rotate(147deg) brightness(93%) contrast(85%);
+$main-filter-color-medium-light: invert(51%) sepia(30%) saturate(477%)
+  hue-rotate(344deg) brightness(93%) contrast(92%);

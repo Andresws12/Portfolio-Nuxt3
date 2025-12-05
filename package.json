@@ -7,12 +7,22 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "format:check": "prettier --list-different \"./**/*.?(vue|ts|js|scss|html|json)\"",
+    "format": "prettier --write \"./**/*.?(vue|ts|js|scss|html|json)\""
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtjs/i18n": "8.0.0-rc.5",
     "nuxt": "^3.8.0",
+    "sass": "^1.69.5",
     "vue": "^3.3.7",
     "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@nuxt/image": "^1.0.0",
+    "@nuxtjs/robots": "^3.0.0",
+    "nuxt-particles": "^0.1.5",
+    "prettier": "^3.0.3"
   }
 }
