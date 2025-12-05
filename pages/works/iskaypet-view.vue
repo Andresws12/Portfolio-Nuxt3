@@ -6,6 +6,11 @@
     :business-name="$t('common.works.iskaypet.name')"
     :business-role="$t('common.works.iskaypet.title')"
     :business-period="$t('common.works.iskaypet.period')"
+    is-active
+    has-vue
+    has-react
+    has-typescript
+    has-jquery
   >
     <h3>{{ $t('views.works.iskaypet.title') }}</h3>
     <p>{{ $t('views.works.iskaypet.intro') }}</p>
