@@ -7,7 +7,7 @@
   >
     <NuxtImg
       class="home-description__image"
-      src="/img/andres-front-programador.webp"
+      src="https://res.cloudinary.com/dx8q5jh0g/image/upload/v1710537658/andres-front-programador_mbprmh.webp"
       :alt="$t('common.images.dataBodyImage')"
       sizes="220px sm:180px md:240px lg:250px xl:350px"
       densities="1x 2x"
