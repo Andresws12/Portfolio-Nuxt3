@@ -11,3 +11,12 @@
 body {
   margin: 0;
 }
+
+// stylelint-disable selector-max-type, selector-id-pattern
+html,
+body,
+#__nuxt,
+.app-container {
+  min-height: 100vh;
+}
+// stylelint-enable selector-max-type, selector-id-pattern
