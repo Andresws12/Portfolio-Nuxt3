@@ -31,7 +31,6 @@
   "devDependencies": {
     "@intlify/eslint-plugin-vue-i18n": "^4.0.0-next.1",
     "@intlify/unplugin-vue-i18n": "^6.0.3",
-    "@nuxt/devtools": "latest",
     "@nuxt/eslint": "^1.1.0",
     "@nuxt/image": "^1.9.0",
     "@nuxtjs/i18n": "9.2.1",
