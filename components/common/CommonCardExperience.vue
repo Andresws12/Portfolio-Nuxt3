@@ -16,6 +16,8 @@ export interface Props {
   hasJquery?: boolean;
   hasTypescript?: boolean;
   hasPhp?: boolean;
+  dateStart?: string;
+  dateEnd?: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -35,9 +37,76 @@ const props = withDefaults(defineProps<Props>(), {
   hasJquery: false,
   hasTypescript: false,
   hasPhp: false,
+  dateStart: "",
+  dateEnd: "",
 });
 
 const emit = defineEmits<EmitsType>();
+
+/**
+ * Calculates the number of months between two dates.
+ *
+ * @param {Date} dateStart - The start date.
+ * @param {Date} dateEnd - The end date.
+ * @returns {number} The number of months between the start and end dates.
+ */
+const getMonths = (dateStart: Date, dateEnd: Date) => {
+  const diffTime = Math.abs(dateEnd.getTime() - dateStart.getTime());
+  return Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 30));
+};
+
+/**
+ * Calculates the number of years from a given number of months.
+ *
+ * @param {number} months - The total number of months.
+ * @returns {number} The number of complete years.
+ */
+const getYearsByMonths = (months: number) => {
+  return Math.floor(months / 12);
+};
+
+/**
+ * Removes the years from a given number of months.
+ *
+ * @param {number} months - The total number of months.
+ * @returns {number} The remaining months after removing the years.
+ */
+const removeYears = (months: number) => {
+  return months % 12;
+};
+
+/**
+ * Calculates the total time between two dates in years and months.
+ *
+ * @param {Date} dateStart - The start date.
+ * @param {Date} dateEnd - The end date.
+ * @returns {string} - The total time formatted as "X años Y meses" or "Y meses" if less than a year.
+ */
+const getTotalTime = (dateStart: Date, dateEnd: Date) => {
+  const diffMonths = getMonths(dateStart, dateEnd);
+  const years = getYearsByMonths(diffMonths);
+  const diffMonthsYears = removeYears(diffMonths);
+
+  if (years === 0) {
+    return `${diffMonthsYears} meses`;
+  }
+  return `${years} años ${diffMonthsYears} meses`;
+};
+
+const workDateCount = computed(() => {
+  if (props.dateStart && props.dateEnd) {
+    const dateStart = new Date(props.dateStart);
+    if (props.dateEnd === "now") {
+      const dateEnd = new Date();
+      const totalTime = getTotalTime(dateStart, dateEnd);
+      return totalTime;
+    }
+    const dateEnd = new Date(props.dateEnd);
+    const totalTime = getTotalTime(dateStart, dateEnd);
+    return totalTime;
+  }
+  return "";
+});
 
 type EmitsType = {
   (e: "click"): void;
@@ -85,7 +154,7 @@ type EmitsType = {
         {{ props.textSubtitle }}
       </h4>
       <p class="common-card-experience__description is-extra">
-        {{ props.textDescription }}
+        {{ props.textDescription }} {{ workDateCount }}
       </p>
     </div>
     <div
