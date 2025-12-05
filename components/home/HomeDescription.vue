@@ -5,7 +5,7 @@
       src="/img/body.webp"
       :alt="$t('common.images.dataBodyImage')"
       :title="$t('common.images.dataBodyImage')"
-      sizes="100vw xs:25vw sm:50vw md:70vw"
+      sizes="sm:150px"
       width="230"
       height="360"
     />

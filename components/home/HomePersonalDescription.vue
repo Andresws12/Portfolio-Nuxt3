@@ -15,7 +15,6 @@
         src="/img/animals.webp"
         :alt="$t('common.images.dataAnimalsImage')"
         :title="$t('common.images.dataAnimalsImage')"
-        sizes="100vw xs:35vw sm:50vw md:70vw"
         width="375"
         height="359"
         lazy="loading"
