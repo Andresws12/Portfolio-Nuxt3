@@ -1,15 +1,21 @@
 <script setup lang="ts">
 import { createHead } from "unhead";
 import { NuxtPage } from "#components";
+import { useMainStore } from "@/stores/mainStore";
 
 import ButtonTranslation from "@/components/common/ButtonTranslation.vue";
 import TechnologiesIcons from "@/components/common/TechnologiesIcons.vue";
+import ToggleDarkModeButton from "@/components/common/ToggleDarkModeButton.vue";
 
 const i18n = useI18n();
 
 createHead();
 
 const i18nHead = useLocaleHead();
+
+const mainStore = useMainStore();
+
+const isDarkMode = computed(() => mainStore.isDark);
 
 useServerHead({
   htmlAttrs: {
@@ -64,9 +70,16 @@ console.log(`
 </script>
 
 <template>
-  <div>
+  <div :class="{ 'dark-mode': isDarkMode }" class="app-container">
     <NuxtPage />
     <ButtonTranslation />
     <TechnologiesIcons />
+    <ToggleDarkModeButton />
   </div>
 </template>
+
+<style lang="scss">
+.app-container {
+  height: 100%;
+}
+</style>

@@ -1,7 +1,5 @@
-@use "../variables/custom-variables.scss" as *;
-
 .badge {
   border-radius: 5px;
-  background-color: $secondary-color-transparent;
+  background-color: var(--secondary-color-transparent);
   padding: 8px 12px;
 }

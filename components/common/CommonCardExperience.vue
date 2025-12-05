@@ -345,7 +345,6 @@ const description = computed(() => {
   margin: 10px;
   width: 300px;
   position: relative;
-  box-shadow: rgb(149 157 165 / 20%) 0 8px 24px;
 
   @include mixins.mobile {
     width: 100%;

@@ -1,5 +1,7 @@
 // App Colors
-// Palette: https: //colors.muz.li/palette/4d4dff/3655b3/884dff/4dffff/36b3b3
+// Palette: https://colors.muz.li/palette/4d4dff/3655b3/884dff/4dffff/36b3b3
+@use "sass:map";
+
 $main-color: #3655b3;
 $main-color-transparent: #3655b352;
 $main-color-light: #4d4dff;
@@ -14,6 +16,7 @@ $extra-color-transparent: #36b3b352;
 $extra-color-light: #4dffff;
 $extra-color-dark: #1a8c8c;
 $main-color-background: #ebf1f4;
+$main-color-background-dark: #252e42;
 
 // Basic Colors
 $dark-color: #313131;
@@ -24,16 +27,17 @@ $light-color: #e4e4e4;
 $light-color-medium-light: #ececec;
 $light-color-light: #f5f5f7;
 $light-color-lighter: #fff;
+$light-color-lighter-dark: #303c52;
 
 // App Colors Lighters
 $main-color-success-lighter: #48c774;
 $main-color-fail-lighter: #e64c59;
 
-// App fonts
+// App Fonts
 $main-font: "Yantramanav";
 $main-font-default: helvetica, arial, verdana, tahoma, sans-serif;
 
-// App filter colors
+// App Filter Colors
 $main-filter-color: invert(26%) sepia(66%) saturate(1607%) hue-rotate(207deg)
   brightness(94%) contrast(87%);
 $main-filter-color-light: invert(22%) sepia(92%) saturate(2999%)
@@ -44,3 +48,96 @@ $main-filter-color-dark: invert(5%) sepia(82%) saturate(6715%)
   hue-rotate(247deg) brightness(90%) contrast(93%);
 $secondary-filter-color: invert(30%) sepia(31%) saturate(3274%)
   hue-rotate(237deg) brightness(117%) contrast(111%);
+
+// Define theme maps including all variables
+$themes: (
+  "light": (
+    main-color: $main-color,
+    main-color-transparent: $main-color-transparent,
+    main-color-light: $main-color-light,
+    main-color-medium-light: $main-color-medium-light,
+    main-color-dark: $main-color-dark,
+    secondary-color: $secondary-color,
+    secondary-color-transparent: $secondary-color-transparent,
+    secondary-color-light: $secondary-color-light,
+    secondary-color-dark: $secondary-color-dark,
+    extra-color: $extra-color,
+    extra-color-transparent: $extra-color-transparent,
+    extra-color-light: $extra-color-light,
+    extra-color-dark: $extra-color-dark,
+    main-color-background: $main-color-background,
+    dark-color: $dark-color,
+    dark-color-medium-light: $dark-color-medium-light,
+    dark-color-light: $dark-color-light,
+    dark-color-lighter: $dark-color-lighter,
+    light-color: $light-color,
+    light-color-medium-light: $light-color-medium-light,
+    light-color-light: $light-color-light,
+    light-color-lighter: $light-color-lighter,
+    main-color-success-lighter: $main-color-success-lighter,
+    main-color-fail-lighter: $main-color-fail-lighter,
+    main-font: $main-font,
+    main-font-default: $main-font-default,
+    main-filter-color: $main-filter-color,
+    main-filter-color-light: $main-filter-color-light,
+    main-filter-color-medium-light: $main-filter-color-medium-light,
+    main-filter-color-dark: $main-filter-color-dark,
+    secondary-filter-color: $secondary-filter-color,
+  ),
+  "dark": (
+    // Adjust dark variables as needed.
+    main-color: $main-color-dark,
+    main-color-transparent: $main-color-transparent,
+    main-color-light: $main-color-light,
+    main-color-medium-light: $main-color-medium-light,
+    main-color-dark: $extra-color,
+    secondary-color: $secondary-color-light,
+    secondary-color-transparent: $secondary-color-transparent,
+    secondary-color-light: $secondary-color-light,
+    secondary-color-dark: $secondary-color-dark,
+    extra-color: $extra-color-dark,
+    extra-color-transparent: $extra-color-transparent,
+    extra-color-light: $extra-color-light,
+    extra-color-dark: $extra-color-dark,
+    main-color-background: $main-color-background-dark,
+    // dark mode background
+    // Swap basic colors for contrast
+    dark-color: $light-color,
+    dark-color-medium-light: $light-color-medium-light,
+    dark-color-light: $light-color-light,
+    dark-color-lighter: $light-color-lighter-dark,
+    light-color: $dark-color,
+    light-color-medium-light: $dark-color-medium-light,
+    light-color-light: $dark-color-light,
+    light-color-lighter: $light-color-lighter-dark,
+    main-color-success-lighter: $main-color-success-lighter,
+    main-color-fail-lighter: $main-color-fail-lighter,
+    main-font: $main-font,
+    main-font-default: $main-font-default,
+    // Use darker filter variations in dark mode if needed
+    main-filter-color: $main-filter-color-dark,
+    main-filter-color-light: $main-filter-color-light,
+    main-filter-color-medium-light: $main-filter-color-medium-light,
+    main-filter-color-dark: $main-filter-color-dark,
+    secondary-filter-color: $secondary-filter-color,
+  ),
+);
+
+// Mixin that injects CSS custom properties based on theme
+@mixin theme($theme-name) {
+  $selected-theme: map.get($themes, $theme-name);
+
+  @each $name, $value in $selected-theme {
+    --#{$name}: #{$value};
+  }
+}
+
+// Apply the light theme by default in :root
+:root {
+  @include theme("light");
+}
+
+// Activate dark theme by adding .dark-mode to the root element
+.dark-mode {
+  @include theme("dark");
+}

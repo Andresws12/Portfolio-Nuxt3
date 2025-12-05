@@ -95,7 +95,6 @@ $animation-offset-third-y: 5vh;
   height: 100%;
   overflow: hidden;
   pointer-events: none;
-  z-index: -1;
   opacity: 0.2;
 }
 
