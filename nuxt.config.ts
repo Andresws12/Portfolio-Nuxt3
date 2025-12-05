@@ -26,9 +26,6 @@ export default defineNuxtConfig({
     densities: [0.5, 1],
     format: ['webp'],
     quality: 80,
-    cloudflare: {
-      baseURL: 'https://imagedelivery.net/FZ-Hx-ohQo4T0ucqN0PbIw',
-    },
   },
   i18n: {
     /* module options */
