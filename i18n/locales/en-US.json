@@ -2,6 +2,15 @@
   "code": "en-US",
   "name": "English",
   "language": "en-US",
+  "duration": {
+    "years": "0 years | 1 year | {count} years",
+    "months": "0 months | 1 month | {count} months",
+    "yearsAndMonths": "{years} {months}",
+    "year_one": "1 year",
+    "year_other": "{count} years",
+    "month_one": "1 month",
+    "month_other": "{count} months"
+  },
   "views": {
     "maintenancePage": {},
     "home": {

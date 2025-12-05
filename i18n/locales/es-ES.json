@@ -2,6 +2,15 @@
   "code": "es-ES",
   "name": "Español",
   "language": "es-ES",
+  "duration": {
+    "years": "0 años | 1 año | {count} años",
+    "months": "0 meses | 1 mes | {count} meses",
+    "yearsAndMonths": "{years} {months}",
+    "year_one": "1 año",
+    "year_other": "{count} años",
+    "month_one": "1 mes",
+    "month_other": "{count} meses"
+  },
   "views": {
     "maintenancePage": {},
     "home": {
