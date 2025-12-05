@@ -40,7 +40,7 @@ useSchemaOrg([
 @use "@/assets/styles/mixins/all" as mixins;
 
 .home {
-  padding: 55px 200px 0;
+  padding: 55px 150px 0;
   display: flex;
   flex-direction: column;
 

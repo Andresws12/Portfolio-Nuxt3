@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { createHead } from "unhead";
+import { useHead } from "#imports";
 import { NuxtPage } from "#components";
 import { useMainStore } from "@/stores/mainStore";
 
@@ -9,15 +9,13 @@ import ToggleThemeButton from "~/components/common/ToggleThemeButton.vue";
 
 const i18n = useI18n();
 
-createHead();
-
 const i18nHead = useLocaleHead();
 
 const mainStore = useMainStore();
 
 const theme = computed(() => mainStore.theme);
 
-useServerHead({
+useHead({
   htmlAttrs: {
     lang: i18nHead.value.htmlAttrs!.lang || "es",
   },
@@ -25,7 +23,7 @@ useServerHead({
   meta: [...(i18nHead.value.meta || [])],
 });
 
-useServerSeoMeta({
+useSeoMeta({
   author: i18n.t("common.seo.author"),
   publisher: i18n.t("common.seo.author"),
   robots: "index, follow",

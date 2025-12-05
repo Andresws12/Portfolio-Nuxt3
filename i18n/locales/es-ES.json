@@ -29,37 +29,49 @@
         "title": "Veamos algunos proyectos de prueba que he realizado 🙇",
         "callToActionButton": "Ver proyecto",
         "projects": {
+          "pokemon": {
+            "title": "Pokemon",
+            "description": "Dashboard de Pokémon en el que puedes listar los pokemons y ver su información"
+          },
+          "dragonball": {
+            "title": "Dragonball",
+            "description": "Dashboard de Dragon ball en el que puedes listar los personajes de la serie y ver su información"
+          },
+          "asafe": {
+            "title": "Asafe",
+            "description": "Dashboard de posts con autenticación, donde puedes crear, editar y eliminar posts, además tienes un grafico del los post por categoria"
+          },
           "factorial": {
             "title": "Factorial",
-            "description": "Constructor de bicicletas"
+            "description": "Constructor de bicicletas en el que puedes seleccionar las características de la bicicleta y ver el precio"
           },
           "iskaypet": {
             "title": "Iskaypet",
-            "description": "Gestor de tareas todo"
+            "description": "Gestor de tareas todo list en el que puedes crear y eliminar tareas"
           },
           "bjumper": {
             "title": "Bjumper",
-            "description": "Buscador de usuarios Github"
+            "description": "Buscador de usuarios Github en el que puedes buscar usuarios y ver su información"
           },
           "mayoral": {
             "title": "Mayoral",
-            "description": "Calendario de vacaciones"
+            "description": "Calendario de vacaciones en el que puedes ver los días festivos y los días de vacaciones de la ciudad de Málaga"
           },
           "Patterson": {
             "title": "Patterson",
-            "description": "Ecommerce con carrito de compras"
+            "description": "Ecommerce con carrito de compras en el que puedes agregar productos al carrito y pagar"
           },
           "acciona": {
             "title": "Acciona",
-            "description": "Gestor de Usuarios Favoritos"
+            "description": "Gestor de Usuarios Favoritos en el que puedes agregar usuarios a tu lista de favoritos"
           },
           "cloudappi": {
             "title": "Cloudappi",
-            "description": "Gestor de Usuarios"
+            "description": "Gestor de Usuarios con paginación, búsqueda y filtrado"
           },
           "azertiumit": {
             "title": "Azertiumit",
-            "description": "Buscador de repositorios Github"
+            "description": "Buscador de repositorios Github en el que puedes buscar repositorios y ver su información"
           }
         }
       },

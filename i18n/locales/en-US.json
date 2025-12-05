@@ -29,37 +29,49 @@
         "title": "Let's take a look at some test projects I've completed 🙇",
         "callToActionButton": "View Project",
         "projects": {
+          "pokemon": {
+            "title": "Pokemon",
+            "description": "Pokemon dashboard where you can list pokemons and see their information"
+          },
+          "dragonball": {
+            "title": "Dragonball",
+            "description": "Dragon ball dashboard where you can list the series characters and see their information"
+          },
+          "asafe": {
+            "title": "Asafe",
+            "description": "Posts dashboard with authentication, where you can create, edit and delete posts, plus you have a graph of posts by category"
+          },
           "factorial": {
             "title": "Factorial",
-            "description": "Bicycle builder"
+            "description": "Bicycle builder where you can select the bike features and see the price"
           },
           "iskaypet": {
             "title": "Iskaypet",
-            "description": "To-do task manager"
+            "description": "Todo list task manager where you can create and delete tasks"
           },
           "bjumper": {
             "title": "Bjumper",
-            "description": "Github user searcher"
+            "description": "Github user searcher where you can search users and see their information"
           },
           "mayoral": {
             "title": "Mayoral",
-            "description": "Vacation calendar"
+            "description": "Vacation calendar where you can see holidays and vacation days in the city of Málaga"
           },
           "Patterson": {
             "title": "Patterson",
-            "description": "Ecommerce with shopping cart"
+            "description": "Ecommerce with shopping cart where you can add products to cart and pay"
           },
           "acciona": {
             "title": "Acciona",
-            "description": "Favorite users manager"
+            "description": "Favorite Users Manager where you can add users to your favorites list"
           },
           "cloudappi": {
             "title": "Cloudappi",
-            "description": "User manager"
+            "description": "User manager with pagination, search and filtering"
           },
           "azertiumit": {
             "title": "Azertiumit",
-            "description": "Github repositories searcher"
+            "description": "Github repositories searcher where you can search repositories and see their information"
           }
         }
       },
