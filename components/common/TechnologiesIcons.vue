@@ -28,6 +28,9 @@ const technologies = ref<Technology[]>([
     duration: 47,
   },
   { name: "PHP", icon: "/img/tech/php.svg", delay: 12, duration: 48 },
+  { name: "Svelte", icon: "/img/tech/svelte.svg", delay: 5, duration: 47 },
+  { name: "Nuxt", icon: "/img/tech/nuxt.svg", delay: 7, duration: 45 },
+  { name: "Next", icon: "/img/tech/nextjs.svg", delay: 9, duration: 43 },
 ]);
 
 const animationActive = ref(false);

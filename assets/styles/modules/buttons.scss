@@ -3,7 +3,7 @@
   padding: 7px 14px;
   border-radius: 5px;
   background-color: var(--main-color-dark);
-  color: var(--light-color-lighter);
+  color: var(--light-color);
   border: none;
   transition: all 0.3s ease 0s;
   text-decoration: none;
@@ -14,7 +14,7 @@
 
   &.is-secondary {
     background-color: var(--secondary-color);
-    color: var(--light-color-lighter);
+    color: var(--light-color);
 
     &:hover {
       background-color: var(--main-color-medium-light);
