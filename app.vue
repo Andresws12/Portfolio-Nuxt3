@@ -42,6 +42,8 @@ useSeoMeta({
 useSchemaOrg([
   definePerson({
     publisher: i18n.t("common.seo.author"),
+    author: i18n.t("common.seo.author"),
+    email: "andreshernandez12.1995@gmail.com",
     image: "/img/body.webp",
     sameAs: ["hhttps://github.com/Andresws12"],
   }),
