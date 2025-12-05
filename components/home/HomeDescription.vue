@@ -2,11 +2,12 @@
   <section
     id="personal-data"
     :aria-label="$t('common.ariaLabel.ariaLabelPersonalData')"
-    data-cy="home-section"
+    data-cy="home-description"
     class="home-description card"
   >
     <NuxtImg
       class="home-description__image"
+      data-cy="home-description-image"
       src="/img/andres-front-programador.webp"
       provider="cloudflare"
       :alt="$t('common.images.dataBodyImage')"
@@ -15,15 +16,21 @@
       width="175"
       height="175"
     />
-    <article class="home-description__data">
-      <h1 class="home-description__title is-title">
+    <article class="home-description__data" data-cy="home-description-data">
+      <h1
+        class="home-description__title is-title"
+        data-cy="home-description-data-title"
+      >
         {{ $t('views.home.homeDescription.title') }}
       </h1>
-      <h2 class="home-description__subtitle is-subtitle">
+      <h2
+        class="home-description__subtitle is-subtitle"
+        data-cy="home-description-data-subtitle"
+      >
         {{ $t('views.home.homeDescription.subtitle') }}
       </h2>
 
-      <button-contact />
+      <button-contact data-cy="home-description-button-contact" />
     </article>
   </section>
 </template>

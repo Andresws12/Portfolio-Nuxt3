@@ -1,6 +1,9 @@
 <template>
-  <section class="layout-work">
-    <article class="layout-work__business-data">
+  <section class="layout-work" data-cy="layout-work">
+    <article
+      class="layout-work__business-data"
+      data-cy="layout-work-business-data"
+    >
       <NuxtImg
         :src="props.imageSource"
         :alt="props.imageData"
@@ -11,12 +14,31 @@
         width="250"
         :height="props.imageHeight"
         class="layout-work__business-image"
+        data-cy="layout-work-business-image"
       />
-      <h1 class="layout-work__business-name">{{ businessName }}</h1>
-      <h2 class="layout-work__business-role">{{ businessRole }}</h2>
-      <p class="layout-work__business-period">{{ businessPeriod }}</p>
+      <h1
+        class="layout-work__business-name"
+        data-cy="layout-work-business-name"
+      >
+        {{ businessName }}
+      </h1>
+      <h2
+        class="layout-work__business-role"
+        data-cy="layout-work-business-role"
+      >
+        {{ businessRole }}
+      </h2>
+      <p
+        class="layout-work__business-period"
+        data-cy="layout-work-business-period"
+      >
+        {{ businessPeriod }}
+      </p>
       <slot name="business-data" />
-      <div class="layout-work__technologies-container">
+      <div
+        class="layout-work__technologies-container"
+        data-cy="layout-work-technologies-container"
+      >
         <NuxtImg
           v-if="props.hasVue"
           src="/img/tech/vue.svg"
@@ -25,6 +47,7 @@
           height="25"
           loading="lazy"
           provider="cloudflare"
+          data-cy="layout-work-technology-vue"
         />
         <NuxtImg
           v-if="props.hasAngular"
@@ -34,6 +57,7 @@
           height="25"
           loading="lazy"
           provider="cloudflare"
+          data-cy="layout-work-technology-angular"
         />
         <NuxtImg
           v-if="props.hasNet"
@@ -43,6 +67,7 @@
           height="25"
           loading="lazy"
           provider="cloudflare"
+          data-cy="layout-work-technology-net"
         />
         <NuxtImg
           v-if="props.hasReact"
@@ -51,6 +76,7 @@
           width="25"
           height="25"
           loading="lazy"
+          data-cy="layout-work-technology-react"
         />
         <NuxtImg
           v-if="props.hasJquery"
@@ -60,6 +86,7 @@
           height="25"
           loading="lazy"
           provider="cloudflare"
+          data-cy="layout-work-technology-jquery"
         />
         <NuxtImg
           v-if="props.hasTypescript"
@@ -69,6 +96,7 @@
           height="25"
           loading="lazy"
           provider="cloudflare"
+          data-cy="layout-work-technology-typescript"
         />
         <NuxtImg
           v-if="props.hasPhp"
@@ -78,10 +106,14 @@
           height="25"
           loading="lazy"
           provider="cloudflare"
+          data-cy="layout-work-technology-php"
         />
       </div>
     </article>
-    <article class="layout-work__personal-data card">
+    <article
+      class="layout-work__personal-data card"
+      data-cy="layout-work-personal-data"
+    >
       <slot />
     </article>
   </section>

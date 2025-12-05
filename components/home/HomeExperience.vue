@@ -2,10 +2,13 @@
   <section
     id="experience-data"
     :aria-label="$t('common.ariaLabel.ariaLabelExperienceData')"
-    data-cy="home-section"
+    data-cy="home-experience"
     class="home-experience card"
   >
-    <h2 class="home-experience__title is-subtitle is-strong">
+    <h2
+      class="home-experience__title is-subtitle is-strong"
+      data-cy="home-experience-title"
+    >
       {{ $t('views.home.homeWorkExperience.title') }}
     </h2>
     <div class="home-experience__container-cards">
@@ -27,6 +30,7 @@
         has-react
         has-typescript
         has-jquery
+        data-cy="home-experience-card-iskaypet"
         @click="$router.push({ path: '/works/iskaypet-view' })"
       />
       <common-card-experience
@@ -45,6 +49,7 @@
         has-typescript
         has-jquery
         has-net
+        data-cy="home-experience-card-cloudappi"
         @click="$router.push({ path: '/works/cloudappi-view' })"
       />
       <common-card-experience
@@ -61,6 +66,7 @@
         has-typescript
         has-net
         has-jquery
+        data-cy="home-experience-card-star"
         @click="$router.push({ path: '/works/star-view' })"
       />
       <common-card-experience
@@ -76,6 +82,7 @@
         has-typescript
         has-php
         has-jquery
+        data-cy="home-experience-card-pantallazo"
         @click="$router.push({ path: '/works/pantallazo-view' })"
       />
     </div>
