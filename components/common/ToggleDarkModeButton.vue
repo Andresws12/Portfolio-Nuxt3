@@ -14,6 +14,8 @@ const isDarkMode = computed(() => mainStore.isDark);
       <NuxtImg
         v-if="isDarkMode"
         key="sun"
+        alt="Sun icon"
+        title="Sun icon"
         src="/img/sun.svg"
         class="toggle-dark-mode__icon-sun"
         quality="100"
@@ -24,6 +26,8 @@ const isDarkMode = computed(() => mainStore.isDark);
       <NuxtImg
         v-else
         key="moon"
+        alt="Moon icon"
+        title="Moon icon"
         src="/img/moon.svg"
         class="toggle-dark-mode__icon-moon"
         quality="100"
