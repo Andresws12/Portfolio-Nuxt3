@@ -136,6 +136,13 @@
       "skipToGithub": "Go to my Github profile",
       "skipToGmail": "Go to my gmail"
     },
+    "ariaLabel": {
+      "ariaLabelMainContent": "Main Content",
+      "ariaLabelPersonalData": "Personal Data",
+      "ariaLabelLinkedin": "Linkedin Profile",
+      "ariaLabelGithub": "Github Profile",
+      "ariaLabelGmail": "My Email"
+    },
     "subtitle": {},
     "inputs": {},
     "buttons": {},
