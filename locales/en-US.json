@@ -8,15 +8,8 @@
         "descriptionWelcome": "Hey there! 👋",
         "description": "Welcome to my digital corner! I've built this portfolio with lots of love and code, using Vue 3, Typescript, and Pinia for efficient state management. Here, you'll not only find me having fun experimenting with the latest trends in frontend development and bringing my most innovative ideas to life, but you'll also get a glimpse into my work experience."
       },
-      "homeDescriptionPersonal": {
-        "descriptionWho": "So, who am I? 🤔",
-        "descriptions": {
-          "paragraph1": "I'm a Colombian with a Spanish soul, or perhaps a Spaniard with a Colombian heart. I've been fortunate to live in both countries and soak up the best of each culture: the joy, work ethic, problem-solving skills, love for family, and perseverance.",
-          "paragraph2": "Ever since I was a kid, I've been drawn to technology. I started with Habbo servers and custom Android operating systems, and now, here I am, living my passion every day. But life isn't all about code; I also love staying fit with crossfit, getting lost in nature, traveling to discover new horizons, and enjoying good music. Oh, and let's not forget, I absolutely love animals! Allow me to introduce you to my little furry companions."
-        }
-      },
       "homeWorkExperience": {
-        "title": "Check Out My Work Adventure! 🚀",
+        "title": "Check Out My Work Experience! 🚀",
         "callToActionButton": "See more",
         "activeButtonText": "Current"
       },
@@ -60,13 +53,13 @@
         }
       },
       "pantallazo": {
-        "title": "Mi Saga en Pantallazo Azul 🖥️",
-        "intro": "Mi primer curro en tecnología fue en Pantallazo Azul, ¡y vaya si hice de todo! Era el tipo al que acudían para montar PCs, ya fuera un equipo básico o una bestia para gaming. Pero eso no es todo, también era la cara amigable que vendía todo tipo de chucherías tecnológicas a los clientes. ¿Tienes un problema técnico? Yo era tu solucionador, resolviendo problemas aquí y allá. Pero espera, ¡hay más! También me metí en el desarrollo de aplicaciones en PHP, instalé cámaras de seguridad y hasta diseñé sitios web en WordPress.",
-        "coolProjects": "Proyectos que marcaron mi inicio:",
-        "posTitle": "TPV web y aplicación web para hoteles en PHP:",
-        "pos": "Era el chico del mantenimiento, asegurándome de que todo funcionara como un reloj.",
-        "wordpressTitle": "Distintas webs de tiendas y estáticas en WordPress:",
-        "wordpress": "Desde tiendas online hasta páginas estáticas, yo era el mago de WordPress que lo hacía todo posible.",
+        "title": "My Pantallazo Azul Saga 🖥️",
+        "intro": "My first gig in tech was at Pantallazo Azul, and man, did I wear a lot of hats! I was the go-to guy for building PCs, whether it was a budget rig or a high-end gaming monster. Not just that, I was also the friendly face selling all sorts of tech goodies to customers. Got a tech problem? I was your fixer, troubleshooting issues left and right. But wait, there's more! I also dabbled in PHP app development, set up security cameras, and even crafted websites in WordPress.",
+        "coolProjects": "Projects That Kickstarted My Journey:",
+        "posTitle": "Web-based POS and Hotel Apps in PHP:",
+        "pos": "I was the maintenance guy, making sure everything ran smoothly.",
+        "wordpressTitle": "Various WordPress Websites:",
+        "wordpress": "From online stores to static pages, I was the WordPress whiz making it all happen.",
         "seo": {
           "title": "Experience at Pantallazo Azul - Andrés Felipe Hernández Galindo",
           "description": "My tech beginnings with Pantallazo Azul. Application development, PC assembly, and more.",
