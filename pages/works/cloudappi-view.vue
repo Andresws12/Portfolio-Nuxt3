@@ -1,8 +1,11 @@
 <script lang="ts" setup>
 import LayoutWork from "@/components/common/layouts/LayoutWork.vue";
 
-import { workImageHeight } from "@/models/ImagesHeight";
+import { useWorksExperienceStore } from "@/stores/worksExperienceStore";
 
+const worksExperienceStore = useWorksExperienceStore();
+
+const workExperiences = computed(() => worksExperienceStore.workArgs[1]);
 const i18n = useI18n();
 
 useSeoMeta({
@@ -22,20 +25,7 @@ useSchemaOrg([
 </script>
 
 <template>
-  <LayoutWork
-    imageSource="/img/cloudappi.webp"
-    :imageHeight="workImageHeight.CLOUDAPPI"
-    :imageData="$t('common.images.dataCloudappiImage')"
-    :businessName="$t('common.works.cloudappi.name')"
-    :businessRole="$t('common.works.cloudappi.title')"
-    :businessPeriod="$t('common.works.cloudappi.period')"
-    hasVue
-    hasReact
-    hasAngular
-    hasTypescript
-    hasJquery
-    hasNet
-  >
+  <LayoutWork :args="workExperiences">
     <h3>{{ $t("views.works.cloudappi.title") }}</h3>
     <p>
       {{ $t("views.works.cloudappi.intro") }}

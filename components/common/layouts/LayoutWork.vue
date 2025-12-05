@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-export interface Props {
+export interface Args {
   imageSource: string;
   imageData: string;
   imageHeight: string;
-  businessName: string;
-  businessRole: string;
-  businessPeriod: string;
+  textTitle: string;
+  textSubtitle: string;
+  callToActionButton?: string;
   isActive?: boolean;
   activeTextButton?: string;
   hasVue?: boolean;
@@ -15,24 +15,161 @@ export interface Props {
   hasJquery?: boolean;
   hasTypescript?: boolean;
   hasPhp?: boolean;
+  dateStart?: string;
+  dateEnd?: string;
+}
+interface Props {
+  args: Args;
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  imageSource: "",
-  imageData: "",
-  imageHeight: "",
-  businessName: "",
-  businessRole: "",
-  businessPeriod: "",
-  isActive: false,
-  activeTextButton: "",
-  hasVue: false,
-  hasAngular: false,
-  hasNet: false,
-  hasReact: false,
-  hasJquery: false,
-  hasTypescript: false,
-  hasPhp: false,
+  args: () => ({
+    imageSource: "",
+    imageData: "",
+    imageHeight: "",
+    textTitle: "",
+    textSubtitle: "",
+    callToActionButton: "",
+    isActive: false,
+    activeTextButton: "",
+    hasVue: false,
+    hasAngular: false,
+    hasNet: false,
+    hasReact: false,
+    hasJquery: false,
+    hasTypescript: false,
+    hasPhp: false,
+    dateStart: "",
+    dateEnd: "",
+  }),
+});
+
+const {
+  imageSource,
+  imageData,
+  imageHeight,
+  textTitle,
+  textSubtitle,
+  hasVue,
+  hasAngular,
+  hasNet,
+  hasReact,
+  hasJquery,
+  hasTypescript,
+  hasPhp,
+  dateStart,
+  dateEnd,
+} = toRefs(props.args);
+const { t } = useI18n();
+
+/**
+ * Gets the absolute difference in full months between two dates.
+ *
+ * @param start - The start date.
+ * @param end - The end date.
+ * @returns The number of months difference (rounded up).
+ */
+function getMonthDifference(start: Date, end: Date): number {
+  const diffTime = Math.abs(end.getTime() - start.getTime());
+  // Approximate 30 days per month
+  return Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 30));
+}
+
+/**
+ * Returns the whole number of years in a month count.
+ *
+ * @param months - The total number of months.
+ * @returns The full years contained in those months.
+ */
+function getYearsFromMonths(months: number): number {
+  return Math.floor(months / 12);
+}
+
+/**
+ * Returns the remaining months after extracting whole years.
+ *
+ * @param months - The total number of months.
+ * @returns The leftover months once years are factored out.
+ */
+function getRemainingMonths(months: number): number {
+  return months % 12;
+}
+
+/**
+ * Constructs a display string of "X años Y meses" or "Y meses" for the
+ * time difference between two dates.
+ *
+ * @param start - The start date.
+ * @param end - The end date.
+ * @returns A formatted string of the duration between the dates.
+ */
+function formatDuration(start: Date, end: Date): string {
+  const totalMonths = getMonthDifference(start, end);
+  const years = getYearsFromMonths(totalMonths);
+  const months = getRemainingMonths(totalMonths);
+
+  if (years <= 0) {
+    return `${months} meses`;
+  } else {
+    return `${years} años ${months} meses`;
+  }
+}
+
+/**
+ * Computes how long the time span is, based on provided start and end dates.
+ * If `dateEnd` is "now", the current date is used as the end date.
+ */
+const workDateCount = computed((): string => {
+  // Ensure both dates exist and are non-empty
+  if (!dateStart.value || !dateEnd.value) {
+    return "";
+  }
+
+  // Parse start date and handle invalid date scenario
+  const start = new Date(dateStart.value);
+  if (isNaN(start.getTime())) return "";
+
+  let end: Date;
+  if (dateEnd.value === "now") {
+    end = new Date();
+  } else {
+    end = new Date(dateEnd.value);
+    if (isNaN(end.getTime())) return "";
+  }
+
+  return formatDuration(start, end);
+});
+
+/**
+ * Computes the formatted start and end dates for a work experience.
+ *
+ * @computed
+ * @returns {Object} An object containing the formatted start and end dates.
+ * @property {string} start - The formatted start date in "MMM YYYY" format.
+ * @property {string} end - The formatted end date in "MMM YYYY" format, or a localized string indicating the work is ongoing.
+ */
+const workDateNames = computed(() => {
+  const start = new Date(dateStart.value);
+  const end = dateEnd.value === "now" ? null : new Date(dateEnd.value);
+  return {
+    start: start.toLocaleDateString(undefined, {
+      year: "numeric",
+      month: "short",
+    }),
+    end: end
+      ? end.toLocaleDateString(undefined, { year: "numeric", month: "short" })
+      : t("views.home.homeWorkExperience.activeButtonText"),
+  };
+});
+
+/**
+ * Computed property that generates a description string for a work experience card.
+ * The description includes the start date, end date, and the duration of the work experience.
+ *
+ * @returns {string} A formatted string in the format "start - end · duration".
+ */
+const description = computed(() => {
+  return `${workDateNames.value.start} - ${workDateNames.value.end} · ${workDateCount.value}`;
 });
 </script>
 
@@ -43,14 +180,14 @@ const props = withDefaults(defineProps<Props>(), {
       data-cy="layout-work-business-data"
     >
       <NuxtImg
-        :src="props.imageSource"
-        :alt="props.imageData"
-        :title="props.imageData"
+        :src="imageSource"
+        :alt="imageData"
+        :title="imageData"
         provider="cloudflare"
         sizes="100vw xs:25vw sm:50vw md:400px"
         loading="lazy"
         width="250"
-        :height="props.imageHeight"
+        :height="imageHeight"
         class="layout-work__business-image"
         data-cy="layout-work-business-image"
       />
@@ -58,19 +195,19 @@ const props = withDefaults(defineProps<Props>(), {
         class="layout-work__business-name"
         data-cy="layout-work-business-name"
       >
-        {{ businessName }}
+        {{ textTitle }}
       </h1>
       <h2
         class="layout-work__business-role"
         data-cy="layout-work-business-role"
       >
-        {{ businessRole }}
+        {{ textSubtitle }}
       </h2>
       <p
         class="layout-work__business-period"
         data-cy="layout-work-business-period"
       >
-        {{ businessPeriod }}
+        {{ description }}
       </p>
       <slot name="business-data" />
       <div
@@ -78,7 +215,7 @@ const props = withDefaults(defineProps<Props>(), {
         data-cy="layout-work-technologies-container"
       >
         <NuxtImg
-          v-if="props.hasVue"
+          v-if="hasVue"
           src="/img/tech/vue.svg"
           alt="vue"
           width="25"
@@ -88,7 +225,7 @@ const props = withDefaults(defineProps<Props>(), {
           data-cy="layout-work-technology-vue"
         />
         <NuxtImg
-          v-if="props.hasAngular"
+          v-if="hasAngular"
           src="/img/tech/angular.svg"
           alt="angular"
           width="25"
@@ -98,7 +235,7 @@ const props = withDefaults(defineProps<Props>(), {
           data-cy="layout-work-technology-angular"
         />
         <NuxtImg
-          v-if="props.hasNet"
+          v-if="hasNet"
           src="/img/tech/net.svg"
           alt=".net"
           width="25"
@@ -108,7 +245,7 @@ const props = withDefaults(defineProps<Props>(), {
           data-cy="layout-work-technology-net"
         />
         <NuxtImg
-          v-if="props.hasReact"
+          v-if="hasReact"
           src="/img/tech/react.svg"
           alt="react"
           width="25"
@@ -117,7 +254,7 @@ const props = withDefaults(defineProps<Props>(), {
           data-cy="layout-work-technology-react"
         />
         <NuxtImg
-          v-if="props.hasJquery"
+          v-if="hasJquery"
           src="/img/tech/jquery.svg"
           alt="jquery"
           width="25"
@@ -127,7 +264,7 @@ const props = withDefaults(defineProps<Props>(), {
           data-cy="layout-work-technology-jquery"
         />
         <NuxtImg
-          v-if="props.hasTypescript"
+          v-if="hasTypescript"
           src="/img/tech/typescript.svg"
           alt="typescript"
           width="25"
@@ -137,7 +274,7 @@ const props = withDefaults(defineProps<Props>(), {
           data-cy="layout-work-technology-typescript"
         />
         <NuxtImg
-          v-if="props.hasPhp"
+          v-if="hasPhp"
           src="/img/tech/php.svg"
           alt="php"
           width="25"

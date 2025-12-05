@@ -7,7 +7,7 @@
     "home": {
       "homeDescription": {
         "title": "Andrés Felipe Hernández Galindo",
-        "subtitle": "Programador Front-end",
+        "subtitle": "Programador Front-end Senior",
         "descriptionWelcome": "¡Hey, qué tal! 👋",
         "description": "¡Bienvenido a mi rincón digital! He construido este portafolio con mucho amor y código, utilizando Vue 3, Typescript y Pinia para una gestión de estados eficiente. Aquí no solo me divierto experimentando con las últimas tendencias en desarrollo frontend y poniendo en práctica mis ideas más innovadoras, sino que también podrás encontrar detalles sobre mi experiencia laboral."
       },
@@ -17,9 +17,9 @@
         "activeButtonText": "Actualmente"
       },
       "seo": {
-        "title": "Andrés Felipe Hernández Galindo - Programador Front End en Málaga",
-        "description": "Andrés Felipe Hernández Galindo, programador front end con más de 5 años de experiencia. Conoce mi trayectoria en empresas como Iskaypet, CloudAPPI, STAR y Pantallazo Azul. Basado en Málaga, España.",
-        "keywords": "Andrés Felipe Hernández Galindo, programador front end, Málaga, España, Iskaypet, CloudAPPI, STAR, Pantallazo Azul"
+        "title": "Andrés Felipe Hernández Galindo - Programador Front End Senior en Málaga",
+        "description": "Andrés Felipe Hernández Galindo, programador front end senior con más de 6 años de experiencia. Conoce mi trayectoria en empresas como Iskaypet, CloudAPPI, STAR y Pantallazo Azul. Basado en Málaga, España.",
+        "keywords": "Andrés Felipe Hernández Galindo, programador front end Senior, Málaga, España, Iskaypet, CloudAPPI, STAR, Pantallazo Azul"
       }
     },
     "works": {
@@ -36,7 +36,7 @@
         "seo": {
           "title": "Experiencia en Iskaypet - Andrés Felipe Hernández Galindo",
           "description": "Conoce mi trabajo y proyectos en Iskaypet como programador front end. Desarrollo y mantenimiento de aplicaciones web y más.",
-          "keywords": "Iskaypet, programador front end, proyectos, desarrollo web"
+          "keywords": "Iskaypet, programador front end senior, proyectos, desarrollo web"
         }
       },
       "cloudappi": {
@@ -103,23 +103,19 @@
     "works": {
       "iskaypet": {
         "name": "Grupo IskayPet",
-        "title": "Programador Front-end",
-        "period": "nov. 2021 - act ·"
+        "title": "Programador Front-end Senior"
       },
       "cloudappi": {
         "name": "CloudAPPI",
-        "title": "Programador Front-end",
-        "period": "mar. 2021 - nov. 2021 ·"
+        "title": "Programador Front-end"
       },
       "star": {
         "name": "Star",
-        "title": "Programador Front-end",
-        "period": "feb. 2019 - feb. 2021 ·"
+        "title": "Programador Front-end"
       },
       "pantallazo": {
         "name": "Pantallazo Azul",
-        "title": "Programador Front-end",
-        "period": "ago. 2018 - feb. 2019 ·"
+        "title": "Programador Front-end"
       }
     },
     "title": {

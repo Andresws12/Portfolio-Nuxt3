@@ -1,8 +1,11 @@
 <script lang="ts" setup>
 import LayoutWork from "@/components/common/layouts/LayoutWork.vue";
 
-import { workImageHeight } from "@/models/ImagesHeight";
+import { useWorksExperienceStore } from "@/stores/worksExperienceStore";
 
+const worksExperienceStore = useWorksExperienceStore();
+
+const workExperiences = computed(() => worksExperienceStore.workArgs[3]);
 const i18n = useI18n();
 
 useSeoMeta({
@@ -22,17 +25,7 @@ useSchemaOrg([
 </script>
 
 <template>
-  <LayoutWork
-    imageSource="/img/pantallazo.webp"
-    :imageHeight="workImageHeight.PANTALLAZO"
-    :imageData="$t('common.images.dataPantallazoImage')"
-    :businessName="$t('common.works.pantallazo.name')"
-    :businessRole="$t('common.works.pantallazo.title')"
-    :businessPeriod="$t('common.works.pantallazo.period')"
-    hasTypescript
-    hasPhp
-    hasJquery
-  >
+  <LayoutWork :args="workExperiences">
     <h3>{{ $t("views.works.pantallazo.title") }}</h3>
     <p>
       {{ $t("views.works.pantallazo.intro") }}

@@ -9,13 +9,16 @@ export default defineNuxtConfig({
     "@nuxtjs/sitemap",
     "nuxt-schema-org",
     "@nuxt/eslint",
+    "@pinia/nuxt",
   ],
-
+  pinia: {
+    storesDirs: ["./stores/**"],
+  },
   site: {
-    // baseURL: 'https://andres-hernandez.com/',
-    // url: 'https://andres-hernandez.com/',
+    baseURL: "https://andres-hernandez.com/",
+    url: "https://andres-hernandez.com/",
     name: "Andres Felipe Hernandez Galindo - Website",
-    // autoI18n: true,
+    autoI18n: true,
   },
 
   delayHydration: {
