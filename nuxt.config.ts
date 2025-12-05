@@ -9,16 +9,16 @@ export default defineNuxtConfig({
     "@nuxtjs/robots",
     "nuxt-purgecss",
     "nuxt-delay-hydration",
-    'nuxt-simple-sitemap',
+    "nuxt-simple-sitemap",
   ],
   site: {
-    url: 'https://andres-hernandez.onrender.com/',
-    autoI18n: true
+    url: "https://andres-hernandez.onrender.com/",
+    autoI18n: true,
   },
   delayHydration: {
     // enables nuxt-delay-hydration in dev mode for testing
-    debug: process.env.NODE_ENV === 'development',
-    mode: 'init'
+    debug: process.env.NODE_ENV === "development",
+    mode: "init",
   },
   image: {
     densities: [1, 2],
