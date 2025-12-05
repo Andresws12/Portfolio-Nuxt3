@@ -72,6 +72,4 @@ export default defineNuxtConfig({
       viewport: "width=device-width, initial-scale=1",
     },
   },
-
-  compatibilityDate: "2025-01-07",
 });
