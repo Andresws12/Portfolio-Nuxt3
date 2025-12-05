@@ -1,6 +1,6 @@
-import { cySelector } from '../utils';
+import { cySelector } from "../utils";
 
-const baseLayoutWork = 'layout-work';
+const baseLayoutWork = "layout-work";
 
 const layoutWork = cySelector(baseLayoutWork);
 const layoutWorkBusinessData = cySelector(`${baseLayoutWork}-business-data`);
@@ -8,28 +8,28 @@ const layoutWorkBusinessImage = cySelector(`${baseLayoutWork}-business-image`);
 const layoutWorkBusinessName = cySelector(`${baseLayoutWork}-business-name`);
 const layoutWorkBusinessRole = cySelector(`${baseLayoutWork}-business-role`);
 const layoutWorkBusinessPeriod = cySelector(
-  `${baseLayoutWork}-business-period`
+  `${baseLayoutWork}-business-period`,
 );
 const layoutWorkBusinessTechnologyVue = cySelector(
-  `${baseLayoutWork}-technology-vue`
+  `${baseLayoutWork}-technology-vue`,
 );
 const layoutWorkBusinessTechnologyAngular = cySelector(
-  `${baseLayoutWork}-technology-angular`
+  `${baseLayoutWork}-technology-angular`,
 );
 const layoutWorkBusinessTechnologyNet = cySelector(
-  `${baseLayoutWork}-technology-net`
+  `${baseLayoutWork}-technology-net`,
 );
 const layoutWorkBusinessTechnologyReact = cySelector(
-  `${baseLayoutWork}-technology-react`
+  `${baseLayoutWork}-technology-react`,
 );
 const layoutWorkBusinessTechnologyJquery = cySelector(
-  `${baseLayoutWork}-technology-jquery`
+  `${baseLayoutWork}-technology-jquery`,
 );
 const layoutWorkBusinessTechnologyTypescript = cySelector(
-  `${baseLayoutWork}-technology-typescript`
+  `${baseLayoutWork}-technology-typescript`,
 );
 const layoutWorkBusinessTechnologyPhp = cySelector(
-  `${baseLayoutWork}-technology-php`
+  `${baseLayoutWork}-technology-php`,
 );
 const layoutWorkPersonalData = cySelector(`${baseLayoutWork}-personal-data`);
 

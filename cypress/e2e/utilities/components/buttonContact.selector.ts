@@ -1,6 +1,6 @@
-import { cySelector } from '../utils';
+import { cySelector } from "../utils";
 
-const baseButtonContact = 'button-contact';
+const baseButtonContact = "button-contact";
 
 const buttonContact = cySelector(baseButtonContact);
 const buttonContactGithub = cySelector(`${baseButtonContact}-github`);

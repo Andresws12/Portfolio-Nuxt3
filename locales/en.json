@@ -1,4 +1,7 @@
 {
+  "code": "en",
+  "name": "English",
+  "language": "en-US",
   "views": {
     "maintenancePage": {},
     "home": {

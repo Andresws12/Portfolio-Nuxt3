@@ -1,6 +1,6 @@
-import path from 'path';
-import { defineConfig } from 'cypress';
-import * as dotenv from 'dotenv'; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+import path from "path";
+import { defineConfig } from "cypress";
+import * as dotenv from "dotenv"; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
 
 dotenv.config({
   path: path.join(process.cwd(), `.env.${process.env.NODE_ENV}`),

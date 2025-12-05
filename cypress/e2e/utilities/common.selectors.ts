@@ -1,3 +1,3 @@
-import { cySelector } from './utils';
+import { cySelector } from "./utils";
 
-export const logoAppSelector = cySelector('logo-app');
+export const logoAppSelector = cySelector("logo-app");

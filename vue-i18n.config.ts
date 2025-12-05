@@ -1,3 +1,3 @@
 export default {
-  fallbackLocale: 'en-US',
+  fallbackLocale: "es-ES",
 };

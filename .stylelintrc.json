@@ -5,9 +5,10 @@
   ],
   "plugins": ["stylelint-declaration-strict-value"],
   "rules": {
+    "lightness-notation": "number",
     "selector-class-pattern": "^(?:(?:o|c|u|t|s|is|has|_|js|qa)-)?[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*(?:__[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*)?(?:--[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*)?(?:\\[.+\\])?$",
     "scss/double-slash-comment-whitespace-inside": null,
-    "max-nesting-depth": 2,
+    "max-nesting-depth": 3,
     "selector-no-vendor-prefix": null,
     "property-no-vendor-prefix": null,
     "value-no-vendor-prefix": null,
@@ -20,10 +21,6 @@
       "bottom": ["rem", "%", "em"],
       "right": ["rem", "%", "em"],
       "left": ["rem", "%", "em"]
-    },
-    "scale-unlimited/declaration-strict-value": [
-      ["/color$/"],
-      { "disableFix": true }
-    ]
+    }
   }
 }

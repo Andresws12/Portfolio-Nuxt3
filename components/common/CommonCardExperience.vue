@@ -1,3 +1,49 @@
+<script lang="ts" setup>
+export interface Props {
+  imageSource: string;
+  imageData: string;
+  imageHeight: string;
+  textTitle: string;
+  textDescription: string;
+  textSubtitle: string;
+  callToActionButton: string;
+  isActive?: boolean;
+  activeTextButton?: string;
+  hasVue?: boolean;
+  hasAngular?: boolean;
+  hasNet?: boolean;
+  hasReact?: boolean;
+  hasJquery?: boolean;
+  hasTypescript?: boolean;
+  hasPhp?: boolean;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  imageSource: "",
+  imageData: "",
+  imageHeight: "",
+  textTitle: "",
+  textDescription: "",
+  textSubtitle: "",
+  callToActionButton: "",
+  isActive: false,
+  activeTextButton: "",
+  hasVue: false,
+  hasAngular: false,
+  hasNet: false,
+  hasReact: false,
+  hasJquery: false,
+  hasTypescript: false,
+  hasPhp: false,
+});
+
+const emit = defineEmits<EmitsType>();
+
+type EmitsType = {
+  (e: "click"): void;
+};
+</script>
+
 <template>
   <article
     class="common-card-experience card"
@@ -120,6 +166,7 @@
     </div>
     <div class="common-card-experience__button-container">
       <button
+        type="button"
         class="button"
         data-cy="common-card-experience-button"
         @click="emit('click')"
@@ -130,53 +177,9 @@
   </article>
 </template>
 
-<script lang="ts" setup>
-export interface Props {
-  imageSource: string;
-  imageData: string;
-  imageHeight: string;
-  textTitle: string;
-  textDescription: string;
-  textSubtitle: string;
-  callToActionButton: string;
-  isActive?: boolean;
-  activeTextButton?: string;
-  hasVue?: boolean;
-  hasAngular?: boolean;
-  hasNet?: boolean;
-  hasReact?: boolean;
-  hasJquery?: boolean;
-  hasTypescript?: boolean;
-  hasPhp?: boolean;
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  imageSource: '',
-  imageData: '',
-  imageHeight: '',
-  textTitle: '',
-  textDescription: '',
-  textSubtitle: '',
-  callToActionButton: '',
-  isActive: false,
-  activeTextButton: '',
-  hasVue: false,
-  hasAngular: false,
-  hasNet: false,
-  hasReact: false,
-  hasJquery: false,
-  hasTypescript: false,
-  hasPhp: false,
-});
-
-type EmitsType = {
-  (e: 'click'): void;
-};
-
-const emit = defineEmits<EmitsType>();
-</script>
-
 <style lang="scss" scoped>
+@use "@/assets/styles/mixins/all" as mixins;
+
 // styles
 .common-card-experience {
   display: flex;
@@ -186,7 +189,7 @@ const emit = defineEmits<EmitsType>();
   position: relative;
   box-shadow: rgb(149 157 165 / 20%) 0 8px 24px;
 
-  @include mobile {
+  @include mixins.mobile {
     width: 100%;
   }
 
