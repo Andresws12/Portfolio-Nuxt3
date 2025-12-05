@@ -24,5 +24,11 @@
     "@nuxtjs/robots": "^3.0.0",
     "nuxt-particles": "^0.1.5",
     "prettier": "^3.0.3"
+  },
+  "engines": {
+    "npm": "please-use-pnpm",
+    "yarn": "please-use-pnpm",
+    "pnpm": "*",
+    "node": ">=20"
   }
 }
