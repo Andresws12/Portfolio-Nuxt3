@@ -144,6 +144,9 @@
       "dataStarImage": "Star logo",
       "dataPantallazoImage": "Pantallazo Azul logo"
     },
+    "seo": {
+      "author": "Andrés Felipe Hernández Galindo"
+    },
     "languages": { "spanish": "Español", "english": "Inglés" },
     "errors": {}
   }

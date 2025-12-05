@@ -39,7 +39,15 @@ useSeoMeta({
   ogTitle: i18n.t("views.works.iskaypet.seo.title"),
   description: i18n.t("views.works.iskaypet.seo.description"),
   ogDescription: i18n.t("views.works.iskaypet.seo.description"),
+  keywords: i18n.t("views.works.iskaypet.seo.keywords"),
 });
+
+useSchemaOrg([
+  defineWebSite({
+    name: i18n.t("views.works.iskaypet.seo.title"),
+  }),
+  defineWebPage(),
+]);
 </script>
 
 <style lang="scss" scoped>
