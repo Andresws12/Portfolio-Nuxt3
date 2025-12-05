@@ -7,7 +7,7 @@
   >
     <NuxtImg
       class="home-description__image"
-      src="/img/andres-front-programador.webp"
+      src="https://ik.imagekit.io/andresws/andres-front-programador.webp?updatedAt=1710536964531"
       :alt="$t('common.images.dataBodyImage')"
       sizes="220px sm:180px md:240px lg:250px xl:350px"
       densities="1x 2x"
