@@ -30,7 +30,7 @@
         {{ $t('views.home.homeDescription.subtitle') }}
       </h2>
 
-      <button-contact data-cy="home-description-button-contact" />
+      <button-contact />
     </article>
   </section>
 </template>
