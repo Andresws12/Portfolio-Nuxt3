@@ -7,12 +7,13 @@
     "
   >
     <div class="common-card-experience__image-container">
-      <img
+      <NuxtImg
         :src="props.imageSource"
         :alt="props.imageData"
         width="250"
         :height="props.imageHeight"
         loading="lazy"
+        provider="cloudflare"
       />
       <span
         v-if="isActive"
