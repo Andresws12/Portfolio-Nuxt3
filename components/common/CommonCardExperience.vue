@@ -22,10 +22,7 @@
         {{ props.activeTextButton }}
       </span>
     </div>
-    <div
-      class="common-card-experience__text-container"
-      :aria-label="'Technologies ' + props.textTitle"
-    >
+    <div class="common-card-experience__text-container">
       <h3 class="common-card-experience__title is-subtitle is-strong">
         {{ props.textTitle }}
       </h3>
@@ -36,7 +33,10 @@
         {{ props.textDescription }}
       </p>
     </div>
-    <div class="common-card-experience__technologies-container">
+    <div
+      class="common-card-experience__technologies-container"
+      :aria-label="'Technologies ' + props.textTitle"
+    >
       <img
         v-if="props.hasVue"
         src="/img/tech/vue.svg"
