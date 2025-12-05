@@ -2,6 +2,9 @@
   <article
     class="common-card-experience card"
     :class="{ 'is-active': isActive }"
+    :aria-label="
+      $t('common.ariaLabel.ariaLabelWorkData') + ' ' + props.textTitle
+    "
   >
     <div class="common-card-experience__image-container">
       <NuxtImg

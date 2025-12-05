@@ -131,6 +131,8 @@
     },
     "ariaLabel": {
       "ariaLabelMainContent": "Contenido principal",
+      "ariaLabelExperienceData": "Datos experiencia laboral",
+      "ariaLabelWorkData": "Datos de trabajo",
       "ariaLabelPersonalData": "Datos personales",
       "ariaLabelLinkedin": "Perfil de Linkedin",
       "ariaLabelGithub": "Perfil de Github",

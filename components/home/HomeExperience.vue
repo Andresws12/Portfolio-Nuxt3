@@ -1,7 +1,7 @@
 <template>
   <section
     id="experience-data"
-    :aria-label="$t('common.ariaLabel.ariaLabelPersonalData')"
+    :aria-label="$t('common.ariaLabel.ariaLabelExperienceData')"
     data-cy="home-section"
     class="home-experience card"
   >

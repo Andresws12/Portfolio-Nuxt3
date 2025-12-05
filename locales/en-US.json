@@ -132,6 +132,8 @@
     "ariaLabel": {
       "ariaLabelMainContent": "Main Content",
       "ariaLabelPersonalData": "Personal Data",
+      "ariaLabelExperienceData": "Experience Data",
+      "ariaLabelWorkData": "Work Data",
       "ariaLabelLinkedin": "Linkedin Profile",
       "ariaLabelGithub": "Github Profile",
       "ariaLabelGmail": "My Email"
