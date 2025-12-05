@@ -14,11 +14,11 @@ const changeLanguage = () => {
 <style lang="scss" scoped>
 .button-translations {
   position: absolute;
-  top: 20px;
+  top: 12px;
   right: 20px;
   z-index: 20;
   text-transform: uppercase;
-  font-weight: 700;
+  font-size: 1.05rem;
 
   &__locale {
     margin-left: 8px;

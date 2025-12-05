@@ -45,7 +45,7 @@
   &__icon {
     margin-right: 10px;
     transition: all 0.3s;
-    filter: $main-filter-color-light;
+    filter: $secondary-filter-color;
 
     &:hover {
       filter: $main-filter-color-dark;
