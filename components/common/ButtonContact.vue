@@ -5,6 +5,7 @@
       rel="noopener noreferrer nofollow"
       href="https://github.com/Andresws12"
       :title="$t('common.images.dataGithubImage')"
+      class=""
     >
       <NuxtImg
         src="/img/github.svg"
@@ -42,10 +43,10 @@
   &__icon {
     margin-right: 10px;
     transition: all 0.3s;
-    filter: $main-filter-color;
+    filter: $main-filter-color-light;
 
     &:hover {
-      filter: $main-filter-color-medium-light;
+      filter: $main-filter-color-dark;
     }
   }
 }

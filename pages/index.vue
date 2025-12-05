@@ -1,13 +1,11 @@
 <template>
-  <home-description />
-  <home-personal-description />
-  <home-work-experience />
+  <div class="home">
+    <home-description />
+  </div>
 </template>
 
 <script lang="ts" setup>
 import HomeDescription from '@/components/home/HomeDescription.vue';
-import HomePersonalDescription from '@/components/home/HomePersonalDescription.vue';
-import HomeWorkExperience from '@/components/home/HomeWorkExperience.vue';
 
 const i18n = useI18n();
 
@@ -26,3 +24,20 @@ useSchemaOrg([
   defineWebPage(),
 ]);
 </script>
+
+<style lang="scss" scoped>
+.home {
+  padding: 55px 200px 0;
+  display: flex;
+
+  @include tablet {
+    padding: 55px 55px 0;
+    justify-content: center;
+  }
+
+  @include mobile {
+    padding: 55px 25px 0;
+    justify-content: center;
+  }
+}
+</style>

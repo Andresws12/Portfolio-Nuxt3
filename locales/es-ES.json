@@ -99,6 +99,9 @@
     "components": {
       "loading": {
         "altText": "Icono de carga"
+      },
+      "contact": {
+        "email": "andreshernandez12.1995{'@'}gmail.com"
       }
     },
     "works": {

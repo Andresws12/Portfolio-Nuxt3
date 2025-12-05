@@ -1,6 +1,6 @@
 <template>
   <button class="button button-translations" @click="changeLanguage()">
-    <span>{{ locale }}</span>
+    <span>{{ locale.slice(0, 2) }}</span>
   </button>
 </template>
 
