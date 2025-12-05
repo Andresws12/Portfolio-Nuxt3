@@ -40,19 +40,19 @@ export interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  imageSource: "",
-  imageData: "",
-  imageHeight: "",
-  textTitle: "",
-  textDescription: "",
-  textSubtitle: "",
-  callToActionButton: "",
+  imageSource: '',
+  imageData: '',
+  imageHeight: '',
+  textTitle: '',
+  textDescription: '',
+  textSubtitle: '',
+  callToActionButton: '',
   isActive: false,
-  activeTextButton: "",
+  activeTextButton: '',
 });
 
 type EmitsType = {
-  (e: "click"): void;
+  (e: 'click'): void;
 };
 
 const emit = defineEmits<EmitsType>();
