@@ -5,6 +5,7 @@
       rel="noopener noreferrer nofollow"
       href="https://github.com/Andresws12"
       :title="$t('common.images.dataGithubImage')"
+      aria-label="GitHub"
       class=""
     >
       <NuxtImg
@@ -21,6 +22,7 @@
       rel="noopener noreferrer nofollow"
       href="https://www.linkedin.com/in/andreshernandez1995/"
       :title="$t('common.images.dataLinkedinImage')"
+      aria-label="LinkedIn"
     >
       <NuxtImg
         class="contact-buttons__icon"
