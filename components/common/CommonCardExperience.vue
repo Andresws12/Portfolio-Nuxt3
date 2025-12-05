@@ -7,13 +7,12 @@
     "
   >
     <div class="common-card-experience__image-container">
-      <NuxtImg
+      <img
         :src="props.imageSource"
         :alt="props.imageData"
         width="250"
         :height="props.imageHeight"
         loading="lazy"
-        provider="cloudflare"
       />
       <span
         v-if="isActive"
@@ -34,68 +33,61 @@
       </p>
     </div>
     <div class="common-card-experience__technologies-container">
-      <NuxtImg
+      <img
         v-if="props.hasVue"
         src="/img/tech/vue.svg"
         alt="vue"
         width="25"
         height="25"
         loading="lazy"
-        provider="cloudflare"
       />
-      <NuxtImg
+      <img
         v-if="props.hasAngular"
         src="/img/tech/angular.svg"
         alt="angular"
         width="25"
         height="25"
         loading="lazy"
-        provider="cloudflare"
       />
-      <NuxtImg
+      <img
         v-if="props.hasNet"
         src="/img/tech/net.svg"
         alt=".net"
         width="25"
         height="25"
         loading="lazy"
-        provider="cloudflare"
       />
-      <NuxtImg
+      <img
         v-if="props.hasReact"
         src="/img/tech/react.svg"
         alt="react"
         width="25"
         height="25"
         loading="lazy"
-        provider="cloudflare"
       />
-      <NuxtImg
+      <img
         v-if="props.hasJquery"
         src="/img/tech/jquery.svg"
         alt="jquery"
         width="25"
         height="25"
         loading="lazy"
-        provider="cloudflare"
       />
-      <NuxtImg
+      <img
         v-if="props.hasTypescript"
         src="/img/tech/typescript.svg"
         alt="typescript"
         width="25"
         height="25"
         loading="lazy"
-        provider="cloudflare"
       />
-      <NuxtImg
+      <img
         v-if="props.hasPhp"
         src="/img/tech/php.svg"
         alt="php"
         width="25"
         height="25"
         loading="lazy"
-        provider="cloudflare"
       />
     </div>
     <div class="common-card-experience__button-container">
