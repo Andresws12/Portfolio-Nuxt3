@@ -131,6 +131,7 @@
     },
     "skips": {
       "skipToMainContent": "Ir al contenido",
+      "skipToPersonalData": "Ir a mi información personal",
       "skipToLinkedin": "Ir a mi perfil de Linkedin",
       "skipToGithub": "Ir a mi perfil de Github"
     },
