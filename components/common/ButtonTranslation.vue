@@ -1,19 +1,27 @@
 <script setup lang="ts">
-// const { locale, setLocale } = useI18n();
-// const changeLanguage = () => {
-//   locale.value === "es-ES" ? setLocale("en-US") : setLocale("es-ES");
-// };
+import { NuxtLink } from "#components";
+const { locale } = useI18n();
+const switchLocalePath = useSwitchLocalePath();
+const targetLocale = computed(() =>
+  locale.value === "es-ES" ? "en-US" : "es-ES",
+);
+
+async function handleLanguageSwitch() {
+  const path = switchLocalePath(targetLocale.value);
+  await navigateTo(path);
+  window.location.reload();
+}
 </script>
 
 <template>
-  <button
+  <NuxtLink
+    :to="switchLocalePath(targetLocale)"
     class="button button-translations"
     data-cy="button-translation"
-    type="button"
-    @click="changeLanguage()"
+    @click.prevent="handleLanguageSwitch"
   >
     <span>{{ locale.slice(0, 2) }}</span>
-  </button>
+  </NuxtLink>
 </template>
 
 <style lang="scss" scoped>

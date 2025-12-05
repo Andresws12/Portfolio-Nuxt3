@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import ButtonContact from "@/components/common/ButtonContact.vue";
+import { NuxtImg } from "#components";
 </script>
 
 <template>

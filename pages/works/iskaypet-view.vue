@@ -1,11 +1,15 @@
 <script lang="ts" setup>
 import LayoutWork from "@/components/common/layouts/LayoutWork.vue";
-
 import { useWorksExperienceStore } from "@/stores/worksExperienceStore";
 
 const worksExperienceStore = useWorksExperienceStore();
 
-const workExperiences = computed(() => worksExperienceStore.workArgs[0]);
+// Agregando una verificación para asegurar que workArgs existe y tiene elementos
+const workExperiences = computed(() => {
+  const { workArgs } = worksExperienceStore;
+  return workArgs && workArgs.length > 0 ? workArgs[0] : null;
+});
+
 const i18n = useI18n();
 
 useSeoMeta({
@@ -25,7 +29,7 @@ useSchemaOrg([
 </script>
 
 <template>
-  <LayoutWork :args="workExperiences">
+  <LayoutWork v-if="workExperiences" :args="workExperiences">
     <h3>{{ $t("views.works.iskaypet.title") }}</h3>
     <p>{{ $t("views.works.iskaypet.intro") }}</p>
     <h4>{{ $t("views.works.iskaypet.coolProjects") }}</h4>
@@ -44,8 +48,18 @@ useSchemaOrg([
       </li>
     </ul>
   </LayoutWork>
+  <div v-else class="loading-state">
+    {{ $t("common.loading") || "Loading..." }}
+  </div>
 </template>
 
 <style lang="scss" scoped>
-//styles
+.loading-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  font-size: 1.2rem;
+  color: var(--text-color, #333);
+}
 </style>

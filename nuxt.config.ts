@@ -37,8 +37,31 @@ export default defineNuxtConfig({
   },
 
   i18n: {
-    vueI18n: "./nuxt-i18n.ts", // custom path example
+    vueI18n: "./nuxt-i18n.ts",
     baseUrl: "https://andres-hernandez.com",
+    defaultLocale: "es-ES",
+    strategy: "prefix_and_default",
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "i18n_redirected",
+      redirectOn: "root",
+    },
+    locales: [
+      {
+        code: "en-US",
+        iso: "en-US",
+        name: "English",
+        file: "en-US.json",
+      },
+      {
+        code: "es-ES",
+        iso: "es-ES",
+        name: "Español",
+        file: "es-ES.json",
+      },
+    ],
+    lazy: true,
+    langDir: "locales/",
   },
   css: ["assets/styles/main.scss"],
   app: {

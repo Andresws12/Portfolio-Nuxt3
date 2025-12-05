@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { NuxtImg } from "#components";
 export interface Args {
   imageSource: string;
   imageData: string;

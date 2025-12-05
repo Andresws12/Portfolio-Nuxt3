@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { createHead } from "unhead";
+import { NuxtPage } from "#components";
 
-// import ButtonTranslation from "@/components/common/ButtonTranslation.vue";
+import ButtonTranslation from "@/components/common/ButtonTranslation.vue";
 
 const i18n = useI18n();
 
@@ -39,6 +40,6 @@ useSchemaOrg([
 <template>
   <div>
     <NuxtPage />
-    <!-- <ButtonTranslation></ButtonTranslation> -->
+    <ButtonTranslation />
   </div>
 </template>
