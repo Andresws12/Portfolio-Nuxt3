@@ -129,6 +129,11 @@
     "title": {
       "home": "Home"
     },
+    "skips": {
+      "skipToMainContent": "Go to content",
+      "skipToLinkedin": "Go to my Linkedin profile",
+      "skipToGithub": "Go to my Github profile"
+    },
     "subtitle": {},
     "inputs": {},
     "buttons": {},
