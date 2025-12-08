@@ -15,7 +15,7 @@ const currentTheme = computed(() => mainStore.theme)
     class="character__me"
     sizes="100vw xs:25vw sm:50vw md:400px"
     loading="lazy"
-    width="250"
+    width="367"
     height="550"
   />
   <Transition name="equipment" appear>
@@ -55,13 +55,13 @@ const currentTheme = computed(() => mainStore.theme)
   &__sunglasses {
     position: fixed;
     bottom: 453px;
-    right: 85px;
+    right: 144px;
   }
 
   &__helmet {
     position: fixed;
     bottom: 415px;
-    right: 20px;
+    right: 80px;
   }
 
   @include mixins.tablet {
@@ -74,14 +74,14 @@ const currentTheme = computed(() => mainStore.theme)
     &__sunglasses {
       bottom: 125px;
       width: 26px;
-      right: 24px;
+      right: 40px;
       z-index: 1;
     }
 
     &__helmet {
       bottom: 112px;
       width: 63px;
-      right: 5px;
+      right: 21px;
       z-index: 1;
     }
   }
