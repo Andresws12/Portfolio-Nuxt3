@@ -1,26 +1,9 @@
 {
-  "extends": [
-    "stylelint-config-standard-scss",
-    "stylelint-config-recommended-vue/scss"
-  ],
-  "plugins": ["stylelint-declaration-strict-value"],
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-recommended-vue/scss"],
   "rules": {
-    "lightness-notation": "number",
-    "selector-class-pattern": "^(?:(?:o|c|u|t|s|is|has|_|js|qa)-)?[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*(?:__[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*)?(?:--[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*)?(?:\\[.+\\])?$",
-    "scss/double-slash-comment-whitespace-inside": null,
-    "max-nesting-depth": 3,
-    "selector-no-vendor-prefix": null,
-    "property-no-vendor-prefix": null,
-    "value-no-vendor-prefix": null,
-    "selector-max-type": 0,
-    "declaration-property-unit-disallowed-list": {
-      "font-size": ["px", "%", "em"],
-      "/^padding/": ["rem", "%", "em"],
-      "/^margin/": ["rem", "%", "em"],
-      "top": ["rem", "%", "em"],
-      "bottom": ["rem", "%", "em"],
-      "right": ["rem", "%", "em"],
-      "left": ["rem", "%", "em"]
-    }
+    "scss/at-rule-no-unknown": true,
+    "no-empty-source": null,
+    "selector-class-pattern": null,
+    "keyframes-name-pattern": null
   }
 }

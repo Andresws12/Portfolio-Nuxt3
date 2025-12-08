@@ -1,0 +1,28 @@
+.button {
+  cursor: pointer;
+  padding: 7px 14px;
+  border-radius: 16px;
+  background-color: var(--main-color-dark);
+  color: var(--light-color-lighter);
+  border: none;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+
+  &:hover {
+    box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
+  }
+
+  &.is-secondary {
+    background-color: var(--secondary-color);
+    color: var(--light-color-lighter);
+
+    &:hover {
+      background-color: var(--main-color-medium-light);
+    }
+  }
+
+  &.is-extended {
+    width: 100%;
+    padding: 10px 14px;
+  }
+}
