@@ -17,16 +17,16 @@
       "homeDescription": {
         "title": "Andrés Felipe Hernández Galindo",
         "subtitle": "Programador Front-end Senior",
-        "descriptionWelcome": "¡Hey, qué tal! 👋",
+        "descriptionWelcome": "¡Hola! 👋",
         "description": "¡Bienvenido a mi rincón digital! He construido este portafolio con mucho amor y código, utilizando Vue 3, Typescript y Pinia para una gestión de estados eficiente. Aquí no solo me divierto experimentando con las últimas tendencias en desarrollo frontend y poniendo en práctica mis ideas más innovadoras, sino que también podrás encontrar detalles sobre mi experiencia laboral."
       },
       "homeWorkExperience": {
-        "title": "¡Dale un vistazo a mi experiencia laboral! 🚀",
+        "title": "Descubre mi experiencia laboral 🚀",
         "callToActionButton": "Ver más",
         "activeButtonText": "Actualmente"
       },
       "homeTestProjects": {
-        "title": "Veamos algunos proyectos de prueba que he realizado 🙇",
+        "title": "Algunos de mis proyectos personales y pruebas 🙇",
         "callToActionButton": "Ver proyecto",
         "projects": {
           "pokemon": {
@@ -84,14 +84,14 @@
     "works": {
       "iskaypet": {
         "title": "En Iskaypet 🐾",
-        "intro": "Me sumergí de lleno en el mundo del ecommerce, trabajando en las webs de Tiendanimal y Kiwoko, que están montadas en Salesforce. Pero oye, no nos quedamos ahí. Estamos en plena misión de migrar todo el tinglado a Headless con Vue 3, y como soy el \"gurú\" de Vue en el equipo, me encargo de investigar, estandarizar y crear los proyectos base para esta gran aventura.",
-        "coolProjects": "Proyectos chulos en los que he trabajado:",
+        "intro": "Me sumergí de lleno en el mundo del ecommerce, trabajando en las webs de Tiendanimal y Kiwoko, que están montadas en Salesforce. Pero seguimos avanzando. Estamos en plena misión de migrar toda la arquitectura a Headless con Next.js, y como referente de Next.js en el equipo, me encargo de investigar, estandarizar y crear los proyectos base para esta gran aventura.",
+        "coolProjects": "Proyectos destacados:",
         "ecommerceTitle": "Ecommerce Tiendanimal y Kiwoko:",
-        "ecommerce": "Aquí me la paso entre Salesforce, Jquery, JavaScript y Sass. ¡Un cóctel tecnológico!",
+        "ecommerce": "Trabajo diariamente con Salesforce, Jquery, JavaScript y Sass. ¡Un cóctel tecnológico!",
         "componentLibraryTitle": "Librería de componentes para el Design System de Tiendanimal:",
-        "componentLibrary": "Este lo he creado desde cero, usando Vue 3, Rollup y Sass. También he metido lint, jest, stylelint y Vitest para que todo quede perfecto.",
-        "ssrProjectTitle": "Proyecto Front SSR con Vue 3:",
-        "ssrProject": "Este es otro proyecto desde cero, pero con un montón de tecnologías como Sass, TypeScript, ESLint, Vitest, Cypress, Stylelint, Pinia, Axios e i18n. Todo para lograr el mejor rendimiento, SEO y core vitals en el ecommerce.",
+        "componentLibrary": "Este lo he creado desde cero, usando React, Rollup y Sass. También he metido lint, jest, stylelint y Vitest para que todo quede perfecto.",
+        "ssrProjectTitle": "Migración de Salesforce a Next.js:",
+        "ssrProject": "Trabajamos en el cambio de Salesforce a Next.js con TypeScript, Zod, Sass y tRPC. Para esto se crearon las primeras bases, con todo lo básico y toda la observabilidad con Grafana Faro, trazas y logs de errores, creando dashboards base. Tras esto creamos la primera página headless para la sección de 'Mis Pedidos', resultando en un éxito, con un buen control de errores, visibilidad completa y excelente compatibilidad con el resto de páginas en headless, autenticación, componentes comunes, estilos, etc.",
         "seo": {
           "title": "Experiencia en Iskaypet - Andrés Felipe Hernández Galindo",
           "description": "Conoce mi trabajo y proyectos en Iskaypet como programador front end. Desarrollo y mantenimiento de aplicaciones web y más.",
@@ -100,10 +100,10 @@
       },
       "cloudappi": {
         "title": "Aventuras en Cloudappi 🌩️",
-        "intro": "En Cloudappi, me convertí en una especie de mago tecnológico, creando aplicaciones web con VUE 3, Angular y .NET Core. Vivíamos el método SCRUM a tope y me divertí con herramientas chulas como GitLab, Redmine, Odoo y Jira. Ya fuera un proyecto grande o pequeño, ahí estaba yo, añadiendo un toque de magia con Bootstrap, Buefy y Bulma, y claro, asegurándome de que todo estuviera en su punto con pruebas e2e y unitarias.",
-        "coolProjects": "Proyectos que me fliparon:",
+        "intro": "En Cloudappi, me convertí en un experto tecnológico, creando aplicaciones web con VUE 3, Angular y .NET Core. Vivíamos el método SCRUM a tope y trabajé con herramientas potentes como GitLab, Redmine, Odoo y Jira. Ya fuera un proyecto grande o pequeño, ahí estaba yo, aportando valor con Bootstrap, Buefy y Bulma, y claro, asegurándome de que todo estuviera en su punto con pruebas e2e y unitarias.",
+        "coolProjects": "Proyectos apasionantes:",
         "simulationTitle": "Simulador para obtener preofertas con un mapa:",
-        "simulation": "Trabajé con Vue 3, Bulma y TypeScript. ¡Era como construir un mapa del tesoro, pero para instalaciones!",
+        "simulation": "Trabajé con Vue 3, Bulma y TypeScript. ¡Era como construir un sistema de navegación, pero para instalaciones!",
         "mapManagementTitle": "Gestión de mapa para puntos con datos:",
         "mapManagement": "Este proyecto fue todo sobre Blazor y Bootstrap. ¡Como un cartógrafo, pero de datos!",
         "listingTitle": "Listado y gestión de información:",
@@ -115,9 +115,9 @@
         }
       },
       "pantallazo": {
-        "title": "Mi Saga en Pantallazo Azul 🖥️",
-        "intro": "Mi primer curro en tecnología fue en Pantallazo Azul, ¡y vaya si hice de todo! Era el tipo al que acudían para montar PCs, ya fuera un equipo básico o una bestia para gaming. Pero eso no es todo, también era la cara amigable que vendía todo tipo de chucherías tecnológicas a los clientes. ¿Tienes un problema técnico? Yo era tu solucionador, resolviendo problemas aquí y allá. Pero espera, ¡hay más! También me metí en el desarrollo de aplicaciones en PHP, instalé cámaras de seguridad y hasta diseñé sitios web en WordPress.",
-        "coolProjects": "Proyectos que marcaron mi inicio:",
+        "title": "Mi Etapa en Pantallazo Azul 🖥️",
+        "intro": "Mi primer trabajo en tecnología fue en Pantallazo Azul, ¡y vaya si aprendí de todo! Era el responsable de montar PCs, ya fuera un equipo básico o una máquina de alto rendimiento. Pero eso no es todo, también asesoraba sobre componentes tecnológicos a los clientes. ¿Tenías un problema técnico? Yo era tu solucionador. Pero espera, ¡hay más! También participé en el desarrollo de aplicaciones en PHP, instalé cámaras de seguridad y hasta diseñé sitios web en WordPress.",
+        "coolProjects": "Proyectos de mis inicios:",
         "posTitle": "TPV web y aplicación web para hoteles en PHP:",
         "pos": "Era el chico del mantenimiento, asegurándome de que todo funcionara como un reloj.",
         "wordpressTitle": "Distintas webs de tiendas y estáticas en WordPress:",
@@ -129,9 +129,9 @@
         }
       },
       "star": {
-        "title": "Mi Debut en las Grandes Ligas con STAR Group 🌟",
-        "intro": "Al entrar en las grandes ligas con STAR Group, mi primer trabajo en una empresa importante fue todo sobre mostrar mis habilidades en Vue 2 y .NET Core. Éramos un grupo amante del SCRUM, y tuve la oportunidad de trastear con GitLab y Jira. Ya fuera un proyecto gigante o una mini-aplicación, yo era el chico que le añadía un toque mágico con Bootstrap, Buefy y Bulma. Y puedes apostar que me aseguré de que todo estuviera perfecto con pruebas e2e y unitarias.",
-        "coolProjects": "Proyectos que me hicieron sentir como una estrella:",
+        "title": "Mi Experiencia en STAR Group 🌟",
+        "intro": "Al unirme a STAR Group, mi primer trabajo en una empresa importante, pude demostrar mis habilidades en Vue 2 y .NET Core. Éramos un grupo amante del SCRUM, y tuve la oportunidad de trabajar con GitLab y Jira. Ya fuera un proyecto gigante o una mini-aplicación, yo aportaba soluciones creativas con Bootstrap, Buefy y Bulma. Y puedes apostar que me aseguré de que todo estuviera perfecto con pruebas e2e y unitarias.",
+        "coolProjects": "Proyectos en los que pude crecer profesionalmente:",
         "smartSearchTitle": "Buscador inteligente: ",
         "smartSearch": "Participé en la creación y mantenimiento de este proyecto, que fue desarrollado con Vue 2, Bulma, Buefy, Cypress y Jest.",
         "techServiceTitle": "App de servicio técnico para mecánicos: ",

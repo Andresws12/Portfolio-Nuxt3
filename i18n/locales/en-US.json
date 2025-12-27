@@ -17,16 +17,16 @@
       "homeDescription": {
         "title": "Andrés Felipe Hernández Galindo",
         "subtitle": "Senior Front-end Software Engineer",
-        "descriptionWelcome": "Hey there! 👋",
+        "descriptionWelcome": "Hello! 👋",
         "description": "Welcome to my digital corner! I've built this portfolio with lots of love and code, using Vue 3, Typescript, and Pinia for efficient state management. Here, you'll not only find me having fun experimenting with the latest trends in frontend development and bringing my most innovative ideas to life, but you'll also get a glimpse into my work experience."
       },
       "homeWorkExperience": {
-        "title": "Check Out My Work Experience! 🚀",
+        "title": "Explore My Work Experience! 🚀",
         "callToActionButton": "More",
         "activeButtonText": "Current"
       },
       "homeTestProjects": {
-        "title": "Let's take a look at some test projects I've completed 🙇",
+        "title": "Some of my personal projects and tests 🙇",
         "callToActionButton": "View Project",
         "projects": {
           "pokemon": {
@@ -84,14 +84,14 @@
     "works": {
       "iskaypet": {
         "title": "At Iskaypet 🐾",
-        "intro": "I dove headfirst into the ecommerce world, working on the Tiendanimal and Kiwoko websites, which are built on Salesforce. But hey, we're not stopping there. We're on a mission to migrate everything to Headless using Vue 3, and as the team's Vue \"guru,\" I'm leading the charge on research, standardization, and setting up the foundational projects for this epic journey.",
-        "coolProjects": "Cool Projects I've Worked On:",
+        "intro": "I dove headfirst into the ecommerce world, working on the Tiendanimal and Kiwoko websites, which are built on Salesforce. But we're continuing to advance. We're on a mission to migrate everything to Headless using Next.js, and as the team's Next.js lead, I'm leading the charge on research, standardization, and setting up the foundational projects for this epic journey.",
+        "coolProjects": "Featured Projects:",
         "ecommerceTitle": "Ecommerce Tiendanimal and Kiwoko:",
-        "ecommerce": "Here, I juggle Salesforce, Jquery, JavaScript, and Sass. A real tech cocktail!",
+        "ecommerce": "Here, I work with Salesforce, Jquery, JavaScript, and Sass. A real tech cocktail!",
         "componentLibraryTitle": "Component Library for Tiendanimal's Design System:",
-        "componentLibrary": "Built this one from scratch, using Vue 3, Rollup, and Sass. Also threw in lint, jest, stylelint, and Vitest to keep things neat.",
-        "ssrProjectTitle": "Front SSR Project with Vue 3:",
-        "ssrProject": "Another from-scratch project, but this time with a whole bunch of tech like Sass, TypeScript, ESLint, Vitest, Cypress, Stylelint, Pinia, Axios, and i18n. All to achieve the best performance, SEO, and core vitals for the ecommerce site.",
+        "componentLibrary": "Built this one from scratch, using React, Rollup, and Sass. Also threw in lint, jest, stylelint, and Vitest to keep things neat.",
+        "ssrProjectTitle": "Salesforce to Next.js Migration:",
+        "ssrProject": "We worked on the migration from Salesforce to Next.js using TypeScript, Zod, Sass, and tRPC. We established the initial foundations, including all basics and full observability with Grafana Faro, traces, and error logs, creating base dashboards. Subsequently, we created the first headless page for the 'My Orders' section, which was a complete success, featuring robust error control, full visibility, and excellent compatibility with other headless pages, authentication, common components, styles, etc.",
         "seo": {
           "title": "Experience at Iskaypet - Andrés Felipe Hernández Galindo",
           "description": "Discover my work and projects at Iskaypet as a front end developer. Web application development and maintenance.",
@@ -100,8 +100,8 @@
       },
       "cloudappi": {
         "title": "Cloudappi Adventures 🌩️",
-        "intro": "At Cloudappi, I was like a tech wizard, conjuring web apps with VUE 3, Angular, and .NET Core. We were all about that SCRUM life, and I got to play around with cool tools like GitLab, Redmine, Odoo, and Jira. Whether it was a big project or a small one, I was there, sprinkling in some Bootstrap, Buefy, and Bulma magic, and of course, making sure everything was tip-top with e2e and unit tests.",
-        "coolProjects": "Projects That Rocked My Socks:",
+        "intro": "At Cloudappi, I became a tech specialist, creating web apps with VUE 3, Angular, and .NET Core. We were all about that SCRUM life, and I got to use powerful tools like GitLab, Redmine, Odoo, and Jira. Whether it was a big project or a small one, I was there, adding value with Bootstrap, Buefy, and Bulma, and of course, making sure everything was tip-top with e2e and unit tests.",
+        "coolProjects": "Exciting Projects:",
         "simulationTitle": "Simulation for Pre-Offers with a Map:",
         "simulation": "Got to work with Vue 3, Bulma, and TypeScript. It was like building a treasure map, but for installations!",
         "mapManagementTitle": "Map Management for Data Points:",
@@ -115,9 +115,9 @@
         }
       },
       "pantallazo": {
-        "title": "My Pantallazo Azul Saga 🖥️",
-        "intro": "My first gig in tech was at Pantallazo Azul, and man, did I wear a lot of hats! I was the go-to guy for building PCs, whether it was a budget rig or a high-end gaming monster. Not just that, I was also the friendly face selling all sorts of tech goodies to customers. Got a tech problem? I was your fixer, troubleshooting issues left and right. But wait, there's more! I also dabbled in PHP app development, set up security cameras, and even crafted websites in WordPress.",
-        "coolProjects": "Projects That Kickstarted My Journey:",
+        "title": "My Time at Pantallazo Azul 🖥️",
+        "intro": "My first job in tech was at Pantallazo Azul, and did I learn a lot! I was responsible for building PCs, whether it was a budget rig or a high-performance machine. Not just that, I was also advising customers on tech components. Got a tech problem? I was your fixer, troubleshooting issues. But wait, there's more! I also participated in PHP app development, set up security cameras, and even crafted websites in WordPress.",
+        "coolProjects": "Projects from my beginnings:",
         "posTitle": "Web-based POS and Hotel Apps in PHP:",
         "pos": "I was the maintenance guy, making sure everything ran smoothly.",
         "wordpressTitle": "Various WordPress Websites:",
@@ -129,9 +129,9 @@
         }
       },
       "star": {
-        "title": "My Big League Debut with STAR Group 🌟",
-        "intro": "Stepping into the big leagues with STAR Group, my first job at a major company was all about flexing my Vue 2 and .NET Core muscles. We were a SCRUM-loving bunch, and I got to mess around with GitLab and Jira. Whether it was a mammoth project or a mini-app, I was the guy sprinkling some Bootstrap, Buefy, and Bulma magic on it. And you bet I made sure everything was A-OK with e2e and unit tests.",
-        "coolProjects": "Projects That Made Me Feel Like a Rockstar:",
+        "title": "My Experience at STAR Group 🌟",
+        "intro": "Joining STAR Group, my first job at a major company, allowed me to demonstrate my Vue 2 and .NET Core skills. We were a SCRUM-loving bunch, and I had the opportunity to work with GitLab and Jira. Whether it was a mammoth project or a mini-app, I provided creative solutions with Bootstrap, Buefy, and Bulma. And you bet I made sure everything was A-OK with e2e and unit tests.",
+        "coolProjects": "Projects where I grew professionally:",
         "smartSearchTitle": "Smart Search Engine: ",
         "smartSearch": "I was one of the contributors in both creating and maintaining this project, which was developed with Vue 2, Bulma, Buefy, Cypress, and Jest.",
         "techServiceTitle": "Tech Service App for Mechanics: ",

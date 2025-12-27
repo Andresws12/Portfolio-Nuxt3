@@ -149,7 +149,7 @@ const { description } = useWorkDuration({
   &__personal-data {
     padding: 25px;
     width: -webkit-fill-available;
-    border-radius: 15px;
+    border-radius: 25px;
     position: relative;
     z-index: 1;
   }

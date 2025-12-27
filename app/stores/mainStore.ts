@@ -1,7 +1,7 @@
 import { Theme } from '@/models/Theme'
 
 export const useMainStore = defineStore('useMainStore', () => {
-  const theme = ref<Theme>(Theme.Light)
+  const theme = ref<Theme>(Theme.Dark)
 
   const toggleTheme = () => {
     const themes = [Theme.Light, Theme.Dark, Theme.Multicolor]

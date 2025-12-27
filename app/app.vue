@@ -50,7 +50,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div :class="isMounted ? theme : 'light'" class="app-container">
+  <div :class="isMounted ? theme : 'dark'" class="app-container site">
     <NuxtPage />
     <ButtonTranslation />
     <TechnologiesIcons />

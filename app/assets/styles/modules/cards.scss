@@ -6,3 +6,51 @@
   margin-bottom: 25px;
   z-index: 1;
 }
+
+.site {
+  &.multicolor {
+    & .card {
+      border: 2px solid transparent;
+      background-image: none;
+      position: relative;
+      background-clip: padding-box;
+
+      &::before {
+        content: '';
+        position: absolute;
+        inset: -2px;
+        border-radius: 25px;
+        padding: 2px;
+        opacity: 0.6;
+        background: linear-gradient(
+          to right,
+          var(--main-color),
+          var(--secondary-color),
+          var(--extra-color)
+        );
+        mask:
+          linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        mask-composite: xor;
+        mask-composite: exclude;
+        z-index: -1;
+        background-size: 300% 300%;
+        animation: gradient-move 3s ease infinite;
+      }
+    }
+  }
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
